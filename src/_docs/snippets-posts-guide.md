@@ -1,11 +1,11 @@
 <!--
-@@@title:Usage@@@
+@@@title:Guide@@@
 @@@description:Learn how to use posts snippets.@@@
 @@@section:Snippets@@@
 @@@subsection:Posts@@@
 -->
 
-# Usage
+# Guide
 
 Learn how to use posts snippets.
 
