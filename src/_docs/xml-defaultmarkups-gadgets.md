@@ -443,11 +443,11 @@ Highlight a special post on your blog.
         <a href="#">
         <img alt="Image" class="featured-post-img" src="https://via.placeholder.com/512x288">
         </a>
-        <div class="featured-post-divider"></div>
+        <div class="featured-post-spacer"></div>
         <h3 class="featured-post-title js-toc-ignore">
           <a class="featured-post-title-link" href="#">Post title</a>
         </h3>
-        <div class="featured-post-divider"></div>
+        <div class="featured-post-spacer"></div>
         <div class="featured-post-snippet">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini...
         </div>
