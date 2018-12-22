@@ -2,12 +2,15 @@
 @@@title:Base CSS@@@
 @@@description:Base CSS.@@@
 @@@section:CSS@@@
-@@@subsection:None@@@
+@@@subsection:Scaffolding@@@
 -->
 
 # Base CSS
 
 Base CSS.
+
+> Base CSS provide an elegant, consistent, and simple baseline to build upon.<br>
+> Manually forked from [Bootstrap Reboot](https://getbootstrap.com).
 
 <figure>
   <div class="doc-badges">
@@ -27,9 +30,9 @@ Base CSS.
 </figure>
 
 
-## Overview
+## Approach
 
-Base CSS builds upon Normalize and Bootstrap Reboot, providing many HTML elements with somewhat opinionated styles using only element selectors to provide an elegant, consistent, and simple baseline to build upon. Additional styling is done only with classes. For example, we reboot some `<table>` styles for a simpler baseline and later provide `.table`, `.table-bordered`, and more.
+Base CSS builds upon [Normalize](css-scaffolding-normalize.html), providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes.
 
 Here are our guidelines and reasons for choosing what to override in base CSS:
 
@@ -55,16 +58,27 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
 
 <div class="doc-example">
   <h1 class="js-toc-ignore">h1. heading</h1>
+
   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  
   <h2 class="js-toc-ignore">h2. heading</h2>
+  
   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  
   <h3 class="js-toc-ignore">h3. heading</h3>
+  
   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  
   <h4 class="js-toc-ignore">h4. heading</h4>
+  
   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  
   <h5 class="js-toc-ignore">h5. heading</h5>
+  
   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  
   <h6 class="js-toc-ignore">h6. heading</h6>
+  
   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 </div>
 
@@ -97,7 +111,7 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
 
 ## Horizontal rules
 
-The HTML `<hr>` element.
+Styling for `<hr>` element.
 
 <div class="doc-example">
   <p>
@@ -138,16 +152,13 @@ The HTML `<hr>` element.
 
 ## Inline text elements
 
-Styling for common inline HTML5 elements.
+Styling for inline text elements.
 
 <div class="doc-example">
   <p><a href="#">Link</a></p>
-  <p><strong>Bold</strong></p>
   <p><small>Small</small></p>
   <p><mark>Mark</mark></p>
   <p><abbr title="HyperText Markup Language">HTML</abbr> abbreviations.</p>
-  <p><sub>Subscript</sub> and <sup>Superscript</sup></p>
-  <p>The <strong>HTML Definition element</strong> (<strong><dfn>&lt;dfn&gt;</dfn></strong>).</p>
 </div>
 
 ```html
@@ -156,67 +167,51 @@ Styling for common inline HTML5 elements.
 <p><small>Small</small></p>
 <p><mark>Mark</mark></p>
 <p><abbr title='HyperText Markup Language'>HTML</abbr> abbreviations.</p>
-<p><sub>Subscript</sub> and <sup>Superscript</sup></p>
-<p>The <strong>HTML Definition element</strong> (<strong><dfn>&lt;dfn&gt;</dfn></strong>).</p>
 ```
 
 
 ## Code
 
-The `<pre>` element is reset to remove its `margin-top` and add `margin-bottom: 1rem`.
+### Inline code
+
+Styling for `<code>` element.
 
 <div class="doc-example">
-  <h4 class="js-toc-ignore">Inline code</h4>
-
-  <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
-
-  <h4 class="js-toc-ignore">Code block</h4>
-
-<pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
-&lt;p&gt;And another line of sample text here...&lt;/p&gt;
-</code></pre>
-
-  <h4 class="js-toc-ignore">Variables</h4>
-
-  <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
-
-  <h4 class="js-toc-ignore">User input</h4>
-
-  <p>
-    To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
-    To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
-  </p>
-
-  <h4 class="js-toc-ignore">Sample output</h4>
-
-  <p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+  For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 </div>
 
 ```html
-<!-- Inline code -->
+For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+```
 
-<p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+### Code block
 
-<!-- Code block -->
+The `<pre>` element is reset to remove its `margin-top` and add `margin-bottom: 1rem`.
 
+<div class="doc-example">
 <pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
 &lt;p&gt;And another line of sample text here...&lt;/p&gt;
 </code></pre>
+</div>
 
-<!-- Variables -->
+```html
+<pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;And another line of sample text here...&lt;/p&gt;
+</code></pre>
+```
 
-<p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
+### User input
 
-<!-- User input -->
+Styling for `<kbd>` element.
 
-<p>
-  To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
-  To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
-</p>
+<div class="doc-example">
+    To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+    To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+</div>
 
-<!-- Sample output -->
-
-<p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+```html
+To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 ```
 
 
@@ -244,6 +239,7 @@ For simpler styling, clear hierarchy, and better spacing, description lists have
     <li>Aenean sit amet erat nunc</li>
     <li>Eget porttitor lorem</li>
   </ul>
+
   <ol>
     <li>Lorem ipsum dolor sit amet</li>
     <li>Consectetur adipiscing elit</li>
@@ -254,6 +250,7 @@ For simpler styling, clear hierarchy, and better spacing, description lists have
     <li>Aenean sit amet erat nunc</li>
     <li>Eget porttitor lorem</li>
   </ol>
+  
   <dl>
     <dt>Description lists</dt>
     <dd>A description list is perfect for defining terms.</dd>
@@ -386,7 +383,7 @@ Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure
 
 ## Blockquotes
 
-The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 1rem` for something more consistent with other elements.
+The `<blockquote>` element is updated to reset the browser default `margin` to `0 0 1rem`.
 
 <div class="doc-example">
   <blockquote>
@@ -436,7 +433,7 @@ The `<address>` element is updated to reset the browser default `font-style` fro
 
 ## Figures
 
-Reset `margin` to `0 0 1rem`.
+The `<figure>` element is updated to reset the browser default `margin` to `0 0 1rem`.
 
 <div class="doc-example">
   <figure>
@@ -453,14 +450,14 @@ Reset `margin` to `0 0 1rem`.
 ```
 
 
-## Forms and buttons
+## Forms
 
-Various form elements have been rebooted for simpler base styles. Here are some of the most notable changes:
+Various form elements have been updated for simpler base styles. Here are some of the most notable changes:
 
 - `<fieldset>`s have no borders, padding, or margin so they can be easily used as wrappers for individual inputs or groups of inputs.
 - `<legend>`s, like fieldsets, have also been restyled to be displayed as a heading of sorts.
 - `<label>`s are set to `display: inline-block` to allow `margin` to be applied.
-- `<input>`s, `<select>`s, `<textarea>`s, and `<button>`s are mostly addressed by Normalize, but Reboot removes their `margin` and sets `line-height: inherit`, too.
+- `<input>`s, `<select>`s, `<textarea>`s, and `<button>`s are mostly addressed by Normalize, but we sets `font-family`, `font-size`, and `line-height` to `inherit`, too.
 - `<textarea>`s are modified to only be resizable vertically as horizontal resizing often “breaks” page layout.
 
 These changes, and more, are demonstrated below.
@@ -631,4 +628,35 @@ These changes, and more, are demonstrated below.
     </p>
   </fieldset>
 </form>
+```
+
+
+## Misc elements
+
+### Summary
+
+The `<summary>` element is updated to reset the browser default `cursor` from `text` to `pointer` to convey that the element can be interacted with by clicking on it.
+
+<div class="doc-example">
+  <details>
+    <summary>Some details</summary>
+    <p>More info about the details.</p>
+  </details>
+
+  <details>
+    <summary>Even more details</summary>
+    <p>Here are even more details about the details.</p>
+  </details>
+</div>
+
+```html
+<details>
+  <summary>Some details</summary>
+  <p>More info about the details.</p>
+</details>
+
+<details>
+  <summary>Even more details</summary>
+  <p>Here are even more details about the details.</p>
+</details>
 ```
