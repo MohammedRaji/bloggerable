@@ -1,14 +1,20 @@
 // Options
 // Color system
-// Fonts, components and more
+// Fonts, components, and more
+// Grid breakpoints
 // Body
 // Headings
+// Paragraphs
 // Horizontal rules
 // Inline text elements
 // Code
+// Lists
 // Tables
 // Blockquotes
-// Forms and buttons
+// Addresses
+// Figures
+// Buttons
+// Forms
 
 //
 // Options
@@ -60,14 +66,15 @@ $text-white:      $white !default;
 $text-black:      $black !default;
 $text-muted:      $gray-600 !default;
 
-// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light".
+// Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold:  150 !default;
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark:             $text-dark !default;
 $yiq-text-light:            $text-white !default;
 
 //
-// Fonts, components and more
+// Fonts, components, and more
 //
 
 // stylelint-disable value-keyword-case
@@ -130,10 +137,11 @@ $body-bg:           $white !default;
 // Headings
 //
 
-$headings-font-family:  inherit !default;
-$headings-font-weight:  500 !default;
-$headings-line-height:  1.2 !default;
-$headings-color:        inherit !default;
+$headings-margin-bottom:  .5rem !default;
+$headings-font-family:    inherit !default;
+$headings-font-weight:    500 !default;
+$headings-line-height:    1.2 !default;
+$headings-color:          inherit !default;
 
 $h1-font-size:          $font-size * 2.5 !default;
 $h2-font-size:          $font-size * 2 !default;
@@ -143,9 +151,16 @@ $h5-font-size:          $font-size * 1.25 !default;
 $h6-font-size:          $font-size !default;
 
 //
+// Paragraphs
+//
+
+$paragraph-margin-bottom:  1rem !default;
+
+//
 // Horizontal rules
 //
 
+$hr-margin-y:      1rem !default;
 $hr-border-width:  $border-width !default;
 $hr-border-color:  rgba($black, .1) !default;
 
@@ -178,6 +193,7 @@ $mark-bg:       #ffecb3 !default;
 $code-font-size:     87.5% !default;
 $code-color:         #e83e8c !default;
 
+$pre-margin-bottom:  1rem !default;
 $pre-font-size:      $code-font-size !default;
 $pre-color:          $body-color !default;
 
@@ -188,9 +204,16 @@ $kbd-bg:             $dark !default;
 $kbd-border-radius:  $border-radius !default;
 
 //
+// Lists
+//
+
+$list-margin-bottom:  1rem !default;
+
+//
 // Tables
 //
 
+$table-margin-bottom:            1rem !default;
 $table-cell-padding:             .75rem !default;
 $table-border-width:             $border-width !default;
 
@@ -248,6 +271,7 @@ $table-striped-order:            odd !default;
 // Blockquotes
 //
 
+$blockquote-margin-bottom:        1rem !default;
 $blockquote-padding-y:            .75rem !default;
 $blockquote-padding-x:            1rem !default;
 $blockquote-color:                $text-dark !default;
@@ -263,10 +287,20 @@ $blockquote-footer-font-size:     90% !default;
 $blockquote-footer-color:         $text-muted !default;
 
 //
-// Forms and buttons
+// Addresses
 //
 
-//= Buttons
+$address-margin-bottom:  1rem !default;
+
+//
+// Figures
+//
+
+$figure-margin-bottom:  1rem !default;
+
+//
+// Buttons
+//
 
 $button-padding-y:            .375rem !default;
 $button-padding-x:            .75rem !default;
@@ -279,7 +313,8 @@ $button-transition:           color .15s ease-in-out, background-color .15s ease
 $button-focus-width:          .2rem !default;
 $button-disabled-opacity:     .65 !default;
 
-// Default button
+//= Default button
+
 $button-color:                $text-dark !default;
 $button-bg:                   $gray-400 !default;
 $button-border-color:         darken($button-bg, 3%) !default;
@@ -290,7 +325,9 @@ $button-active-color:         $text-dark !default;
 $button-active-bg:            darken($button-bg, 12%) !default;
 $button-active-border-color:  darken($button-active-bg, 3%) !default;
 
-//= Forms
+//
+// Forms
+//
 
 $label-margin-bottom:               .5rem !default;
 
@@ -319,8 +356,7 @@ $form-text-font-size:               $small-font-size !default;
 $form-text-color:                   $text-muted !default;
 
 $form-check-input-gutter:           1.25rem !default;
-$form-check-input-margin-y:         .3rem !default;
-$form-check-input-margin-x:         .25rem !default;
+$form-check-input-margin-y:         .4rem !default;
 $form-check-inline-margin-x:        .75rem !default;
 $form-check-inline-input-margin-x:  .3125rem !default;
 
