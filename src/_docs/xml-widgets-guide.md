@@ -150,7 +150,9 @@ Gadget with `<b:widget-settings>`. For example, [image gadget](xml-defaultmarkup
     <b:include name='content'/>
   </b:includable>
   <b:includable id='content'>
-    ...
+    <div class='widget-content'>
+      ... <!-- Custom markup -->
+    </div>
   </b:includable>
 </b:widget>
 ```
@@ -175,10 +177,10 @@ Gadget without `<b:widget-settings>`. For example, [blog search gadget](xml-defa
     </div>
   </b:includable>
   <b:includable id='searchForm'>
-    ...
+    ... <!-- Custom markup -->
   </b:includable>
   <b:includable id='searchSubmit'>
-    ...
+    ... <!-- Custom markup -->
   </b:includable>
 </b:widget>
 ```
