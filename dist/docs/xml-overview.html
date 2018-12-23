@@ -13,22 +13,22 @@
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">'component-1-element'</span>&gt;</span>
   ...
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre><pre><code class="lang-scss"># component-1<span class="hljs-class">.scss</span>
+</code></pre><pre><code class="lang-sass"><span class="hljs-comment"># component-1.scss</span>
 
-<span class="hljs-class">.component-1-element</span> {
-  ...
+.component-<span class="hljs-number">1</span>-element {
+  <span class="hljs-keyword">...</span>
 }
 </code></pre><p>Component 2</p><pre><code class="lang-html"># component-2.xml
 
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">'component-2-element'</span>&gt;</span>
   ...
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre><pre><code class="lang-scss"># component-2<span class="hljs-class">.scss</span>
+</code></pre><pre><code class="lang-sass"><span class="hljs-comment"># component-2.scss</span>
 
-<span class="hljs-class">.component-2-element</span> {
-  ...
+.component-<span class="hljs-number">2</span>-element {
+  <span class="hljs-keyword">...</span>
 }
-</code></pre><h3 id="sass-example">Sass example</h3><pre><code class="lang-plaintext">[root project directory]
+</code></pre><h3 id="sass-example">Sass example</h3><pre><code class="lang-plaintext">[root theme directory]
 └── src/
     └── _xml/
         ├── folder-<span class="hljs-number">1</span>/
@@ -41,29 +41,29 @@
             ├── component-<span class="hljs-number">3</span><span class="hljs-class">.xml</span>
             ├── component-<span class="hljs-number">4</span><span class="hljs-class">.scss</span>
             └── component-<span class="hljs-number">4</span>.xml
-</code></pre><p>The styles in <code>folder-1/*.scss</code> and <code>folder-2/*.scss</code> will be available in the <code>src/tmp/css/xml-sass.css</code>.</p><h4 id="variables-functions-and-mixins">Variables, functions, and mixins</h4><p>You can add local and/or global variables, functions, and mixins. The name of the variables, functions, and mixins must be unique to avoid override by another Sass files in the <code>src/_xml</code>.</p><h5 id="local-example">Local example</h5><p>Example local variables:</p><pre><code class="lang-scss"># src/_xml/folder-1/component-1.scss
+</code></pre><p>The styles in <code>folder-1/*.scss</code> and <code>folder-2/*.scss</code> will be available in the <code>src/tmp/css/xml-sass.css</code>.</p><h4 id="variables-functions-and-mixins">Variables, functions, and mixins</h4><p>You can add local and/or global variables, functions, and mixins. The name of the variables, functions, and mixins must be unique to avoid override by another Sass files in the <code>src/_xml</code>.</p><h5 id="local-example">Local example</h5><p>Example local variables:</p><pre><code class="lang-sass"># src/_xml/folder-<span class="hljs-number">1</span>/component-<span class="hljs-number">1.</span>scss
 
-$component-1-color: #fff !default;
-$component-1-bg:    #000 !default;
+<span class="hljs-variable">$component</span>-<span class="hljs-number">1</span>-<span class="hljs-keyword">color</span>: #fff !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$component</span>-<span class="hljs-number">1</span>-bg:    #<span class="hljs-number">000</span> !<span class="hljs-keyword">default</span>;
 
-.component-1-element {
-  color: $component-1-color;
-  background-color: $component-1-bg;
+.component-<span class="hljs-number">1</span>-element {
+  <span class="hljs-keyword">color</span>: <span class="hljs-variable">$component</span>-<span class="hljs-number">1</span>-<span class="hljs-keyword">color</span>;
+  background-<span class="hljs-keyword">color</span>: <span class="hljs-variable">$component</span>-<span class="hljs-number">1</span>-bg;
 }
-</code></pre><h5 id="global-example">Global example</h5><p>Create a new file <code>_global.scss</code> in <code>src/_xml</code>. In this new file add variables, functions, and mixins. Functions must come first, then variables, and then mixins.</p><p>Example global variables:</p><pre><code class="lang-scss"># src/_xml/_global.scss
+</code></pre><h5 id="global-example">Global example</h5><p>Create a new file <code>_global.scss</code> in <code>src/_xml</code>. In this new file add variables, functions, and mixins. Functions must come first, then variables, and then mixins.</p><p>Example global variables:</p><pre><code class="lang-sass"><span class="hljs-preprocessor"># src/_xml/_global.scss</span>
 
-$color: #fff !default;
-$bg:    #000 !default;
-</code></pre><pre><code class="lang-scss"># src/_xml/folder-1/component-2.scss
+<span class="hljs-label">$color:</span> <span class="hljs-preprocessor">#fff !default;</span>
+<span class="hljs-label">$bg:</span>    <span class="hljs-preprocessor">#000 !default;</span>
+</code></pre><pre><code class="lang-sass"># src/_xml/folder-<span class="hljs-number">1</span>/component-<span class="hljs-number">2.</span>scss
 
-.component-2-element {
-  color: $color;
-  background-color: $bg;
+.component-<span class="hljs-number">2</span>-element {
+  <span class="hljs-keyword">color</span>: <span class="hljs-variable">$color</span>;
+  background-<span class="hljs-keyword">color</span>: <span class="hljs-variable">$bg</span>;
 }
-</code></pre><h4 id="import">Import</h4><p>You can also import variables, functions, and mixins from <code>src/_scss</code>, or import Sass files from Node.js module.</p><pre><code class="lang-scss"># src/_xml/_global.scss
+</code></pre><h4 id="import">Import</h4><p>You can also import variables, functions, and mixins from <code>src/_scss</code>, or import Sass files from Node.js module.</p><pre><code class="lang-sass"><span class="hljs-comment"># src/_xml/_global.scss</span>
 
-@import &quot;./src/_scss/file-name&quot;;
-</code></pre><h3 id="css-example">CSS example</h3><pre><code class="lang-plaintext">[root project directory]
+@<span class="hljs-keyword">import</span> <span class="hljs-string">"./src/_scss/file-name"</span>;
+</code></pre><h3 id="css-example">CSS example</h3><pre><code class="lang-plaintext">[root theme directory]
 └── src/
     └── _xml/
         ├── folder-<span class="hljs-number">1</span>/
