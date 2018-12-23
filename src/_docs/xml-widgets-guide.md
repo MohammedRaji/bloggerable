@@ -29,7 +29,7 @@ Learn how to add a widget.
 ### Example
 
 ```plaintext
-[root project directory]
+[root theme directory]
 └── src/
     ├── _xml/
     │   └── widgets/
@@ -77,7 +77,7 @@ Include the widget file to the `<b:section>`:
 ### Use defaultmarkups
 
 ```plaintext
-[root project directory]
+[root theme directory]
 └── src/
     └── _xml/
         └── widgets/
@@ -115,7 +115,7 @@ Gadget without `<b:widget-settings>`. For example, [blog search gadget](xml-defa
 ### Override defaultmarkups
 
 ```plaintext
-[root project directory]
+[root theme directory]
 └── src/
     └── _xml/
         └── widgets/

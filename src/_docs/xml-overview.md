@@ -60,7 +60,7 @@ Component 1
 </div>
 ```
 
-```scss
+```sass
 # component-1.scss
 
 .component-1-element {
@@ -78,7 +78,7 @@ Component 2
 </div>
 ```
 
-```scss
+```sass
 # component-2.scss
 
 .component-2-element {
@@ -89,7 +89,7 @@ Component 2
 ### Sass example
 
 ```plaintext
-[root project directory]
+[root theme directory]
 └── src/
     └── _xml/
         ├── folder-1/
@@ -114,7 +114,7 @@ You can add local and/or global variables, functions, and mixins. The name of th
 
 Example local variables:
 
-```scss
+```sass
 # src/_xml/folder-1/component-1.scss
 
 $component-1-color: #fff !default;
@@ -132,14 +132,14 @@ Create a new file `_global.scss` in `src/_xml`. In this new file add variables, 
 
 Example global variables:
 
-```scss
+```sass
 # src/_xml/_global.scss
 
 $color: #fff !default;
 $bg:    #000 !default;
 ```
 
-```scss
+```sass
 # src/_xml/folder-1/component-2.scss
 
 .component-2-element {
@@ -152,7 +152,7 @@ $bg:    #000 !default;
 
 You can also import variables, functions, and mixins from `src/_scss`, or import Sass files from Node.js module.
 
-```scss
+```sass
 # src/_xml/_global.scss
 
 @import "./src/_scss/file-name";
@@ -161,7 +161,7 @@ You can also import variables, functions, and mixins from `src/_scss`, or import
 ### CSS example
 
 ```plaintext
-[root project directory]
+[root theme directory]
 └── src/
     └── _xml/
         ├── folder-1/

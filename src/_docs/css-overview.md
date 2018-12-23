@@ -22,7 +22,7 @@ Utilize our source Sass files to take advantage of variables, functions, mixins,
 ## File structure
 
 ```plaintext
-[root project directory]
+[root theme directory]
 └── src/
     └── _scss/
         ├── _custom.scss
@@ -68,8 +68,8 @@ Just like Sass variables, all Sass maps include the `!default` flag and can be o
 
 Example:
 
-```scss
-_custom.scss
+```sass
+# _custom.scss
 
 // Customize options
 $enable-rounded: false;
@@ -98,7 +98,7 @@ We utilizes several Sass functions in `_functions.scss`.
 
 Functions for getting values from the color maps.
 
-```scss
+```sass
 // Retrieve color Sass maps
 @function theme-color($key: "primary") {
   @return map-get($theme-colors, $key);
@@ -107,7 +107,7 @@ Functions for getting values from the color maps.
 
 Example:
 
-```scss
+```sass
 // Example to pick one color from a Sass map
 .custom-element {
   background-color: theme-color("dark");
@@ -118,7 +118,7 @@ Example:
 
 The color contrast function, `color-yiq`. It utilizes the [YIQ color space](https://en.wikipedia.org/wiki/YIQ) to automatically return a light (`#fff`) or dark (`#111`) contrast color based on the specified base color.
 
-```scss
+```sass
 // Color contrast
 @function color-yiq($color) {
   $r: red($color);
@@ -137,7 +137,7 @@ The color contrast function, `color-yiq`. It utilizes the [YIQ color space](http
 
 Example:
 
-```scss
+```sass
 $bg: #000;
 
 .custom-element {
@@ -179,7 +179,7 @@ CSS:
 
 Sass mixins:
 
-```scss
+```sass
 // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
 @include media-breakpoint-up(sm) { ... }
 @include media-breakpoint-up(md) { ... }
@@ -222,7 +222,7 @@ CSS:
 
 Sass mixins:
 
-```scss
+```sass
 @include media-breakpoint-down(xs) { ... }
 @include media-breakpoint-down(sm) { ... }
 @include media-breakpoint-down(md) { ... }
@@ -262,7 +262,7 @@ CSS:
 
 Sass mixins:
 
-```scss
+```sass
 @include media-breakpoint-only(xs) { ... }
 @include media-breakpoint-only(sm) { ... }
 @include media-breakpoint-only(md) { ... }
@@ -284,7 +284,7 @@ CSS:
 
 Sass mixins:
 
-```scss
+```sass
 @include media-breakpoint-between(md, xl) { ... }
 ```
 
@@ -299,7 +299,7 @@ Sass mixins:
 ### Example
 
 ```plaintext
-[root project directory]
+[root theme directory]
 └── src/
     └── _scss/
         ├── my-styles/              # Your Sass
@@ -314,13 +314,13 @@ Sass mixins:
 
 In `_mixins.scss` file add this code:
 
-```scss
+```sass
 @import "mixins/my-mixin";
 ```
 
 In `all.scss` file add this code:
 
-```scss
+```sass
 @import "variables";
 @import "mixins";
 
@@ -329,7 +329,7 @@ In `all.scss` file add this code:
 
 At the end of the `index.scss` file, add this line:
 
-```scss
+```sass
 @import "my-styles/all";
 ```
 
@@ -344,7 +344,7 @@ Now, you can just build the source with `grunt`, and the output will be availabl
 
 Sass:
 
-```scss
+```sass
 //
 // Heading 1
 //
