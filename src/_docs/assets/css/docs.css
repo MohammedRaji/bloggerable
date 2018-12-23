@@ -9,6 +9,10 @@
  * Licensed under the Creative Commons Attribution 3.0 Unported License (https://creativecommons.org/licenses/by/3.0)
  */
 
+.doc-body {
+  margin: 0;
+}
+
 /* ==========================================================================
    Nav, TOC, and content
    ========================================================================== */
@@ -249,7 +253,7 @@
 }
 
 /**
- * Reset margin
+ * Reset margins
  */
 
 .doc-content > h3,
@@ -274,12 +278,29 @@
   margin-left: 0;
 }
 
-ol ol,
-ul ul,
-ol ul,
-ul ol {
+.doc-content > ol ol,
+.doc-content > ul ul,
+.doc-content > ol ul,
+.doc-content > ul ol {
   margin-bottom: 0;
 }
+
+/* stylelint-disable selector-max-type, selector-max-compound-selectors */
+.doc-content > ol li + li,
+.doc-content > ul li + li,
+.doc-content > ol li ol,
+.doc-content > ol li ul,
+.doc-content > ul li ul,
+.doc-content > ul li ol,
+.doc-content > div:not(.doc-topbar):not(.doc-breadcrumb):not(.doc-example) ol li + li,
+.doc-content > div:not(.doc-topbar):not(.doc-breadcrumb):not(.doc-example) ul li + li,
+.doc-content > div:not(.doc-topbar):not(.doc-breadcrumb):not(.doc-example) ol li ol,
+.doc-content > div:not(.doc-topbar):not(.doc-breadcrumb):not(.doc-example) ol li ul,
+.doc-content > div:not(.doc-topbar):not(.doc-breadcrumb):not(.doc-example) ul li ul,
+.doc-content > div:not(.doc-topbar):not(.doc-breadcrumb):not(.doc-example) ul li ol {
+  margin-top: .25em;
+}
+/* stylelint-enable selector-max-type, selector-max-compound-selectors */
 
 /**
  * Skip navigation
@@ -435,6 +456,38 @@ ul ol {
  * Code
  */
 
+.doc-content > p code,
+.doc-content > ol code,
+.doc-content > ul code,
+.doc-content > dl code,
+.doc-content > table code,
+.doc-content > blockquote code,
+.doc-content > figure code,
+.doc-content > details code,
+.doc-content > div:not(.doc-example) code {
+  padding: .2em .4em;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 85%;
+  color: #ff3860;
+  word-break: break-word;
+  background-color: #f5f5f5;
+  border: 0;
+  border-radius: .25rem;
+}
+/* stylelint-disable selector-max-type */
+.doc-content > p a code,
+.doc-content > ol a code,
+.doc-content > ul a code,
+.doc-content > dl a code,
+.doc-content > table a code,
+.doc-content > blockquote a code,
+.doc-content > figure a code,
+.doc-content > details a code,
+.doc-content > div:not(.doc-example) a code {
+  color: inherit;
+}
+/* stylelint-enable selector-max-type */
+
 .doc-content > pre {
   display: block;
   padding: 1rem;
@@ -445,6 +498,15 @@ ul ol {
   color: #212529;
   background-color: #f8f9fa;
   border-radius: .25rem;
+}
+.doc-content > pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  word-break: inherit;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
 }
 
 /**
@@ -606,6 +668,7 @@ ul ol {
   align-items: center;
   justify-content: flex-start;
 }
+
 .doc-badge-item {
   display: inline-block;
   padding: .5em .75em;
@@ -617,7 +680,6 @@ ul ol {
   vertical-align: baseline;
   border-radius: .25rem;
 }
-
 .doc-badge-item:first-child:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -633,15 +695,15 @@ a.doc-badge-item {
   color: #212529;
   background-color: #f5f5f5;
 }
-.doc-badge-item-success,
-a.doc-badge-item-success {
-  color: #fff;
-  background-color: #23d160;
-}
 .doc-badge-item-info,
 a.doc-badge-item-info {
   color: #fff;
   background-color: #209cee;
+}
+.doc-badge-item-success,
+a.doc-badge-item-success {
+  color: #fff;
+  background-color: #23d160;
 }
 .doc-badge-item-warning,
 a.doc-badge-item-warning {
