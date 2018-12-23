@@ -35,10 +35,6 @@ We uses gadget version `2`:
 <html b:defaultwidgetversion='2'>
   ...
 </html>
-
-<b:widget version='2'>
-  ...
-</b:widget>
 ```
 
 
@@ -276,13 +272,13 @@ Heading 2
 
 `<b:widget>`:
 
-- Always use `locked`, `title`, `version`, and `visible` attribute.
+- Always use `locked`, `title`, and `visible` attribute.
 
 Example:
 
 ```html
 <b:section class='b-section-header-nav' id='b-section-header-nav' name='Header nav'>
-  <b:widget id='HTML1' locked='false' title='HTML/JavaScript' type='HTML' version='2' visible='true'>
+  <b:widget id='HTML1' locked='false' title='HTML/JavaScript' type='HTML' visible='true'>
     ...
   </b:widget>
 </b:section>

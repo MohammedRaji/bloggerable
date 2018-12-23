@@ -77,7 +77,7 @@ Make it easy for visitors to navigate your blog with links to older posts.
 </div>
 
 ```html
-<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' version='2' visible='true'>
+<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
     <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -137,7 +137,7 @@ Make it easy for visitors to navigate your blog with links to older posts.
 </div>
 
 ```html
-<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' version='2' visible='true'>
+<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
     <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -217,7 +217,7 @@ Make it easy for visitors to navigate your blog with links to older posts.
 </div>
 
 ```html
-<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' version='2' visible='true'>
+<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
     <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -259,7 +259,7 @@ Make it easy for visitors to navigate your blog with links to older posts.
 </div>
 
 ```html
-<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' version='2' visible='true'>
+<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='showStyle'>FLAT</b:widget-setting>
     <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -293,7 +293,7 @@ Make it easy for visitors to navigate your blog with links to older posts.
 </div>
 
 ```html
-<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' version='2' visible='true'>
+<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='showStyle'>MENU</b:widget-setting>
     <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -351,7 +351,7 @@ Let visitors search your blog.
 </div>
 
 ```html
-<b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' version='2' visible='true'/>
+<b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' visible='true'/>
 ```
 
 
@@ -408,7 +408,7 @@ Add a Contact Form to your Blog.
 </div>
 
 ```html
-<b:widget id='ContactForm1' locked='false' title='Contact Form' type='ContactForm' version='2' visible='true'/>
+<b:widget id='ContactForm1' locked='false' title='Contact Form' type='ContactForm' visible='true'/>
 ```
 
 
@@ -457,7 +457,7 @@ Highlight a special post on your blog.
 </div>
 
 ```html
-<b:widget id='FeaturedPost1' locked='false' title='Featured Post' type='FeaturedPost' version='2' visible='true'>
+<b:widget id='FeaturedPost1' locked='false' title='Featured Post' type='FeaturedPost' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='showSnippet'>true</b:widget-setting>
     <b:widget-setting name='showPostTitle'>true</b:widget-setting>
@@ -508,7 +508,7 @@ Make it easy for visitors to subscribe to email delivery when you publish a post
 </div>
 
 ```html
-<b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail' version='2' visible='true'/>
+<b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail' visible='true'/>
 ```
 
 
@@ -547,7 +547,7 @@ Display your blog's title and description.
 </div>
 
 ```html
-<b:widget id='Header1' locked='false' title='(Header)' type='Header' version='2' visible='true'>
+<b:widget id='Header1' locked='false' title='(Header)' type='Header' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='displayUrl'>https://via.placeholder.com/1200x630</b:widget-setting>
     <b:widget-setting name='displayHeight'>768</b:widget-setting>
@@ -573,7 +573,7 @@ Display your blog's title and description.
 </div>
 
 ```html
-<b:widget id='Header1' locked='false' title='(Header)' type='Header' version='2' visible='true'>
+<b:widget id='Header1' locked='false' title='(Header)' type='Header' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='displayUrl'>https://via.placeholder.com/256x256</b:widget-setting>
     <b:widget-setting name='displayHeight'>630</b:widget-setting>
@@ -600,7 +600,7 @@ Display your blog's title and description.
 </div>
 
 ```html
-<b:widget id='Header1' locked='false' title='(Header)' type='Header' version='2' visible='true'>
+<b:widget id='Header1' locked='false' title='(Header)' type='Header' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='displayUrl'>https://via.placeholder.com/256x256</b:widget-setting>
     <b:widget-setting name='displayHeight'>630</b:widget-setting>
@@ -652,7 +652,7 @@ Add an image from your computer, or from somewhere else on the web.
 </div>
 
 ```html
-<b:widget id='Image1' locked='false' title='Image' type='Image' version='2' visible='true'>
+<b:widget id='Image1' locked='false' title='Image' type='Image' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='displayUrl'>https://via.placeholder.com/512x512</b:widget-setting>
     <b:widget-setting name='displayHeight'>172</b:widget-setting>
@@ -705,7 +705,7 @@ Show all the labels of posts in your blog.
 </div>
 
 ```html
-<b:widget id='Label1' locked='false' title='Labels' type='Label' version='2' visible='true'>
+<b:widget id='Label1' locked='false' title='Labels' type='Label' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
     <b:widget-setting name='display'>LIST</b:widget-setting>
@@ -740,7 +740,7 @@ Show all the labels of posts in your blog.
 </div>
 
 ```html
-<b:widget id='Label1' locked='false' title='Labels' type='Label' version='2' visible='true'>
+<b:widget id='Label1' locked='false' title='Labels' type='Label' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
     <b:widget-setting name='display'>CLOUD</b:widget-setting>
@@ -838,7 +838,7 @@ Display a list of the most popular posts from your blog.
 </div>
 
 ```html
-<b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' version='2' visible='true'>
+<b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='numItemsToShow'>3</b:widget-setting>
     <b:widget-setting name='showThumbnails'>true</b:widget-setting>

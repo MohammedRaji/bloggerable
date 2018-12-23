@@ -1,4 +1,4 @@
-<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='showDateHeader'>false</b:widget-setting>
     <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>

@@ -1,4 +1,4 @@
-<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' version='2' visible='true'>
+<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='showStyle'>MENU</b:widget-setting>
     <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>

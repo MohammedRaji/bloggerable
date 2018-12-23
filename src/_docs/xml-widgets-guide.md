@@ -52,7 +52,7 @@ Create a new folder called `b-section-example` in `_xml/widgets`, in this new fo
 ```html
 # Label1.xml
 
-<b:widget id='Label1' locked='false' title='Labels' type='Label' version='2' visible='true'>
+<b:widget id='Label1' locked='false' title='Labels' type='Label' visible='true'>
   ...
 </b:widget>
 ```
@@ -60,7 +60,7 @@ Create a new folder called `b-section-example` in `_xml/widgets`, in this new fo
 ```html
 # LinkList1.xml
 
-<b:widget id='LinkList1' locked='false' title='Link List' type='LinkList' version='2' visible='true'>
+<b:widget id='LinkList1' locked='false' title='Link List' type='LinkList' visible='true'>
   ...
 </b:widget>
 ```
@@ -91,7 +91,7 @@ Gadget with `<b:widget-settings>`. For example, [image gadget](xml-defaultmarkup
 ```html
 # Image1.xml
 
-<b:widget id='Image1' locked='false' title='Image' type='Image' version='2' visible='true'>
+<b:widget id='Image1' locked='false' title='Image' type='Image' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='displayUrl'>https://via.placeholder.com/512x512</b:widget-setting>
     <b:widget-setting name='displayHeight'>172</b:widget-setting>
@@ -109,7 +109,7 @@ Gadget without `<b:widget-settings>`. For example, [blog search gadget](xml-defa
 ```html
 # BlogSearch1.xml
 
-<b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' version='2' visible='true'/>
+<b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' visible='true'/>
 ```
 
 ### Override defaultmarkups
@@ -135,7 +135,7 @@ Gadget with `<b:widget-settings>`. For example, [image gadget](xml-defaultmarkup
 ```html
 # Image1.xml
 
-<b:widget id='Image1' locked='false' title='Image' type='Image' version='2' visible='true'>
+<b:widget id='Image1' locked='false' title='Image' type='Image' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='displayUrl'>https://via.placeholder.com/512x512</b:widget-setting>
     <b:widget-setting name='displayHeight'>172</b:widget-setting>
@@ -166,7 +166,7 @@ Gadget without `<b:widget-settings>`. For example, [blog search gadget](xml-defa
 ```html
 # BlogSearch1.xml
 
-<b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' version='2' visible='true'>
+<b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' visible='true'>
   <b:includable id='main'>
     <b:include name='widget-title'/>
     <b:include name='content'/>
