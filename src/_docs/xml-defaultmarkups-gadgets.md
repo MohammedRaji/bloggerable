@@ -781,7 +781,7 @@ Display a list of the most popular posts from your blog.
     <div class="widget-content">
       <div class="popular-post">
         <a href="#"><img alt="Image" class="popular-post-img popular-post-noimg" height="64" src="https://via.placeholder.com/64x64" width="64"></a>
-        <div class="popular-post-body">
+        <div class="popular-post-content">
           <h3 class="popular-post-title js-toc-ignore">
             <a class="popular-post-title-link" href="#">Post title 01</a>
           </h3>
@@ -799,7 +799,7 @@ Display a list of the most popular posts from your blog.
       </div>
       <div class="popular-post">
         <a href="#"><img alt="Image" class="popular-post-img" height="64" src="https://via.placeholder.com/64x64" width="64"></a>
-        <div class="popular-post-body">
+        <div class="popular-post-content">
           <h3 class="popular-post-title js-toc-ignore">
             <a class="popular-post-title-link" href="#">Post title 02</a>
           </h3>
@@ -817,7 +817,7 @@ Display a list of the most popular posts from your blog.
       </div>
       <div class="popular-post">
         <a href="#"><img alt="Image" class="popular-post-img popular-post-noimg" height="64" src="https://via.placeholder.com/64x64" width="64"></a>
-        <div class="popular-post-body">
+        <div class="popular-post-content">
           <h3 class="popular-post-title js-toc-ignore">
             <a class="popular-post-title-link" href="#">Post title 03</a>
           </h3>

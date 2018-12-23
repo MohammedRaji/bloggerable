@@ -47,7 +47,7 @@
           </b:if>
         </b:if>
         <b:comment>=== Content ===</b:comment>
-        <div class='popular-post-body'>
+        <div class='popular-post-content'>
           <b:comment>=== Title ===</b:comment>
           <h3 class='popular-post-title'>
             <a class='popular-post-title-link' expr:href='data:post.link ?: data:post.url'>
