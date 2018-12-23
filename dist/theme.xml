@@ -1290,7 +1290,7 @@ Header
       </h1>
       <b:if cond='data:widgets any (w =&gt; w.sectionId == "b-section-header-nav")'>
         <b:section class='b-section-header-nav' id='b-section-header-nav' maxwidgets='1' name='Header nav' showaddelement='no'>
-          <b:widget id='PageList1' locked='true' title='Header nav' type='PageList' version='2' visible='true'>
+          <b:widget id='PageList1' locked='true' title='Header nav' type='PageList' visible='true'>
             <b:widget-settings>
               <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': '/', 'title': 'Home', 'position': 0}, 'link0': {'href': 'https://blogger-starter.github.io/bloggerable', 'title': 'Docs', 'position': 1}, 'link1': {'href': 'https://blogger-starter.blogspot.com', 'title': 'Themes', 'position': 2}, 'link2': {'href': 'https://github.com/blogger-starter/bloggerable', 'title': 'GitHub', 'position': 3}}]]></b:widget-setting>
               <b:widget-setting name='homeTitle'>Home</b:widget-setting>
@@ -1336,7 +1336,7 @@ Main content (main and sidebar)
         <main class='main-col layout-mode-col-8' id='main-col' role='main'>
           <div class='main' id='main'>
             <b:section class='b-section-main' id='b-section-main' maxwidgets='1' name='Main' showaddelement='no'>
-              <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+              <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' visible='true'>
                 <b:widget-settings>
                   <b:widget-setting name='showDateHeader'>false</b:widget-setting>
                   <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
@@ -2464,8 +2464,8 @@ Main content (main and sidebar)
         <aside class='sidebar-col layout-mode-col-4' id='sidebar-col'>
           <div class='sidebar' id='sidebar'>
             <b:section class='b-section-sidebar' id='b-section-sidebar' name='Sidebar'>
-              <b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' version='2' visible='true'/>
-              <b:widget id='Label1' locked='false' title='Labels' type='Label' version='2' visible='true'>
+              <b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' visible='true'/>
+              <b:widget id='Label1' locked='false' title='Labels' type='Label' visible='true'>
                 <b:widget-settings>
                   <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
                   <b:widget-setting name='display'>CLOUD</b:widget-setting>
@@ -2474,7 +2474,7 @@ Main content (main and sidebar)
                   <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
                 </b:widget-settings>
               </b:widget>
-              <b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' version='2' visible='true'>
+              <b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' visible='true'>
                 <b:widget-settings>
                   <b:widget-setting name='showStyle'>MENU</b:widget-setting>
                   <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -2487,7 +2487,7 @@ Main content (main and sidebar)
                   <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
                 </b:widget-settings>
               </b:widget>
-              <b:widget id='HTML1' locked='false' title='Pages' type='HTML' version='2' visible='true'>
+              <b:widget id='HTML1' locked='false' title='Pages' type='HTML' visible='true'>
                 <b:widget-settings>
                   <b:widget-setting name='content'>
                     &lt;ul style="padding-left: 0; list-style: none;"&gt;
@@ -2533,7 +2533,7 @@ Footer
     <div class='footer-inner'>
       <b:if cond='data:widgets any (w =&gt; w.sectionId == "b-section-footer-nav")'>
         <b:section class='b-section-footer-nav' id='b-section-footer-nav' maxwidgets='1' name='Footer nav' showaddelement='no'>
-          <b:widget id='LinkList1' locked='true' title='Footer nav' type='LinkList' version='2' visible='true'>
+          <b:widget id='LinkList1' locked='true' title='Footer nav' type='LinkList' visible='true'>
             <b:widget-settings>
               <b:widget-setting name='sorting'>NONE</b:widget-setting>
               <b:widget-setting name='text-0'>Twitter</b:widget-setting>
