@@ -27,11 +27,11 @@ Make it easy for visitors to navigate your blog with links to older posts.
   <div class="doc-badges">
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/blog-archive.xml</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/BlogArchive.xml</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/blog-archive.scss</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/BlogArchive.scss</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Type</span>
@@ -317,11 +317,11 @@ Let visitors search your blog.
   <div class="doc-badges">
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/blog-search.xml</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/BlogSearch.xml</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/blog-search.scss</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/BlogSearch.scss</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Type</span>
@@ -363,11 +363,11 @@ Add a Contact Form to your Blog.
   <div class="doc-badges">
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/contact-form.xml</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/ContactForm.xml</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/contact-form.scss</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/ContactForm.scss</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Type</span>
@@ -420,11 +420,11 @@ Highlight a special post on your blog.
   <div class="doc-badges">
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/featured-post.xml</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/FeaturedPost.xml</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/featured-post.scss</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/FeaturedPost.scss</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Type</span>
@@ -476,11 +476,11 @@ Make it easy for visitors to subscribe to email delivery when you publish a post
   <div class="doc-badges">
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/follow-by-email.xml</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/FollowByEmail.xml</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/follow-by-email.scss</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/FollowByEmail.scss</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Type</span>
@@ -512,144 +512,6 @@ Make it easy for visitors to subscribe to email delivery when you publish a post
 ```
 
 
-## Image
-
-Add an image from your computer, or from somewhere else on the web.
-
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/image.xml</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/image.scss</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Type</span>
-      <span class="doc-badge-item doc-badge-item-info">Image</span>
-    </div>
-  </div>
-</figure>
-
-<div class="doc-example">
-  <div class="widget Image">
-    <h3 class="title js-toc-ignore">
-      Image
-    </h3>
-    <div class="widget-content">
-      <figure class="image">
-        <a href="https://blogger.com"><img alt="Image" class="image-img" src="https://via.placeholder.com/512x512"></a>
-        <figcaption class="image-caption">
-          A caption for the above image.
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</div>
-
-```html
-<b:widget id='Image1' locked='false' title='Image' type='Image' version='2' visible='true'>
-  <b:widget-settings>
-    <b:widget-setting name='displayUrl'>https://via.placeholder.com/512x512</b:widget-setting>
-    <b:widget-setting name='displayHeight'>172</b:widget-setting>
-    <b:widget-setting name='sectionWidth'>258</b:widget-setting>
-    <b:widget-setting name='shrinkToFit'>true</b:widget-setting>
-    <b:widget-setting name='displayWidth'>258</b:widget-setting>
-    <b:widget-setting name='link'>https://blogger.com</b:widget-setting>
-    <b:widget-setting name='caption'>A caption for the above image.</b:widget-setting>
-  </b:widget-settings>
-</b:widget>
-```
-
-
-## Labels
-
-Show all the labels of posts in your blog.
-
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/labels.xml</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/labels.scss</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Type</span>
-      <span class="doc-badge-item doc-badge-item-info">Label</span>
-    </div>
-  </div>
-</figure>
-
-### List
-
-<div class="doc-example">
-  <div class="widget Label">
-    <h3 class="title js-toc-ignore">
-      Labels
-    </h3>
-    <div class="widget-content">
-      <div class="label-list">
-        <a class="label-list-link" href="#">Foo<span class="label-list-count">10</span></a>
-        <a class="label-list-link" href="#">Bar<span class="label-list-count">20</span></a>
-        <a class="label-list-link active" href="#">Baz (active)<span class="label-list-count">30</span></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-```html
-<b:widget id='Label1' locked='false' title='Labels' type='Label' version='2' visible='true'>
-  <b:widget-settings>
-    <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-    <b:widget-setting name='display'>LIST</b:widget-setting>
-    <b:widget-setting name='selectedLabelsList'/>
-    <b:widget-setting name='showType'>ALL</b:widget-setting>
-    <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
-  </b:widget-settings>
-</b:widget>
-```
-
-### Cloud
-
-<div class="doc-example">
-  <div class="widget Label">
-    <h3 class="title js-toc-ignore">
-      Labels
-    </h3>
-    <div class="widget-content">
-      <ul class="label-cloud">
-        <li class="label-cloud-item">
-          <a class="label-cloud-link" href="#">Foo<span class="label-cloud-count">10</span></a>
-        </li>
-        <li class="label-cloud-item">
-          <a class="label-cloud-link" href="#">Bar<span class="label-cloud-count">20</span></a>
-        </li>
-        <li class="label-cloud-item">
-          <a class="label-cloud-link active" href="#">Baz (active)<span class="label-cloud-count">30</span></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-```html
-<b:widget id='Label1' locked='false' title='Labels' type='Label' version='2' visible='true'>
-  <b:widget-settings>
-    <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-    <b:widget-setting name='display'>CLOUD</b:widget-setting>
-    <b:widget-setting name='selectedLabelsList'/>
-    <b:widget-setting name='showType'>ALL</b:widget-setting>
-    <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
-  </b:widget-settings>
-</b:widget>
-```
-
-
 ## Page Header
 
 Display your blog's title and description.
@@ -658,11 +520,11 @@ Display your blog's title and description.
   <div class="doc-badges">
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/page-header.xml</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Header.xml</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/page-header.scss</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Header.scss</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Type</span>
@@ -752,6 +614,144 @@ Display your blog's title and description.
 ```
 
 
+## Image
+
+Add an image from your computer, or from somewhere else on the web.
+
+<figure>
+  <div class="doc-badges">
+    <div class="doc-badge" style="width: 100%;">
+      <span class="doc-badge-item">Source</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Image.xml</span>
+    </div>
+    <div class="doc-badge" style="width: 100%;">
+      <span class="doc-badge-item">CSS</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Image.scss</span>
+    </div>
+    <div class="doc-badge" style="width: 100%;">
+      <span class="doc-badge-item">Type</span>
+      <span class="doc-badge-item doc-badge-item-info">Image</span>
+    </div>
+  </div>
+</figure>
+
+<div class="doc-example">
+  <div class="widget Image">
+    <h3 class="title js-toc-ignore">
+      Image
+    </h3>
+    <div class="widget-content">
+      <figure class="image">
+        <a href="https://blogger.com"><img alt="Image" class="image-img" src="https://via.placeholder.com/512x512"></a>
+        <figcaption class="image-caption">
+          A caption for the above image.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+```html
+<b:widget id='Image1' locked='false' title='Image' type='Image' version='2' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='displayUrl'>https://via.placeholder.com/512x512</b:widget-setting>
+    <b:widget-setting name='displayHeight'>172</b:widget-setting>
+    <b:widget-setting name='sectionWidth'>258</b:widget-setting>
+    <b:widget-setting name='shrinkToFit'>true</b:widget-setting>
+    <b:widget-setting name='displayWidth'>258</b:widget-setting>
+    <b:widget-setting name='link'>https://blogger.com</b:widget-setting>
+    <b:widget-setting name='caption'>A caption for the above image.</b:widget-setting>
+  </b:widget-settings>
+</b:widget>
+```
+
+
+## Labels
+
+Show all the labels of posts in your blog.
+
+<figure>
+  <div class="doc-badges">
+    <div class="doc-badge" style="width: 100%;">
+      <span class="doc-badge-item">Source</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Label.xml</span>
+    </div>
+    <div class="doc-badge" style="width: 100%;">
+      <span class="doc-badge-item">CSS</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Label.scss</span>
+    </div>
+    <div class="doc-badge" style="width: 100%;">
+      <span class="doc-badge-item">Type</span>
+      <span class="doc-badge-item doc-badge-item-info">Label</span>
+    </div>
+  </div>
+</figure>
+
+### List
+
+<div class="doc-example">
+  <div class="widget Label">
+    <h3 class="title js-toc-ignore">
+      Labels
+    </h3>
+    <div class="widget-content">
+      <div class="label-list">
+        <a class="label-list-link" href="#">Foo<span class="label-list-count">10</span></a>
+        <a class="label-list-link" href="#">Bar<span class="label-list-count">20</span></a>
+        <a class="label-list-link active" href="#">Baz (active)<span class="label-list-count">30</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+```html
+<b:widget id='Label1' locked='false' title='Labels' type='Label' version='2' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+    <b:widget-setting name='display'>LIST</b:widget-setting>
+    <b:widget-setting name='selectedLabelsList'/>
+    <b:widget-setting name='showType'>ALL</b:widget-setting>
+    <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+  </b:widget-settings>
+</b:widget>
+```
+
+### Cloud
+
+<div class="doc-example">
+  <div class="widget Label">
+    <h3 class="title js-toc-ignore">
+      Labels
+    </h3>
+    <div class="widget-content">
+      <ul class="label-cloud">
+        <li class="label-cloud-item">
+          <a class="label-cloud-link" href="#">Foo<span class="label-cloud-count">10</span></a>
+        </li>
+        <li class="label-cloud-item">
+          <a class="label-cloud-link" href="#">Bar<span class="label-cloud-count">20</span></a>
+        </li>
+        <li class="label-cloud-item">
+          <a class="label-cloud-link active" href="#">Baz (active)<span class="label-cloud-count">30</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+```html
+<b:widget id='Label1' locked='false' title='Labels' type='Label' version='2' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+    <b:widget-setting name='display'>CLOUD</b:widget-setting>
+    <b:widget-setting name='selectedLabelsList'/>
+    <b:widget-setting name='showType'>ALL</b:widget-setting>
+    <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+  </b:widget-settings>
+</b:widget>
+```
+
+
 ## Popular Posts
 
 Display a list of the most popular posts from your blog.
@@ -760,11 +760,11 @@ Display a list of the most popular posts from your blog.
   <div class="doc-badges">
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/popular-posts.xml</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/PopularPosts.xml</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/popular-posts.scss</span>
+      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/PopularPosts.scss</span>
     </div>
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">Type</span>

@@ -128,7 +128,7 @@ Gadget without `<b:widget-settings>`. For example, [blog search gadget](xml-defa
 
 Gadget with `<b:widget-settings>`. For example, [image gadget](xml-defaultmarkups-gadgets.html#image):
 
-- Copy-paste the default markup `src/_xml/defaultmarkups/gadgets/image.xml` into `Image1.xml`.
+- Copy-paste the default markup `src/_xml/defaultmarkups/gadgets/Image.xml` into `Image1.xml`.
 - Customize the markup with different classes and IDs.
 - Create styles for the custom markup in `Image1.scss`.
 
@@ -159,7 +159,7 @@ Gadget with `<b:widget-settings>`. For example, [image gadget](xml-defaultmarkup
 
 Gadget without `<b:widget-settings>`. For example, [blog search gadget](xml-defaultmarkups-gadgets.html#blog-search):
 
-- Copy-paste the default markup `src/_xml/defaultmarkups/gadgets/blog-search.xml` into `BlogSearch1.xml`.
+- Copy-paste the default markup `src/_xml/defaultmarkups/gadgets/BlogSearch.xml` into `BlogSearch1.xml`.
 - Customize the markup with different classes and IDs.
 - Create styles for the custom markup in `BlogSearch1.scss`.
 

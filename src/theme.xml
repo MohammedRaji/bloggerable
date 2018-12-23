@@ -210,55 +210,55 @@ Default markups
   <b:comment>### Blog Archive ###</b:comment>
 
   <b:defaultmarkup type='BlogArchive'>
-    <!--(bake _xml/defaultmarkups/gadgets/blog-archive.xml)-->
+    <!--(bake _xml/defaultmarkups/gadgets/BlogArchive.xml)-->
   </b:defaultmarkup>
 
   <b:comment>### Blog Search ###</b:comment>
 
   <b:defaultmarkup type='BlogSearch'>
-    <!--(bake _xml/defaultmarkups/gadgets/blog-search.xml)-->
+    <!--(bake _xml/defaultmarkups/gadgets/BlogSearch.xml)-->
   </b:defaultmarkup>
 
   <b:comment>### Contact Form ###</b:comment>
 
   <b:defaultmarkup type='ContactForm'>
-    <!--(bake _xml/defaultmarkups/gadgets/contact-form.xml)-->
+    <!--(bake _xml/defaultmarkups/gadgets/ContactForm.xml)-->
   </b:defaultmarkup>
 
   <b:comment>### Featured Post ###</b:comment>
 
   <b:defaultmarkup type='FeaturedPost'>
-    <!--(bake _xml/defaultmarkups/gadgets/featured-post.xml)-->
+    <!--(bake _xml/defaultmarkups/gadgets/FeaturedPost.xml)-->
   </b:defaultmarkup>
 
   <b:comment>### Follow by Email ###</b:comment>
 
   <b:defaultmarkup type='FollowByEmail'>
-    <!--(bake _xml/defaultmarkups/gadgets/follow-by-email.xml)-->
-  </b:defaultmarkup>
-
-  <b:comment>### Image ###</b:comment>
-
-  <b:defaultmarkup type='Image'>
-    <!--(bake _xml/defaultmarkups/gadgets/image.xml)-->
-  </b:defaultmarkup>
-
-  <b:comment>### Labels ###</b:comment>
-
-  <b:defaultmarkup type='Label'>
-    <!--(bake _xml/defaultmarkups/gadgets/labels.xml)-->
+    <!--(bake _xml/defaultmarkups/gadgets/FollowByEmail.xml)-->
   </b:defaultmarkup>
 
   <b:comment>### Page Header ###</b:comment>
 
   <b:defaultmarkup type='Header'>
-    <!--(bake _xml/defaultmarkups/gadgets/page-header.xml)-->
+    <!--(bake _xml/defaultmarkups/gadgets/Header.xml)-->
+  </b:defaultmarkup>
+
+  <b:comment>### Image ###</b:comment>
+
+  <b:defaultmarkup type='Image'>
+    <!--(bake _xml/defaultmarkups/gadgets/Image.xml)-->
+  </b:defaultmarkup>
+
+  <b:comment>### Labels ###</b:comment>
+
+  <b:defaultmarkup type='Label'>
+    <!--(bake _xml/defaultmarkups/gadgets/Label.xml)-->
   </b:defaultmarkup>
 
   <b:comment>### Popular Posts ###</b:comment>
 
   <b:defaultmarkup type='PopularPosts'>
-    <!--(bake _xml/defaultmarkups/gadgets/popular-posts.xml)-->
+    <!--(bake _xml/defaultmarkups/gadgets/PopularPosts.xml)-->
   </b:defaultmarkup>
 </b:defaultmarkups>
 
