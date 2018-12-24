@@ -15,14 +15,6 @@ For improved cross-browser rendering, we use [Normalize.css](https://necolas.git
       <span class="doc-badge-item">Source</span>
       <span class="doc-badge-item doc-badge-item-info">src/_scss/_normalize.scss</span>
     </div>
-    <div class="doc-badge">
-      <span class="doc-badge-item">Variables</span>
-      <span class="doc-badge-item doc-badge-item-danger">No</span>
-    </div>
-    <div class="doc-badge">
-      <span class="doc-badge-item">Depend on Base CSS</span>
-      <span class="doc-badge-item doc-badge-item-danger">No</span>
-    </div>
   </div>
 </figure>
 
