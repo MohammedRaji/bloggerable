@@ -1,6 +1,6 @@
 # Bloggerable
 
-A starter theme for [Blogger](https://blogger.com).
+A starter theme for [Blogger](https://blogger.com) with superpowers.
 
 
 ## Documentation
