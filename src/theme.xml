@@ -53,9 +53,7 @@ CSS
 <b:if cond='!data:view.isLayoutMode'>
 <style>
 <!--(bake tmp/css/bundle.css)-->
-/*! _xml (Sass) */
 <!--(bake tmp/css/xml-sass.css)-->
-/*! _xml (CSS) */
 <!--(bake tmp/css/xml-css.css)-->
 </style>
 </b:if>
@@ -82,14 +80,7 @@ CSS
 </head>
 <body>
 
-
-<b:comment>
-#############################################################################
-Body classes and skip navigation
-############################################################################# </b:comment>
-
-<b:comment>### Body classes ###</b:comment>
-
+<b:comment>=== Body classes ===</b:comment>
 <b:class cond='data:view.isHomepage' name='is-homepage'/>
 <b:class cond='data:view.isPost' name='is-post'/>
 <b:class cond='data:view.isPage' name='is-page'/>
@@ -100,11 +91,13 @@ Body classes and skip navigation
 <b:class cond='data:view.isError' name='is-error'/>
 <b:class cond='data:view.isPreview' name='is-preview'/>
 
-<b:comment>### Skip navigation ###</b:comment>
 
-<a class='skiplink' href='#main-content' id='skiplink'>
-  <data:messages.skipToMainContent/>
-</a>
+<b:comment>
+#############################################################################
+Skip navigation
+############################################################################# </b:comment>
+
+<!--(bake _xml/skip-navigation.xml)-->
 
 
 <b:comment>
@@ -112,23 +105,7 @@ Body classes and skip navigation
 Header
 ############################################################################# </b:comment>
 
-<header class='header' id='header'>
-  <div class='container'>
-    <div class='header-inner'>
-      <h1 class='header-title'>
-        <a class='header-title-link' expr:href='data:blog.homepageUrl'>
-          <b:attr name='b:whitespace' value='remove'/>
-          <data:blog.title/>
-        </a>
-      </h1>
-      <b:if cond='data:widgets any (w =&gt; w.sectionId == "b-section-header-nav")'>
-        <b:section class='b-section-header-nav' id='b-section-header-nav' maxwidgets='1' name='Header nav' showaddelement='no'>
-          <!--(bake _xml/widgets/b-section-header-nav/PageList1.xml)-->
-        </b:section>
-      </b:if>
-    </div><!-- /.header-inner -->
-  </div><!-- /.container -->
-</header>
+<!--(bake _xml/header.xml)-->
 
 
 <b:comment>
@@ -136,34 +113,7 @@ Header
 Main content (main and sidebar)
 ############################################################################# </b:comment>
 
-<div class='main-content' id='main-content'>
-  <div class='container'>
-    <div class='main-content-inner'>
-      <div class='main-content-row'>
-        <!-- Main -->
-        <main class='main-col layout-mode-col-8' id='main-col' role='main'>
-          <div class='main' id='main'>
-            <b:section class='b-section-main' id='b-section-main' maxwidgets='1' name='Main' showaddelement='no'>
-              <!--(bake _xml/widgets/b-section-main/Blog1.xml)-->
-            </b:section>
-          </div><!-- /.main -->
-        </main><!-- /.main-col -->
-
-        <!-- Sidebar -->
-        <aside class='sidebar-col layout-mode-col-4' id='sidebar-col'>
-          <div class='sidebar' id='sidebar'>
-            <b:section class='b-section-sidebar' id='b-section-sidebar' name='Sidebar'>
-              <!--(bake _xml/widgets/b-section-sidebar/BlogSearch1.xml)-->
-              <!--(bake _xml/widgets/b-section-sidebar/Label1.xml)-->
-              <!--(bake _xml/widgets/b-section-sidebar/BlogArchive1.xml)-->
-              <!--(bake _xml/widgets/b-section-sidebar/HTML1.xml)-->
-            </b:section>
-          </div><!-- /.sidebar -->
-        </aside><!-- /.sidebar-col -->
-      </div><!-- /.main-content-row -->
-    </div><!-- /.main-content-inner -->
-  </div><!-- /.container -->
-</div><!-- /.main-content -->
+<!--(bake _xml/main-content.xml)-->
 
 
 <b:comment>
@@ -171,19 +121,7 @@ Main content (main and sidebar)
 Footer
 ############################################################################# </b:comment>
 
-<footer class='footer' id='footer'>
-  <div class='container'>
-    <div class='footer-inner'>
-      <b:if cond='data:widgets any (w =&gt; w.sectionId == "b-section-footer-nav")'>
-        <b:section class='b-section-footer-nav' id='b-section-footer-nav' maxwidgets='1' name='Footer nav' showaddelement='no'>
-          <!--(bake _xml/widgets/b-section-footer-nav/LinkList1.xml)-->
-        </b:section>
-      </b:if>
-      <p class='footer-text'>&#169; <data:blog.title/>. <a expr:href='data:blog.bloggerUrl'><b:message name='messages.poweredByBlogger'/></a>.</p>
-      <p class='footer-text'>Bloggerable is open source. It's developed and maintained on <a href='https://github.com/blogger-starter/blogger-starter'>GitHub</a>.</p>
-    </div><!-- /.footer-inner -->
-  </div><!-- /.container -->
-</footer><!-- /.footer -->
+<!--(bake _xml/footer.xml)-->
 
 
 <b:comment>

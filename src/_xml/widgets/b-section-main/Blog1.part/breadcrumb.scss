@@ -1,0 +1,38 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: .75rem 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  list-style: none;
+  background-color: #f8f9fa;
+  border-radius: .25rem;
+}
+
+//= Item
+
+.breadcrumb-item {
+  color: #212529;
+
+  &.active {
+    color: #6c757d;
+  }
+
+  & + &::before {
+    display: inline-block;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    color: #6c757d;
+    content: "/";
+  }
+  &.active + &.active::before {
+    content: ":";
+  }
+}
+
+//= Link
+
+// .breadcrumb-link {}

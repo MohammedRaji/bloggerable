@@ -1,0 +1,46 @@
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: -.5rem;
+}
+
+.pager-newer {
+  margin-right: .25rem;
+  margin-left: .25rem;
+}
+.pager-home {
+  margin-right: .25rem;
+  margin-left: .25rem;
+}
+.pager-older {
+  margin-right: .25rem;
+  margin-left: .25rem;
+}
+
+.pager-link {
+  position: relative;
+  display: inline-block;
+  padding: .5rem .75rem;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 2rem;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+  }
+  &.disabled {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+  }
+}

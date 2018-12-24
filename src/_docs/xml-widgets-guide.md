@@ -31,15 +31,15 @@ Learn how to add a widget.
 ```plaintext
 [root theme directory]
 └── src/
-    ├── _xml/
-    │   └── widgets/
-    │       └── b-section-example/
-    │           ├── Label1.xml
-    │           └── LinkList1.xml
-    └── theme.xml
+    └── _xml/
+        ├── widgets/
+        │   └── b-section-example/
+        │       ├── Label1.xml
+        │       └── LinkList1.xml
+        └── example.xml
 ```
 
-Create a `<b:section>` in `theme.xml`:
+Create a `<b:section>` in `example.xml`:
 
 ```html
 <b:section class='b-section-example' id='b-section-example'>

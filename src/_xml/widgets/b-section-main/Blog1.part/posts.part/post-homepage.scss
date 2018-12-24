@@ -1,0 +1,41 @@
+.post-homepage {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+//
+// Title
+//
+
+.post-homepage-title {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+//= Link
+
+// .post-homepage-title-link {}
+
+//
+// Snippet
+//
+
+.post-homepage-snippet {
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6c757d;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

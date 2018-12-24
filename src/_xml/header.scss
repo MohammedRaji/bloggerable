@@ -1,0 +1,65 @@
+.header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.header-inner {
+  padding: 0;
+  background-color: transparent;
+}
+
+//
+// Title
+//
+
+.header-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+//= Link
+
+.header-title-link {
+  color: #6c757d;
+
+  &:hover,
+  &:focus {
+    color: #212529;
+    text-decoration: none;
+  }
+}
+
+//
+// Responsive
+//
+
+.b-section-header-nav {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .header-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-title {
+    max-width: 300px;
+    margin-right: 3rem;
+    text-align: left;
+  }
+  .b-section-header-nav {
+    margin-top: 0;
+  }
+}

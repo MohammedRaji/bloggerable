@@ -1,4 +1,4 @@
-<b:if cond='data:view.isPost'>
+<b:if cond='data:view.isPost or data:view.isPage'>
   <b:loop values='data:posts' var='post'>
     <b:if cond='data:post.allowComments'>
 

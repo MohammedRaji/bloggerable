@@ -1,0 +1,48 @@
+.comments {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+//
+// Title
+//
+
+.comments-title {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+//
+// Alert
+//
+
+.comments-alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #856404;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: .25rem;
+
+  > * {
+    margin-top: 0;
+    margin-bottom: .5rem;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  .comments-alert-link {
+    color: #533f03;
+
+    &:hover {
+      color: #533f03;
+    }
+  }
+}

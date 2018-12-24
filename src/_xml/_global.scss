@@ -1,0 +1,72 @@
+//= Add global variables, functions, mixins, and styles in this file.
+//= The variables, functions, and mixins in this file can be used
+//  by another Sass files in the `src/_xml`.
+//= The styles in this file can be used in any `.xml` files.
+//= The name of the variables, functions, mixins, and styles must be unique
+//  to avoid override by another Sass or CSS files.
+
+// ==========================================================================
+// Functions
+// ==========================================================================
+
+// ...
+
+// ==========================================================================
+// Variables
+// ==========================================================================
+
+// ...
+
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// ...
+
+// ==========================================================================
+// Styles
+// ==========================================================================
+
+// =========================================
+// Containers
+// =========================================
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+//= Small devices (landscape phones, 576px and up)
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+//= Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+//= Large devices (desktops, 992px and up)
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+//= Extra large devices (large desktops, 1200px and up)
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

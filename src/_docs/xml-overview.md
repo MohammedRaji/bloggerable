@@ -102,9 +102,9 @@ Bar component:
 
 The styles in `folder-1/*.scss` and `folder-2/*.scss` will be available in the `src/tmp/css/xml-sass.css`.
 
-#### Variables, functions, and mixins
+#### Variables, functions, mixins, and styles
 
-You can add local and/or global variables, functions, and mixins. The name of the variables, functions, and mixins must be unique to avoid override by another Sass files in the `src/_xml`.
+You can add local and/or global variables, functions, mixins, and styles.
 
 ##### Local example
 
@@ -124,7 +124,7 @@ $foo-bg:    #000 !default;
 
 ##### Global example
 
-Create a new file `_global.scss` in `src/_xml`. In this new file add variables, functions, and mixins. Functions must come first, then variables, and then mixins.
+Add global variables, functions, mixins, and styles in `src/_xml/_global.scss`.
 
 Example global variables:
 
