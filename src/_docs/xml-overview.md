@@ -42,42 +42,42 @@ We uses gadget version `2`:
 
 You can create Sass/CSS files in `src/_xml`, the Sass/CSS files will be automatically concatenated, compiled, and minified into `src/tmp/css/xml-sass.css` (Sass files) and `src/tmp/css/xml-css.css` (CSS files).
 
-When using this feature, its CSS will apply to elements of the current file/component only. This means the element and its CSS must be set specifically.
+When using this feature, its CSS will apply to elements of the current file/component only. This means the component and its CSS must be set specifically.
 
-Example:
+**Example**
 
-Component 1
+Foo component:
 
 ```html
-# component-1.xml
+# foo.xml
 
-<div class='component-1-element'>
+<div class='foo-element'>
   ...
 </div>
 ```
 
 ```sass
-# component-1.scss
+# foo.scss
 
-.component-1-element {
+.foo-element {
   ...
 }
 ```
 
-Component 2
+Bar component:
 
 ```html
-# component-2.xml
+# bar.xml
 
-<div class='component-2-element'>
+<div class='bar-element'>
   ...
 </div>
 ```
 
 ```sass
-# component-2.scss
+# bar.scss
 
-.component-2-element {
+.bar-element {
   ...
 }
 ```
@@ -89,15 +89,15 @@ Component 2
 └── src/
     └── _xml/
         ├── folder-1/
-        │   ├── component-1.scss
-        │   ├── component-1.xml
-        │   ├── component-2.scss
-        │   └── component-2.xml
+        │   ├── foo.scss
+        │   ├── foo.xml
+        │   ├── bar.scss
+        │   └── bar.xml
         └── folder-2/
-            ├── component-3.scss
-            ├── component-3.xml
-            ├── component-4.scss
-            └── component-4.xml
+            ├── baz.scss
+            ├── baz.xml
+            ├── qux.scss
+            └── qux.xml
 ```
 
 The styles in `folder-1/*.scss` and `folder-2/*.scss` will be available in the `src/tmp/css/xml-sass.css`.
@@ -111,14 +111,14 @@ You can add local and/or global variables, functions, and mixins. The name of th
 Example local variables:
 
 ```sass
-# src/_xml/folder-1/component-1.scss
+# src/_xml/folder-1/foo.scss
 
-$component-1-color: #fff !default;
-$component-1-bg:    #000 !default;
+$foo-color: #fff !default;
+$foo-bg:    #000 !default;
 
-.component-1-element {
-  color: $component-1-color;
-  background-color: $component-1-bg;
+.foo-element {
+  color: $foo-color;
+  background-color: $foo-bg;
 }
 ```
 
@@ -136,9 +136,9 @@ $bg:    #000 !default;
 ```
 
 ```sass
-# src/_xml/folder-1/component-2.scss
+# src/_xml/folder-1/bar.scss
 
-.component-2-element {
+.bar-element {
   color: $color;
   background-color: $bg;
 }
@@ -161,15 +161,15 @@ You can also import variables, functions, and mixins from `src/_scss`, or import
 └── src/
     └── _xml/
         ├── folder-1/
-        │   ├── component-1.css
-        │   ├── component-1.xml
-        │   ├── component-2.css
-        │   └── component-2.xml
+        │   ├── foo.css
+        │   ├── foo.xml
+        │   ├── bar.css
+        │   └── bar.xml
         └── folder-2/
-            ├── component-3.css
-            ├── component-3.xml
-            ├── component-4.css
-            └── component-4.xml
+            ├── baz.css
+            ├── baz.xml
+            ├── qux.css
+            └── qux.xml
 ```
 
 The styles in `folder-1/*.css` and `folder-2/*.css` will be available in the `src/tmp/css/xml-css.css`.
