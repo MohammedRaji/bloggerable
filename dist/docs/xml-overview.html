@@ -4,55 +4,55 @@
 </code></pre><p>We uses gadget version <code>2</code>:</p><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">b:defaultwidgetversion</span>=<span class="hljs-value">'2'</span>&gt;</span>
   ...
 <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
-</code></pre><h2 id="scoped-css">Scoped CSS</h2><p>You can create Sass/CSS files in <code>src/_xml</code>, the Sass/CSS files will be automatically concatenated, compiled, and minified into <code>src/tmp/css/xml-sass.css</code> (Sass files) and <code>src/tmp/css/xml-css.css</code> (CSS files).</p><p>When using this feature, its CSS will apply to elements of the current file/component only. This means the element and its CSS must be set specifically.</p><p>Example:</p><p>Component 1</p><pre><code class="lang-html"># component-1.xml
+</code></pre><h2 id="scoped-css">Scoped CSS</h2><p>You can create Sass/CSS files in <code>src/_xml</code>, the Sass/CSS files will be automatically concatenated, compiled, and minified into <code>src/tmp/css/xml-sass.css</code> (Sass files) and <code>src/tmp/css/xml-css.css</code> (CSS files).</p><p>When using this feature, its CSS will apply to elements of the current file/component only. This means the component and its CSS must be set specifically.</p><p><strong>Example</strong></p><p>Foo component:</p><pre><code class="lang-html"># foo.xml
 
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">'component-1-element'</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">'foo-element'</span>&gt;</span>
   ...
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre><pre><code class="lang-sass"><span class="hljs-comment"># component-1.scss</span>
+</code></pre><pre><code class="lang-sass"><span class="hljs-comment"># foo.scss</span>
 
-.component-<span class="hljs-number">1</span>-element {
+.foo-element {
   <span class="hljs-keyword">...</span>
 }
-</code></pre><p>Component 2</p><pre><code class="lang-html"># component-2.xml
+</code></pre><p>Bar component:</p><pre><code class="lang-html"># bar.xml
 
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">'component-2-element'</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">'bar-element'</span>&gt;</span>
   ...
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre><pre><code class="lang-sass"><span class="hljs-comment"># component-2.scss</span>
+</code></pre><pre><code class="lang-sass"><span class="hljs-comment"># bar.scss</span>
 
-.component-<span class="hljs-number">2</span>-element {
+.bar-element {
   <span class="hljs-keyword">...</span>
 }
 </code></pre><h3 id="sass-example">Sass example</h3><pre><code class="lang-plaintext">[root theme directory]
 └── src/
     └── _xml/
         ├── folder-<span class="hljs-number">1</span>/
-        │   ├── component-<span class="hljs-number">1</span><span class="hljs-class">.scss</span>
-        │   ├── component-<span class="hljs-number">1</span><span class="hljs-class">.xml</span>
-        │   ├── component-<span class="hljs-number">2</span><span class="hljs-class">.scss</span>
-        │   └── component-<span class="hljs-number">2</span><span class="hljs-class">.xml</span>
+        │   ├── foo<span class="hljs-class">.scss</span>
+        │   ├── foo<span class="hljs-class">.xml</span>
+        │   ├── bar<span class="hljs-class">.scss</span>
+        │   └── bar<span class="hljs-class">.xml</span>
         └── folder-<span class="hljs-number">2</span>/
-            ├── component-<span class="hljs-number">3</span><span class="hljs-class">.scss</span>
-            ├── component-<span class="hljs-number">3</span><span class="hljs-class">.xml</span>
-            ├── component-<span class="hljs-number">4</span><span class="hljs-class">.scss</span>
-            └── component-<span class="hljs-number">4</span>.xml
-</code></pre><p>The styles in <code>folder-1/*.scss</code> and <code>folder-2/*.scss</code> will be available in the <code>src/tmp/css/xml-sass.css</code>.</p><h4 id="variables-functions-and-mixins">Variables, functions, and mixins</h4><p>You can add local and/or global variables, functions, and mixins. The name of the variables, functions, and mixins must be unique to avoid override by another Sass files in the <code>src/_xml</code>.</p><h5 id="local-example">Local example</h5><p>Example local variables:</p><pre><code class="lang-sass"># src/_xml/folder-<span class="hljs-number">1</span>/component-<span class="hljs-number">1.</span>scss
+            ├── baz<span class="hljs-class">.scss</span>
+            ├── baz<span class="hljs-class">.xml</span>
+            ├── qux<span class="hljs-class">.scss</span>
+            └── qux.xml
+</code></pre><p>The styles in <code>folder-1/*.scss</code> and <code>folder-2/*.scss</code> will be available in the <code>src/tmp/css/xml-sass.css</code>.</p><h4 id="variables-functions-mixins-and-styles">Variables, functions, mixins, and styles</h4><p>You can add local and/or global variables, functions, mixins, and styles.</p><h5 id="local-example">Local example</h5><p>Example local variables:</p><pre><code class="lang-sass"># src/_xml/folder-<span class="hljs-number">1</span>/foo.scss
 
-<span class="hljs-variable">$component</span>-<span class="hljs-number">1</span>-<span class="hljs-keyword">color</span>: #fff !<span class="hljs-keyword">default</span>;
-<span class="hljs-variable">$component</span>-<span class="hljs-number">1</span>-bg:    #<span class="hljs-number">000</span> !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$foo</span>-<span class="hljs-keyword">color</span>: #fff !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$foo</span>-bg:    #<span class="hljs-number">000</span> !<span class="hljs-keyword">default</span>;
 
-.component-<span class="hljs-number">1</span>-element {
-  <span class="hljs-keyword">color</span>: <span class="hljs-variable">$component</span>-<span class="hljs-number">1</span>-<span class="hljs-keyword">color</span>;
-  background-<span class="hljs-keyword">color</span>: <span class="hljs-variable">$component</span>-<span class="hljs-number">1</span>-bg;
+.foo-element {
+  <span class="hljs-keyword">color</span>: <span class="hljs-variable">$foo</span>-<span class="hljs-keyword">color</span>;
+  background-<span class="hljs-keyword">color</span>: <span class="hljs-variable">$foo</span>-bg;
 }
-</code></pre><h5 id="global-example">Global example</h5><p>Create a new file <code>_global.scss</code> in <code>src/_xml</code>. In this new file add variables, functions, and mixins. Functions must come first, then variables, and then mixins.</p><p>Example global variables:</p><pre><code class="lang-sass"><span class="hljs-preprocessor"># src/_xml/_global.scss</span>
+</code></pre><h5 id="global-example">Global example</h5><p>Add global variables, functions, mixins, and styles in <code>src/_xml/_global.scss</code>.</p><p>Example global variables:</p><pre><code class="lang-sass"><span class="hljs-preprocessor"># src/_xml/_global.scss</span>
 
 <span class="hljs-label">$color:</span> <span class="hljs-preprocessor">#fff !default;</span>
 <span class="hljs-label">$bg:</span>    <span class="hljs-preprocessor">#000 !default;</span>
-</code></pre><pre><code class="lang-sass"># src/_xml/folder-<span class="hljs-number">1</span>/component-<span class="hljs-number">2.</span>scss
+</code></pre><pre><code class="lang-sass"># src/_xml/folder-<span class="hljs-number">1</span>/bar.scss
 
-.component-<span class="hljs-number">2</span>-element {
+.bar-element {
   <span class="hljs-keyword">color</span>: <span class="hljs-variable">$color</span>;
   background-<span class="hljs-keyword">color</span>: <span class="hljs-variable">$bg</span>;
 }
@@ -63,15 +63,15 @@
 └── src/
     └── _xml/
         ├── folder-<span class="hljs-number">1</span>/
-        │   ├── component-<span class="hljs-number">1</span><span class="hljs-class">.css</span>
-        │   ├── component-<span class="hljs-number">1</span><span class="hljs-class">.xml</span>
-        │   ├── component-<span class="hljs-number">2</span><span class="hljs-class">.css</span>
-        │   └── component-<span class="hljs-number">2</span><span class="hljs-class">.xml</span>
+        │   ├── foo<span class="hljs-class">.css</span>
+        │   ├── foo<span class="hljs-class">.xml</span>
+        │   ├── bar<span class="hljs-class">.css</span>
+        │   └── bar<span class="hljs-class">.xml</span>
         └── folder-<span class="hljs-number">2</span>/
-            ├── component-<span class="hljs-number">3</span><span class="hljs-class">.css</span>
-            ├── component-<span class="hljs-number">3</span><span class="hljs-class">.xml</span>
-            ├── component-<span class="hljs-number">4</span><span class="hljs-class">.css</span>
-            └── component-<span class="hljs-number">4</span>.xml
+            ├── baz<span class="hljs-class">.css</span>
+            ├── baz<span class="hljs-class">.xml</span>
+            ├── qux<span class="hljs-class">.css</span>
+            └── qux.xml
 </code></pre><p>The styles in <code>folder-1/*.css</code> and <code>folder-2/*.css</code> will be available in the <code>src/tmp/css/xml-css.css</code>.</p><h2 id="code-guide">Code guide</h2><h3 id="comments-and-organization">Comments and organization</h3><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">b:comment</span>&gt;</span>
 #############################################################################
 Heading 1
