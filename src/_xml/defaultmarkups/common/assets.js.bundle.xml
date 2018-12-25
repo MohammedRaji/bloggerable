@@ -1,0 +1,9 @@
+<b:includable id='assets.js.bundle'>
+
+  <script>
+  //<![CDATA[
+  <!--(bake /tmp/js/bundle.js)-->
+  //]]>
+  </script>
+
+</b:includable>

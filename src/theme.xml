@@ -1,46 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html>
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-
-
-<b:comment>
-#############################################################################
-Configuration
-############################################################################# </b:comment>
-
-<b:comment>=== Metadata ===</b:comment>
-<b:with value='"{{ theme.config.metadata.socialImage }}"' var='socialImage'>
-<b:with value='{ appId: "{{ theme.config.metadata.facebook.appId }}" }' var='facebook'>
-<b:with value='{ usernameSite: "{{ theme.config.metadata.twitter.usernameSite }}", usernameCreator: "{{ theme.config.metadata.twitter.usernameCreator }}" }' var='twitter'>
-
-
 <head>
 
 
 <b:comment>
 #############################################################################
-Title, meta and link tags
+Metadata
 ############################################################################# </b:comment>
 
-<b:comment>### Required meta tags ###</b:comment>
-
-<!--(bake _xml/head/required-meta-tags.xml)-->
-
-<b:comment>### Title ###</b:comment>
-
-<!--(bake _xml/head/title-tags.xml)-->
-
-<b:comment>### Custom all-head-content ###</b:comment>
-
-<!--(bake _xml/head/custom-all-head-content.xml)-->
-
-<b:comment>### Open Graph ###</b:comment>
-
-<!--(bake _xml/head/open-graph.xml)-->
-
-<b:comment>### Twitter Cards ###</b:comment>
-
-<!--(bake _xml/head/twitter-cards.xml)-->
+<b:include data='{
+  socialImage: "https://example.com/1200x630.png",
+  facebook: {
+    appId: "replace_me"
+  },
+  twitter: {
+    usernameSite: "@replace_me",
+    usernameCreator: "@replace_me"
+  }
+}' name='custom-all-head-content'/>
 
 
 <b:comment>
@@ -50,21 +28,17 @@ CSS
 
 <b:comment>### Bundle ###</b:comment>
 
-<b:if cond='!data:view.isLayoutMode'>
-<style>
-<!--(bake tmp/css/bundle.css)-->
-<!--(bake tmp/css/xml-sass.css)-->
-<!--(bake tmp/css/xml-css.css)-->
-</style>
-</b:if>
+<b:include cond='!data:view.isLayoutMode' name='assets.css.bundle'/>
 
 <b:comment>### Layout mode ###</b:comment>
 
+<b:if cond='data:view.isLayoutMode'>
 <b:template-skin>
 <![CDATA[
 <!--(bake tmp/css/template-skin.css)-->
 ]]>
 </b:template-skin>
+</b:if>
 
 <b:comment>### Skin ###</b:comment>
 
@@ -131,11 +105,7 @@ JavaScript
 
 <b:comment>### Bundle ###</b:comment>
 
-<script>
-//<![CDATA[
-<!--(bake tmp/js/bundle.js)-->
-//]]>
-</script>
+<b:include name='assets.js.bundle'/>
 
 
 <b:comment>
@@ -143,66 +113,8 @@ JavaScript
 Default markups
 ############################################################################# </b:comment>
 
-<b:defaultmarkups>
-
-  <b:comment>### Blog Archive ###</b:comment>
-
-  <b:defaultmarkup type='BlogArchive'>
-    <!--(bake _xml/defaultmarkups/gadgets/BlogArchive.xml)-->
-  </b:defaultmarkup>
-
-  <b:comment>### Blog Search ###</b:comment>
-
-  <b:defaultmarkup type='BlogSearch'>
-    <!--(bake _xml/defaultmarkups/gadgets/BlogSearch.xml)-->
-  </b:defaultmarkup>
-
-  <b:comment>### Contact Form ###</b:comment>
-
-  <b:defaultmarkup type='ContactForm'>
-    <!--(bake _xml/defaultmarkups/gadgets/ContactForm.xml)-->
-  </b:defaultmarkup>
-
-  <b:comment>### Featured Post ###</b:comment>
-
-  <b:defaultmarkup type='FeaturedPost'>
-    <!--(bake _xml/defaultmarkups/gadgets/FeaturedPost.xml)-->
-  </b:defaultmarkup>
-
-  <b:comment>### Follow by Email ###</b:comment>
-
-  <b:defaultmarkup type='FollowByEmail'>
-    <!--(bake _xml/defaultmarkups/gadgets/FollowByEmail.xml)-->
-  </b:defaultmarkup>
-
-  <b:comment>### Page Header ###</b:comment>
-
-  <b:defaultmarkup type='Header'>
-    <!--(bake _xml/defaultmarkups/gadgets/Header.xml)-->
-  </b:defaultmarkup>
-
-  <b:comment>### Image ###</b:comment>
-
-  <b:defaultmarkup type='Image'>
-    <!--(bake _xml/defaultmarkups/gadgets/Image.xml)-->
-  </b:defaultmarkup>
-
-  <b:comment>### Labels ###</b:comment>
-
-  <b:defaultmarkup type='Label'>
-    <!--(bake _xml/defaultmarkups/gadgets/Label.xml)-->
-  </b:defaultmarkup>
-
-  <b:comment>### Popular Posts ###</b:comment>
-
-  <b:defaultmarkup type='PopularPosts'>
-    <!--(bake _xml/defaultmarkups/gadgets/PopularPosts.xml)-->
-  </b:defaultmarkup>
-</b:defaultmarkups>
+<!--(bake _xml/defaultmarkups/defaultmarkups.xml)-->
 
 
 </body>
-</b:with>
-</b:with>
-</b:with>
 </html>
