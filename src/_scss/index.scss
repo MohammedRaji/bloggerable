@@ -1,12 +1,12 @@
 /*!
- * {{ theme.name }} v{{ theme.version }}
- * Based on {{ base.1.name }}
+ * {{ config.theme.name }} v{{ config.theme.version }}
+ * Based on {{ config.bloggerable.name }}
  */
 
 /*!
- * {{ base.1.name }} v{{ base.1.version }} ({{ base.1.homepage }})
- * Copyright {{ base.1.date }} {{ base.1.author.name }} ({{ base.1.author.url }})
- * Licensed under {{ base.1.license.name }} ({{ base.1.license.url }})
+ * {{ config.bloggerable.name }} v{{ config.bloggerable.version }} ({{ config.bloggerable.homepage }})
+ * Copyright {{ config.bloggerable.date }} {{ config.bloggerable.author.name }} ({{ config.bloggerable.author.url }})
+ * Licensed under {{ config.bloggerable.license.name }} ({{ config.bloggerable.license.url }})
  */
 
 @import "custom";

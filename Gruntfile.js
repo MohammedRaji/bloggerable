@@ -10,18 +10,16 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
-    configBase: grunt.file.readJSON('src/config.base.json'),
-    configTheme: grunt.file.readJSON('src/config.theme.json'),
-    configDocs: grunt.file.readJSON('src/config.docs.json'),
+    config: grunt.file.readJSON('src/config.json'),
 
     banner: '/*!\n' +
-            ' * {{ theme.name }} v{{ theme.version }}\n' +
-            ' * Based on {{ base.1.name }}\n' +
+            ' * {{ config.theme.name }} v{{ config.theme.version }}\n' +
+            ' * Based on {{ config.bloggerable.name }}\n' +
             ' */\n' +
             '/*!\n' +
-            ' * {{ base.1.name }} v{{ base.1.version }} ({{ base.1.homepage }})\n' +
-            ' * Copyright {{ base.1.date }} {{ base.1.author.name }} ({{ base.1.author.url }})\n' +
-            ' * Licensed under {{ base.1.license.name }} ({{ base.1.license.url }})\n' +
+            ' * {{ config.bloggerable.name }} v{{ config.bloggerable.version }} ({{ config.bloggerable.homepage }})\n' +
+            ' * Copyright {{ config.bloggerable.date }} {{ config.bloggerable.author.name }} ({{ config.bloggerable.author.url }})\n' +
+            ' * Licensed under {{ config.bloggerable.license.name }} ({{ config.bloggerable.license.url }})\n' +
             ' */\n',
 
     clean: {
@@ -30,25 +28,23 @@ module.exports = function (grunt) {
     },
 
     bake: {
+      options: {
+        content: function () {
+          var files = [{
+            path: 'src/config.json',
+            alias: 'config'
+          }];
+          return files.reduce(function (content, file) {
+            content[file.alias] = grunt.file.readJSON(file.path);
+            return content;
+          }, {
+            "rootDirname": __dirname.split(path.sep).pop()
+          });
+        }
+      },
       theme: {
         options: {
-          basePath: 'src',
-          content: function () {
-            var files = [{
-              path: 'src/config.base.json',
-              alias: 'base'
-            }, {
-              path: 'src/config.theme.json',
-              alias: 'theme'
-            }, {
-              path: 'src/config.docs.json',
-              alias: 'docs'
-            }];
-            return files.reduce(function (content, file) {
-              content[file.alias] = grunt.file.readJSON(file.path);
-              return content;
-            }, {});
-          }
+          basePath: 'src'
         },
         files: [{
           expand: true,
@@ -59,23 +55,7 @@ module.exports = function (grunt) {
       },
       coreCss: {
         options: {
-          basePath: 'src',
-          content: function () {
-            var files = [{
-              path: 'src/config.base.json',
-              alias: 'base'
-            }, {
-              path: 'src/config.theme.json',
-              alias: 'theme'
-            }, {
-              path: 'src/config.docs.json',
-              alias: 'docs'
-            }];
-            return files.reduce(function (content, file) {
-              content[file.alias] = grunt.file.readJSON(file.path);
-              return content;
-            }, {});
-          }
+          basePath: 'src'
         },
         files: [
           { src: 'src/skin.css', dest: 'src/tmp/css/skin.css' },
@@ -87,23 +67,7 @@ module.exports = function (grunt) {
       },
       coreJs: {
         options: {
-          basePath: 'src',
-          content: function () {
-            var files = [{
-              path: 'src/config.base.json',
-              alias: 'base'
-            }, {
-              path: 'src/config.theme.json',
-              alias: 'theme'
-            }, {
-              path: 'src/config.docs.json',
-              alias: 'docs'
-            }];
-            return files.reduce(function (content, file) {
-              content[file.alias] = grunt.file.readJSON(file.path);
-              return content;
-            }, {});
-          }
+          basePath: 'src'
         },
         files: [{
           expand: true,
@@ -114,25 +78,7 @@ module.exports = function (grunt) {
       },
       docs: {
         options: {
-          basePath: 'src',
-          content: function () {
-            var files = [{
-              path: 'src/config.base.json',
-              alias: 'base'
-            }, {
-              path: 'src/config.theme.json',
-              alias: 'theme'
-            }, {
-              path: 'src/config.docs.json',
-              alias: 'docs'
-            }];
-            return files.reduce(function (content, file) {
-              content[file.alias] = grunt.file.readJSON(file.path);
-              return content;
-            }, {
-              "rootDirname": __dirname.split(path.sep).pop()
-            });
-          }
+          basePath: 'src'
         },
         files: [{
           expand: true,

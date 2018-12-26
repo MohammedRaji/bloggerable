@@ -25,9 +25,7 @@ The directory structure looks something like this:
     ├── _scss
     ├── _xml
     ├── tmp
-    ├── config.base.json
-    ├── config.docs.json
-    ├── config.theme.json
+    ├── config.json
     └── theme.xml
 ```
 
@@ -69,11 +67,9 @@ The directory structure looks something like this:
     </tr>
     <tr>
       <td>
-        <div><code style="white-space: nowrap;">src/config.base.json</code></div>
-        <div><code style="white-space: nowrap;">src/config.docs.json</code></div>
-        <div><code style="white-space: nowrap;">src/config.theme.json</code></div>
+        <div><code style="white-space: nowrap;">src/config.json</code></div>
       </td>
-      <td>Configuration data.</td>
+      <td>A config file to gives you a lot of flexibility.</td>
     </tr>
     <tr>
       <td rowspan="3">
@@ -89,7 +85,7 @@ The directory structure looks something like this:
     </tr>
     <tr>
       <td><code style="white-space: nowrap;">src/theme.xml</code></td>
-      <td>The main file for the theme. All the compiled CSS and JS, and the XML partials will be included in this file.</td>
+      <td>The main file. All the compiled CSS and JS, and the XML partials will be included in this file.</td>
     </tr>
     <tr>
       <td>Other files/folders</td>
@@ -103,10 +99,10 @@ The directory structure looks something like this:
 
 The goal of this tutorial is to take you from having some development experience to building your first theme.
 
-1. Once downloaded, unzip the compressed folder and rename `bloggerable-{{ base.1.version }}` folder to your theme name (e.g., `my-awesome-theme`).
+1. Once downloaded, unzip the compressed folder and rename `bloggerable-{{ config.bloggerable.version }}` folder to the name of your theme, use `a-z` letters (e.g., `my-awesome-theme`).
 2. Read the [tooling setup](#tooling-setup) and [Grunt commands](#using-grunt-commands) below to use our build system.
 3. Read the basic [templating](#templating) below.
-4. Configure theme `src/config.theme.json` and docs `src/config.docs.json` (change `title` to your theme name—e.g., `My Awesome Theme`).
+4. Configure `src/config.json`.
 5. Explore the docs.
 6. Build an awesome theme and customize the docs to suit your theme.
 7. Run `grunt` to build your changes.
@@ -121,7 +117,7 @@ The goal of this tutorial is to take you from having some development experience
     4. Push to [GitHub](https://github.com) or other services.
 13. To release your theme, run `grunt release`, this command will compile the source and zip the root theme directory (exclude: `.git`, `.zip`, `node_modules`), you can find the zip file in the root theme directory.
 14. Share or sell your theme (the zip file).
-15. You can publish your theme documentation (`dist/docs`) to [GitHub Pages](https://pages.github.com) or other services.
+15. You can publish the docs (`dist/docs`) to [GitHub Pages](https://pages.github.com) or other services.
 
 
 ## Tooling setup
@@ -175,13 +171,17 @@ For example, the grunt-bake tag that can be used to include the partial in `src/
 
 ### Configuration
 
-Configuration data:
+Our source code have a `src/config.json` file to gives you a lot of flexibility.
 
-1. `src/config.base.json`
-2. `src/config.docs.json`
-3. `src/config.theme.json`
+You can access the config values by using:
 
-You can access the data in: 
+<!--(bake-start _process="false")-->
+```html
+{{ config.* }}
+```
+<!--(bake-end)-->
+
+You can access the config values in:
 
 - `src/theme.xml`
 - `src/skin.css`
@@ -191,33 +191,32 @@ You can access the data in:
 - `src/_js`
 - `src/_docs`
 
-Access the data:
-
-- `config.base.json` - access the data using <code>&lbrace;&lbrace; base.dataName &rbrace;&rbrace;</code>
-- `config.docs.json` - access the data using <code>&lbrace;&lbrace; docs.dataName &rbrace;&rbrace;</code>
-- `config.theme.json` - access the data using <code>&lbrace;&lbrace; theme.dataName &rbrace;&rbrace;</code>
-
 Example:
 
 ```json
-# config.theme.json
+# src/config.json
 
 {
-  "example": "Lorem ipsum dolor sit amet"
+  "x": {
+    "y": "z"
+  },
+  "example": "Lorem ipsum dolor sit amet."
 }
 ```
 
 <!--(bake-start _process="false")-->
 ```html
-# your-file.xml
+# src/_xml/file.xml
 
-<p>{{ theme.example }}.</p>
+{{ config.x.y }}
+<p>{{ config.example }}</p>
 ```
 <!--(bake-end)-->
 
 ```html
 Output:
 
+z
 <p>Lorem ipsum dolor sit amet.</p>
 ```
 

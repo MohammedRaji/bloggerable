@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><%if(section != 'None'){%><%=section%> - <%}%><%if(subsection != 'None'){%><%=subsection%>: <%}%><%=title%> &middot; {{ docs.title }}</title>
+    <title><%if(section != 'None'){%><%=section%> &middot; <%}%><%if(subsection != 'None'){%><%=subsection%>: <%}%><%=title%></title>
     <meta name="description" content="<%=description%>">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="assets/bundle/css/bundle.css">
@@ -67,13 +67,13 @@
         <a class="doc-nav-link" href="snippets-data-messages.html">Messages</a>
         <div class="doc-nav-divider"></div>
 
-        <h6 class="doc-nav-header doc-nav-header-secondary">{{ base.1.name }} Links</h6>
-        <a class="doc-nav-link" href="{{ docs.links.bloggerable.demo }}" target="_blank">Demo</a>
-        <a class="doc-nav-link" href="{{ docs.links.bloggerable.documentation }}" target="_blank">Documentation</a>
-        <a class="doc-nav-link" href="{{ docs.links.bloggerable.themes }}" target="_blank">Themes</a>
-        <a class="doc-nav-link" href="{{ docs.links.bloggerable.github }}" target="_blank">GitHub</a>
-        <a class="doc-nav-link" href="{{ docs.links.bloggerable.facebook }}" target="_blank">Facebook</a>
-        <a class="doc-nav-link" href="{{ docs.links.bloggerable.twitter }}" target="_blank">Twitter</a>
+        <h6 class="doc-nav-header doc-nav-header-secondary">{{ config.bloggerable.name }} Links</h6>
+        <a class="doc-nav-link" href="{{ config.docs.links.bloggerable.demo }}" target="_blank">Demo</a>
+        <a class="doc-nav-link" href="{{ config.docs.links.bloggerable.documentation }}" target="_blank">Documentation</a>
+        <a class="doc-nav-link" href="{{ config.docs.links.bloggerable.themes }}" target="_blank">Themes</a>
+        <a class="doc-nav-link" href="{{ config.docs.links.bloggerable.github }}" target="_blank">GitHub</a>
+        <a class="doc-nav-link" href="{{ config.docs.links.bloggerable.facebook }}" target="_blank">Facebook</a>
+        <a class="doc-nav-link" href="{{ config.docs.links.bloggerable.twitter }}" target="_blank">Twitter</a>
       </div>
     </nav>
     <button class="doc-nav-toggle" id="docNavToggle" type="button">

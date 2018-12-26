@@ -1,11 +1,11 @@
 /*!
- * {{ theme.name }} Docs
- * Based on {{ base.1.name }}
+ * {{ config.theme.name }} Docs
+ * Based on {{ config.bloggerable.name }}
  */
 
 /*!
- * {{ base.1.name }} Docs ({{ base.1.homepage }})
- * Copyright {{ base.1.date }} {{ base.1.author.name }} ({{ base.1.author.url }})
+ * {{ config.bloggerable.name }} Docs ({{ config.bloggerable.homepage }})
+ * Copyright {{ config.bloggerable.date }} {{ config.bloggerable.author.name }} ({{ config.bloggerable.author.url }})
  * Licensed under the Creative Commons Attribution 3.0 Unported License (https://creativecommons.org/licenses/by/3.0)
  */
 

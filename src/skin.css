@@ -5,21 +5,21 @@
    ========================================================================== */
 
 /*!
- * Name            : {{ theme.name }}
- * Version         : {{ theme.version }}
- * Date            : {{ theme.date }}
- * Homepage        : {{ theme.homepage }}
- * Author          : {{ theme.author.name }}
- * Author URL      : {{ theme.author.url }}
- * Repository Type : {{ theme.repository.type }}
- * Repository URL  : {{ theme.repository.url }}
- * License         : {{ theme.license.name }}
- * License URL     : {{ theme.license.url }}
- * Based on {{ base.1.name }}
+ * Name            : {{ config.theme.name }}
+ * Version         : {{ config.theme.version }}
+ * Date            : {{ config.theme.date }}
+ * Homepage        : {{ config.theme.homepage }}
+ * Author          : {{ config.theme.author.name }}
+ * Author URL      : {{ config.theme.author.url }}
+ * Repository Type : {{ config.theme.repository.type }}
+ * Repository URL  : {{ config.theme.repository.url }}
+ * License         : {{ config.theme.license.name }}
+ * License URL     : {{ config.theme.license.url }}
+ * Based on {{ config.bloggerable.name }}
  */
 
 /*!
- * {{ base.1.name }} v{{ base.1.version }} ({{ base.1.homepage }})
- * Copyright {{ base.1.date }} {{ base.1.author.name }} ({{ base.1.author.url }})
- * Licensed under {{ base.1.license.name }} ({{ base.1.license.url }})
+ * {{ config.bloggerable.name }} v{{ config.bloggerable.version }} ({{ config.bloggerable.homepage }})
+ * Copyright {{ config.bloggerable.date }} {{ config.bloggerable.author.name }} ({{ config.bloggerable.author.url }})
+ * Licensed under {{ config.bloggerable.license.name }} ({{ config.bloggerable.license.url }})
  */
