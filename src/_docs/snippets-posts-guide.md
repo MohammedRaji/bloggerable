@@ -10,7 +10,7 @@
 Learn how to use posts snippets.
 
 
-## Loops
+## Using the Loop
 
 Posts snippets must be used within the loop tag.
 
