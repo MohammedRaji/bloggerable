@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         files: [
           { src: 'src/skin.css', dest: 'src/tmp/css/skin.css' },
           { src: 'src/template-skin.css', dest: 'src/tmp/css/template-skin.css' },
-          { src: 'src/tmp/css/bundle.css', dest: 'src/tmp/css/bundle.css' },
+          { src: 'src/tmp/css/main.css', dest: 'src/tmp/css/main.css' },
           { src: 'src/tmp/css/xml-sass.css', dest: 'src/tmp/css/xml-sass.css' },
           { src: 'src/tmp/css/xml-css.css', dest: 'src/tmp/css/xml-css.css' }
         ]
@@ -72,7 +72,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'src/tmp/js/',
-          src: 'bundle.js',
+          src: 'main.js',
           dest: 'src/tmp/js'
         }]
       },
@@ -160,7 +160,7 @@ module.exports = function (grunt) {
           sourceMap: false
         },
         files: [
-          { 'src/tmp/css/bundle.css': 'src/_scss/index.scss' },
+          { 'src/tmp/css/main.css': 'src/_scss/index.scss' },
           { 'src/tmp/css/xml-sass.css': 'src/tmp/css/xml-sass.scss' }
         ]
       }
@@ -226,7 +226,7 @@ module.exports = function (grunt) {
       },
       coreJs: {
         files: {
-          'src/tmp/js/bundle.js': 'src/_js/index.js'
+          'src/tmp/js/main.js': 'src/_js/index.js'
         }
       }
     },
@@ -249,7 +249,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'src/tmp/js/',
-          src: 'bundle.js',
+          src: 'main.js',
           dest: 'src/tmp/js'
         }]
       },

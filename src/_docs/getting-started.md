@@ -51,11 +51,11 @@ The directory structure looks something like this:
     </tr>
     <tr>
       <td><code style="white-space: nowrap;">src/_js</code></td>
-      <td>The source code for JavaScript (<code>src/tmp/js/bundle.js</code>).</td>
+      <td>The source code for JavaScript (<code>src/tmp/js/main.js</code>).</td>
     </tr>
     <tr>
       <td><code style="white-space: nowrap;">src/_scss</code></td>
-      <td>The source code for CSS (<code>src/tmp/css/bundle.css</code>).</td>
+      <td>The source code for CSS (<code>src/tmp/css/main.css</code>).</td>
     </tr>
     <tr>
       <td><code style="white-space: nowrap;">src/_xml</code></td>

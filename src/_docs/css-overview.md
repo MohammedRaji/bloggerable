@@ -335,7 +335,7 @@ At the end of the `index.scss` file, add this line:
 
 In your Sass files, you can use our built-in Sass variables, functions and mixins. And the `_custom.scss` can also work for your Sass.
 
-Now, you can just build the source with `grunt`, and the output will be available in the `src/tmp/css/bundle.css`.
+Now, you can just build the source with `grunt`, and the output will be available in the `src/tmp/css/main.css`.
 
 
 ## Code guide
