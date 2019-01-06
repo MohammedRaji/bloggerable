@@ -43,7 +43,7 @@ Utilize our source Sass files to take advantage of variables, functions, mixins,
     </tr>
     <tr>
       <td><code style="white-space: nowrap;">\*\*/*.scss</code></td>
-      <td>Other Sass files are variables, functions, mixins and components.</td>
+      <td>Other Sass files are variables, functions, mixins, and components.</td>
     </tr>
   </tbody>
 </table>
@@ -287,55 +287,6 @@ Sass mixins:
 ```sass
 @include media-breakpoint-between(md, xl) { ... }
 ```
-
-
-## Create your own Sass
-
-- Under the `src/_scss` folder, create a new folder.
-- In this new folder, create your Sass files.
-- In the same folder create a new file `_variables.scss`, `_mixins.scss`, and `all.scss`.
-- In the same folder create a new folder called `mixins`.
-
-### Example
-
-```plaintext
-[root theme directory]
-└── src/
-    └── _scss/
-        ├── my-styles/              # Your Sass
-        │   ├── mixins/             # Create mixin files for your components in this folder
-        │   │   └── _my-mixin.scss  # Example mixin
-        │   ├── _mixins.scss        # Import your mixins from "mixins" folder to this file
-        │   ├── _my-component.scss  # Example component
-        │   ├── _variables.scss     # Write variables for your components in this file
-        │   └── all.scss            # Import all your Sass files to this file
-        └── index.scss              # Import all.scss to this file
-```
-
-In `_mixins.scss` file add this code:
-
-```sass
-@import "mixins/my-mixin";
-```
-
-In `all.scss` file add this code:
-
-```sass
-@import "variables";
-@import "mixins";
-
-@import "my-component";
-```
-
-At the end of the `index.scss` file, add this line:
-
-```sass
-@import "my-styles/all";
-```
-
-In your Sass files, you can use our built-in Sass variables, functions and mixins. And the `_custom.scss` can also work for your Sass.
-
-Now, you can just build the source with `grunt`, and the output will be available in the `src/tmp/css/main.css`.
 
 
 ## Code guide

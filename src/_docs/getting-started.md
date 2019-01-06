@@ -26,6 +26,8 @@ The directory structure looks something like this:
     ├── _xml
     ├── tmp
     ├── config.json
+    ├── skin.css
+    ├── template-skin.css
     └── theme.xml
 ```
 
@@ -104,7 +106,7 @@ The goal of this tutorial is to take you from having some development experience
 3. Read the basic [templating](#templating) below.
 4. Configure `src/config.json`.
 5. Explore the docs.
-6. Build an awesome theme and customize the docs to suit your theme.
+6. Build an awesome theme. You can also [create a new document](#create-a-new-document) for your theme.
 7. Run `grunt` to build your changes.
 8. To preview theme changes, apply the new compiled theme (`dist/theme.xml`) to your blog. Reload the local documentation in your browser to preview documentation changes.
 9. Done? (**Yes**: next) / (**No**: back to number `4`).
@@ -118,6 +120,66 @@ The goal of this tutorial is to take you from having some development experience
 13. To release your theme, run `grunt release`, this command will compile the source and zip the root theme directory (exclude: `.git`, `.zip`, `node_modules`), you can find the zip file in the root theme directory.
 14. Share or sell your theme (the zip file).
 15. You can publish the docs (`dist/docs`) to [GitHub Pages](https://pages.github.com) or other services.
+
+### Create a new document
+
+- Do not edit the existing docs in `src/_docs`.
+- Under the `src/_docs`, create a new `.md` file.
+- Update document navigation in `src/_docs/template.jst` to add the link, place in the appropriate section/subsection or create a new appropriate section/subsection.
+- Please learn from the source in `src/_docs` for more details.
+
+### Rewrite the default styles in `src/_scss`
+
+- Remove all Sass files and folder in `src/_scss` except `index.scss`.
+- Remove the docs `src/_docs/css-*.md` and its navigation link in `src/_docs/template.jst`.
+- Just like before, write your own styles in `src/_scss`, import your styles to `index.scss`, document your styles in `src/_docs` with filename `css-[name].md`, and update document navigation to add the link (place in the *CSS* section and create the appropriate subsection).
+
+### Updating your theme to latest Bloggerable
+
+Bloggerable is maintained under the [Semantic Versioning guidelines](https://semver.org).
+
+> A normal version number MUST take the form X.Y.Z where X, Y, and Z are non-negative integers, and MUST NOT contain leading zeroes. X is the major version, Y is the minor version, and Z is the patch version.
+
+#### Update to latest minor or patch version of Bloggerable
+
+For example, updating your theme from Bloggerable `v1.0.0` to `v1.0.1` or `v1.0.0` to `v1.1.0`.
+
+When you update your theme to the latest minor or patch version of Bloggerable, if the version of your theme is `v1.0`, bump your theme version to `v1.1`.
+
+##### Problem
+
+Updating your theme to the latest minor or patch version of Bloggerable might cause some problems because we provide a starter theme, default styles, and default structure. The problem is when your theme is no longer the same from our source code. Therefore we will explain how to update your theme to the latest minor or patch version of Bloggerable.
+
+##### Sample case
+
+For example, the version of your theme is `v1.0` based on Bloggerable `v1.0.0`. You will update your theme to Bloggerable `v1.1.0`.
+
+```md
+# Example Bloggerable v1.1.0 Changelog
+
+path/to/file1:
+
+- Fixes x
+
+path/to/file2:
+
+- Add x
+```
+
+- Update `path/to/file1` and `path/to/file2` in your theme, and then in `src/config.json` bump your theme version to `v1.1` and bump Bloggerable version to `v1.1.0`.
+- Or you don't need to update `path/to/file1` and/or `path/to/file2` in your theme if the file has been customized for your theme (no longer the same from our source code), and you can still bump your theme version to `v1.1` and bump Bloggerable version to `v1.1.0` in `src/config.json` to make your theme up-to-date.
+
+Adding and/or ignoring the latest changes from Bloggerable `v1.1.0` in your theme, you can still bump your theme version to `v1.1` and bump Bloggerable version to `v1.1.0` in `src/config.json` to make your theme up-to-date, but make sure that your theme has the same basic features as Bloggerable `v1.1.0` (specifically for build tools in `Gruntfile.js` and `devDependencies` in `package.json`).
+
+When you update the version number in `src/config.json`, please also update the `theme.date`, `bloggerable.date` and other `bloggerable.*` config if there are changes.
+
+#### Update to latest major version of Bloggerable
+
+For example, updating your theme from Bloggerable `v1.0.0` to `v2.0.0`.
+
+When you update your theme to the latest major version of Bloggerable, if the version of your theme is `v1.0`, bump your theme version to `v2.0`.
+
+To update your theme to the latest major version of Bloggerable (e.g., Bloggerable `v2.0.0`), please re-download Bloggerable `v2.0.0` and recreate your theme in Bloggerable `v2.0.0`.
 
 
 ## Tooling setup
