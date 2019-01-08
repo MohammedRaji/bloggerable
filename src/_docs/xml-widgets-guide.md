@@ -23,7 +23,7 @@ Learn how to add a widget.
 
 - Create a `<b:section>` in `.xml` file, the classes and IDs are named using the format `b-section-[name]`.
 - Under the `src/_xml/widgets`, create a new folder called `b-section-[name]`.
-- In this new folder, create a new widget file `[widget IDs].xml`.
+- In this new folder, create a new widget (`[widget IDs].xml`) file.
 - Include the widget file to the `<b:section>`.
 
 ### Example
@@ -47,7 +47,7 @@ Create a `<b:section>` in `example.xml`:
 </b:section>
 ```
 
-Create a new folder called `b-section-example` in `_xml/widgets`, in this new folder create `Label1.xml` and `LinkList1.xml`:
+`Label1.xml` and `LinkList1.xml`:
 
 ```html
 # Label1.xml
@@ -65,7 +65,7 @@ Create a new folder called `b-section-example` in `_xml/widgets`, in this new fo
 </b:widget>
 ```
 
-Include the widget file to the `<b:section>`:
+Include the widget file to the `<b:section>` in `example.xml`:
 
 ```html
 <b:section class='b-section-example' id='b-section-example'>
@@ -75,6 +75,8 @@ Include the widget file to the `<b:section>`:
 ```
 
 ### Use defaultmarkups
+
+Use the default markups and styles in [`src/_xml/defaultmarkups/gadgets`](xml-defaultmarkups-gadgets.html).
 
 ```plaintext
 [root theme directory]
@@ -113,6 +115,8 @@ Gadget without `<b:widget-settings>`. For example, [blog search gadget](xml-defa
 ```
 
 ### Override defaultmarkups
+
+Override the default markups and styles in [`src/_xml/defaultmarkups/gadgets`](xml-defaultmarkups-gadgets.html).
 
 ```plaintext
 [root theme directory]

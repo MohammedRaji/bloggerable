@@ -74,9 +74,14 @@
   background-color: rgba(255, 255, 255, .145);
 }
 
-/** Header **/
+.doc-nav-link-title {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
 
-.doc-nav-header {
+/** Section **/
+
+.doc-nav-section {
   padding: 0 1rem;
   margin-top: .75rem;
   margin-bottom: .75rem;
@@ -88,11 +93,7 @@
   text-transform: uppercase;
 }
 
-.doc-nav-header-secondary {
-  color: #4db6ac;
-}
-
-.doc-nav-subheader {
+.doc-nav-subsection {
   margin: .75rem 1rem;
   font-size: .65rem;
   font-weight: 700;
@@ -100,6 +101,10 @@
   color: #6c757d;
   text-align: left;
   text-transform: uppercase;
+}
+
+.doc-nav-section + .doc-nav-subsection {
+  margin-top: 1.5rem;
 }
 
 /** Divider **/
@@ -111,7 +116,7 @@
   border-top: 1px solid #32383e;
 }
 
-.doc-nav-divider + .doc-nav-header {
+.doc-nav-divider + .doc-nav-section {
   margin-top: 1.75rem;
 }
 

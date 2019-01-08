@@ -53,11 +53,11 @@ The directory structure looks something like this:
     </tr>
     <tr>
       <td><code style="white-space: nowrap;">src/_js</code></td>
-      <td>The source code for JavaScript (<code>src/tmp/js/main.js</code>).</td>
+      <td>The source code for main JavaScript (<code>src/tmp/js/main.js</code>).</td>
     </tr>
     <tr>
       <td><code style="white-space: nowrap;">src/_scss</code></td>
-      <td>The source code for CSS (<code>src/tmp/css/main.css</code>).</td>
+      <td>The source code for main CSS (<code>src/tmp/css/main.css</code>).</td>
     </tr>
     <tr>
       <td><code style="white-space: nowrap;">src/_xml</code></td>
@@ -124,15 +124,80 @@ The goal of this tutorial is to take you from having some development experience
 ### Create a new document
 
 - Do not edit the existing docs in `src/_docs`.
-- Under the `src/_docs`, create a new `.md` file.
+- Under the `src/_docs`, create a new Markdown (`.md`) file, the file are named using the format `[section][-{subsection}-{title}].md`.
 - Update document navigation in `src/_docs/template.jst` to add the link, place in the appropriate section/subsection or create a new appropriate section/subsection.
 - Please learn from the source in `src/_docs` for more details.
 
-### Rewrite the default styles in `src/_scss`
+Example:
+
+<pre><code># src/_docs/foo.md (Index for `Foo` section - Optional)
+
+&lt;!--
+&commat;&commat;&commat;title:Overview&commat;&commat;&commat;
+&commat;&commat;&commat;description:Example description.&commat;&commat;&commat;
+&commat;&commat;&commat;section:Foo&commat;&commat;&commat;
+&commat;&commat;&commat;subsection:None&commat;&commat;&commat;
+--&gt;
+
+...</code></pre>
+
+<pre><code># src/_docs/foo-bar-one.md
+
+&lt;!--
+&commat;&commat;&commat;title:One&commat;&commat;&commat;
+&commat;&commat;&commat;description:Example description.&commat;&commat;&commat;
+&commat;&commat;&commat;section:Foo&commat;&commat;&commat;
+&commat;&commat;&commat;subsection:Bar&commat;&commat;&commat;
+--&gt;
+
+...</code></pre>
+
+<pre><code># src/_docs/foo-bar-two.md
+
+&lt;!--
+&commat;&commat;&commat;title:Two&commat;&commat;&commat;
+&commat;&commat;&commat;description:Example description.&commat;&commat;&commat;
+&commat;&commat;&commat;section:Foo&commat;&commat;&commat;
+&commat;&commat;&commat;subsection:Bar&commat;&commat;&commat;
+--&gt;
+
+...</code></pre>
+
+```html
+# src/_docs/template.jst
+
+...
+<nav class="doc-nav" id="docNav">
+  <div class="doc-nav-wrap">
+
+    <h6 class="doc-nav-section">Foo</h6>
+    <a class="doc-nav-link" href="foo.html">Overview</a>
+    <h6 class="doc-nav-subsection">Bar</h6>
+    <a class="doc-nav-link" href="foo-bar-one.html">One</a>
+    <a class="doc-nav-link" href="foo-bar-two.html">Two</a>
+
+  </div>
+</nav>
+...
+```
+
+### Create a new component in `src/_scss`
+
+- Under the `src/_scss`, create a new Sass (`_[name].scss`) file.
+- Import the Sass file to `src/_scss/index.scss`.
+- Add variables for the component in `src/_scss/_variables.scss`.
+- Create a mixins for the component in `src/_scss/mixins` folder, and then import the mixins to `src/_scss/_mixins.scss`.
+- Utilize our Sass variables, functions, and mixins.
+- [Document](#create-a-new-document) the component in `src/_docs` with filename `css-components-[name].md`, and update document navigation in `src/_docs/template.jst` to add the link (place in the *Components* subsection of the *CSS* section).
+- Please learn from the source in `src/_scss` and `src/_docs` for more details.
+
+### Rewrite the main CSS in `src/_scss`
 
 - Remove all Sass files and folder in `src/_scss` except `index.scss`.
 - Remove the docs `src/_docs/css-*.md` and its navigation link in `src/_docs/template.jst`.
-- Just like before, write your own styles in `src/_scss`, import your styles to `index.scss`, document your styles in `src/_docs` with filename `css-[name].md`, and update document navigation to add the link (place in the *CSS* section and create the appropriate subsection).
+- Create your own styles in `src/_scss`, import your styles to `src/_scss/index.scss`. 
+- [Document](#create-a-new-document) your styles in `src/_docs` with filename `css[-{subsection}-{name}].md`, and update document navigation in `src/_docs/template.jst` to add the link (place in the *CSS* section and create a new appropriate subsection).
+- Please learn from the source in `src/_scss` and `src/_docs` for more details.
 
 ### Updating your theme to latest Bloggerable
 
@@ -234,6 +299,8 @@ For example, the grunt-bake tag that can be used to include the partial in `src/
 ### Configuration
 
 Our source code have a `src/config.json` file to gives you a lot of flexibility.
+
+Do not edit the existing JSON key in `src/config.json`.
 
 You can access the config values by using:
 

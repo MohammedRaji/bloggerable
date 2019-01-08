@@ -28,7 +28,9 @@
     }
   }
 
-  nav.scroll(0, (navActive[0].offsetTop - 45));
+  if ((navCurrent != 'index.html') && (navCurrent != '')) {
+    nav.scroll(0, (navActive[0].offsetTop - 45));
+  }
 
   navToggle.addEventListener('click', function() {
     document.body.classList.toggle('show-nav');

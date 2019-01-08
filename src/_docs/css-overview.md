@@ -7,7 +7,7 @@
 
 # Overview
 
-Utilize our source Sass files to take advantage of variables, functions, mixins, and more.
+The main CSS.
 
 <figure>
   <div class="doc-badges">
