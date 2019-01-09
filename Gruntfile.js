@@ -312,9 +312,21 @@ module.exports = function (grunt) {
     },
 
     compress: {
-      main: {
+      theme: {
         options: {
-          archive: __dirname.split(path.sep).pop() + '-dist.zip',
+          archive: __dirname.split(path.sep).pop() + '-<%= config.theme.version %>.zip',
+          mode: 'zip',
+          level: 9,
+          pretty: true
+        },
+        files: [{
+          expand: true,
+          src: ['**', '.*', '!.git', '!*.zip', '!node_modules/**']
+        }]
+      },
+      starter: {
+        options: {
+          archive: 'bloggerable-<%= config.bloggerable.version %>.zip',
           mode: 'zip',
           level: 9,
           pretty: true
@@ -382,5 +394,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean:dist', 'test']);
 
   // Release task.
-  grunt.registerTask('release', ['default', 'compress']);
+  grunt.registerTask('release', ['default', 'compress:theme']);
+  grunt.registerTask('release-starter', ['default', 'compress:starter']);
 };

@@ -117,7 +117,7 @@ The goal of this tutorial is to take you from having some development experience
     2. `git add .`
     3. `git commit -m "Initial commit"`
     4. Push to [GitHub](https://github.com) or other services.
-13. To release your theme, run `grunt release`, this command will compile the source and zip the root theme directory (exclude: `.git`, `.zip`, `node_modules`), you can find the zip file in the root theme directory.
+13. To release your theme, run `grunt release`, this command will compile the source and zip the root theme directory (exclude: `.git`, `.zip`, `node_modules`). The zip file is named using the format `[theme-name]-[theme-version].zip`, you can find the file in the root theme directory.
 14. Share or sell your theme (the zip file).
 15. You can publish the docs (`dist/docs`) to [GitHub Pages](https://pages.github.com) or other services.
 
@@ -266,7 +266,6 @@ Our `Gruntfile.js` includes the following commands and tasks:
 | --- | --- |
 | <code style="white-space: nowrap;">grunt</code> | `grunt` creates the `dist` directory with compiled files. |
 | <code style="white-space: nowrap;">grunt watch</code> | Watches the source files and automatically building them whenever you save. |
-| <code style="white-space: nowrap;">grunt release</code> | Same as `grunt` plus it zip the root theme directory (exclude: `.git`, `.zip`, `node_modules`). The zip file is named using the format <code style="white-space: nowrap;">[theme-name]-[theme-version].zip</code>, you can find the file in the root theme directory. |
 
 ### Local documentation
 
