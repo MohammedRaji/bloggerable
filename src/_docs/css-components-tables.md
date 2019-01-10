@@ -5,8 +5,6 @@
 @@@subsection:Components@@@
 -->
 
-# Tables
-
 Simple CSS for HTML tables.
 
 <figure>

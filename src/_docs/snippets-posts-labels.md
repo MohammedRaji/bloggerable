@@ -5,8 +5,6 @@
 @@@subsection:Posts@@@
 -->
 
-# Labels
-
 Labels of the post.
 
 **Options**

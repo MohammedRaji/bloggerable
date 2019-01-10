@@ -5,8 +5,6 @@
 @@@subsection:Default markups@@@
 -->
 
-# Guide
-
 Learn how to create default markups.
 
 <figure>

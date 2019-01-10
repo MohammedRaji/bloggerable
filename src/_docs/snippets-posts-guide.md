@@ -5,8 +5,6 @@
 @@@subsection:Posts@@@
 -->
 
-# Guide
-
 Learn how to use posts snippets.
 
 

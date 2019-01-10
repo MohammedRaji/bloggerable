@@ -5,8 +5,6 @@
 @@@subsection:Posts@@@
 -->
 
-# Author name
-
 Name of the profile of the post author.
 
 

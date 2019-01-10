@@ -5,8 +5,6 @@
 @@@subsection:Posts@@@
 -->
 
-# Title
-
 Title of the post.
 
 

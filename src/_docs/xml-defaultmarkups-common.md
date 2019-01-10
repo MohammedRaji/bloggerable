@@ -5,8 +5,6 @@
 @@@subsection:Default markups@@@
 -->
 
-# Common
-
 Common default markups.
 
 <figure>

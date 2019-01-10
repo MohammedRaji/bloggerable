@@ -5,8 +5,6 @@
 @@@subsection:None@@@
 -->
 
-# Getting started
-
 Learn how to compile the source code, builds the theme and documentation, and more.
 
 

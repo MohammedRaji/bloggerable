@@ -93,43 +93,44 @@
       </svg>
     </button>
 
-    <div class="doc-overlay" id="docOverlay"></div>
+    <ul class="doc-topbar doc-margin-x">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="getting-started.html">Getting started</a>
+      </li>
+      <li>
+        <a href="css-overview.html">CSS</a>
+      </li>
+      <li>
+        <a href="xml-overview.html">XML</a>
+      </li>
+      <li>
+        <a href="snippets-overview.html">Snippets</a>
+      </li>
+    </ul>
 
-    <main class="doc-content" id="content">
-      <div class="doc-topbar">
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="getting-started.html">Getting started</a>
-          </li>
-          <li>
-            <a href="css-overview.html">CSS</a>
-          </li>
-          <li>
-            <a href="xml-overview.html">XML</a>
-          </li>
-          <li>
-            <a href="snippets-overview.html">Snippets</a>
-          </li>
-        </ul>
-      </div>
-      <div class="doc-breadcrumb">
-        <ol>
-          <%if(section != 'None'){%>
-            <li><%=section%></li>
-            <%if(subsection != 'None'){%>
-              <li><%=subsection%></li>
-            <%}%>
+    <div class="doc-header doc-margin-x">
+      <ol class="doc-header-breadcrumb">
+        <%if(section != 'None'){%>
+          <li><%=section%></li>
+          <%if(subsection != 'None'){%>
+            <li><%=subsection%></li>
           <%}%>
-          <%if(section == 'None'){%>
-            <li>:=:</li>
-          <%}%>
-        </ol>
-      </div>
+        <%}%>
+        <%if(section == 'None'){%>
+          <li>:=:</li>
+        <%}%>
+      </ol>
+      <h1 class="doc-header-title"><%=title%></h1>
+    </div>
+
+    <main class="doc-content doc-margin-x" id="content">
       <%=content%>
     </main>
+
+    <div class="doc-overlay" id="docOverlay"></div>
 
     <script src="assets/bundle/js/main.js"></script>
     <script src="assets/js/anchor.min.js"></script>

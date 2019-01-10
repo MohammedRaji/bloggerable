@@ -5,8 +5,6 @@
 @@@subsection:None@@@
 -->
 
-# Overview
-
 Library of commonly used snippets for Blogger.
 
 

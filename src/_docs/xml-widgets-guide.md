@@ -5,8 +5,6 @@
 @@@subsection:Widgets@@@
 -->
 
-# Guide
-
 Learn how to add a widget.
 
 <figure>

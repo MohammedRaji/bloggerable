@@ -5,8 +5,6 @@
 @@@subsection:Components@@@
 -->
 
-# Buttons
-
 Simple CSS for buttons.
 
 <figure>

@@ -5,8 +5,6 @@
 @@@subsection:Posts@@@
 -->
 
-# Sharing
-
 The share buttons for the post.
 
 

@@ -5,8 +5,6 @@
 @@@subsection:Scaffolding@@@
 -->
 
-# Base CSS
-
 Base CSS.
 
 > Base CSS provide an elegant, consistent, and simple baseline to build upon.<br>

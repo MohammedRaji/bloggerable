@@ -5,8 +5,6 @@
 @@@subsection:Components@@@
 -->
 
-# Forms
-
 Simple CSS for HTML forms.
 
 <figure>

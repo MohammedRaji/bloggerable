@@ -5,8 +5,6 @@
 @@@subsection:Scaffolding@@@
 -->
 
-# Normalize.css
-
 For improved cross-browser rendering, we use [Normalize.css](https://necolas.github.io/normalize.css).
 
 <figure>

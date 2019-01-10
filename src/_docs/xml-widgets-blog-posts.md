@@ -5,8 +5,6 @@
 @@@subsection:Widgets@@@
 -->
 
-# Blog posts
-
 Custom blog posts gadget.
 
 <figure>

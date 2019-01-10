@@ -5,8 +5,6 @@
 @@@subsection:Default markups@@@
 -->
 
-# Gadgets
-
 Default markups for gadgets.
 
 <figure>

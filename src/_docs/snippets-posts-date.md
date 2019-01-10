@@ -5,8 +5,6 @@
 @@@subsection:Posts@@@
 -->
 
-# Date
-
 Date of the post.
 
 

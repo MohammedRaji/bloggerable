@@ -5,8 +5,6 @@
 @@@subsection:Posts@@@
 -->
 
-# Content snippet
-
 Snippet of the post's content.
 
 

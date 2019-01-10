@@ -5,8 +5,6 @@
 @@@subsection:None@@@
 -->
 
-# Overview
-
 The main CSS.
 
 <figure>

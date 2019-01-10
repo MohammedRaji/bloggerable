@@ -5,8 +5,6 @@
 @@@subsection:Posts@@@
 -->
 
-# Comments link
-
 Link to the comments on the post.
 
 

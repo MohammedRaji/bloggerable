@@ -5,8 +5,6 @@
 @@@subsection:Posts@@@
 -->
 
-# Author photo
-
 Photo of the profile of the post author.
 
 **Options**

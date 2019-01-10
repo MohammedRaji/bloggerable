@@ -5,8 +5,6 @@
 @@@subsection:Posts@@@
 -->
 
-# Body
-
 The content of the post.
 
 

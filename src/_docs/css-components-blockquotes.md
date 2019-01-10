@@ -5,8 +5,6 @@
 @@@subsection:Components@@@
 -->
 
-# Blockquotes
-
 Simple CSS for blockquotes.
 
 <figure>

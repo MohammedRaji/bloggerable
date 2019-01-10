@@ -5,8 +5,6 @@
 @@@subsection:None@@@
 -->
 
-# Overview
-
 Blogger XML.
 
 <figure>

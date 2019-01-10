@@ -5,8 +5,6 @@
 @@@subsection:View@@@
 -->
 
-# Page types
-
 Conditional tags for different page types, which allows you to specify a part of your template code on specific types of pages or specific URLs.
 
 

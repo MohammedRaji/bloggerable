@@ -5,8 +5,6 @@
 @@@subsection:Posts@@@
 -->
 
-# Featured image
-
 The featured image for the post.
 
 **Options**

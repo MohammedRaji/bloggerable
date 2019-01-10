@@ -5,8 +5,6 @@
 @@@subsection:Posts@@@
 -->
 
-# Read more link
-
 Link to the full post.
 
 
