@@ -1,5 +1,6 @@
 const path = require('path');
 const sass = require('node-sass');
+const hljs = require('highlight.js');
 
 module.exports = function (grunt) {
   'use strict';
@@ -89,31 +90,22 @@ module.exports = function (grunt) {
       }
     },
 
-    markdown: {
+    site: {
       docs: {
         options: {
-          template: 'src/docs/template.jst',
-          templateContext: {},
-          contextBinder: true,
-          contextBinderMark: '@@@',
-          autoTemplate: true,
-          autoTemplateFormat: 'jst',
-          markdownOptions: {
+          site: {},
+          extend: {},
+          marked: {
             gfm: true,
-            highlight: 'manual',
-            codeLines: {
-              before: '<span>',
-              after: '</span>'
+            highlight: function(code, lang) {
+              return hljs.highlight(lang, code).value;
             }
-          }
+          },
+          templates: 'src/_docs/templates',
+          defaultTemplate: 'doc.html'
         },
-        files: [{
-          expand: true,
-          cwd: 'src/_docs/',
-          src: '**/*.md',
-          dest: 'dist/docs',
-          ext: '.html'
-        }]
+        src: 'src/_docs/content',
+        dest: 'dist/docs'
       }
     },
 
@@ -146,7 +138,7 @@ module.exports = function (grunt) {
         src: ['src/skin.css', 'src/template-skin.css', 'src/_scss/**/*.scss', 'src/_xml/**/*.scss', 'src/_xml/**/*.css']
       },
       docs: {
-        src: 'src/_docs/assets/css/docs.css'
+        src: ['src/_docs/assets/css/**/*.css', '!src/_docs/assets/css/**/*.min.css']
       }
     },
 
@@ -177,7 +169,7 @@ module.exports = function (grunt) {
         src: 'src/tmp/css/**/*.css'
       },
       docs: {
-        src: 'dist/docs/assets/css/docs.css'
+        src: ['dist/docs/assets/css/**/*.css', '!dist/docs/assets/css/**/*.min.css']
       }
     },
 
@@ -206,7 +198,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'dist/docs/',
-          src: ['assets/**/*.css', '!assets/**/*.min.css', '!assets/bundle/css/**/*.css'],
+          src: ['assets/css/**/*.css', '!assets/css/**/*.min.css'],
           dest: 'dist/docs'
         }]
       }
@@ -260,7 +252,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'dist/docs/',
-          src: ['assets/**/*.js', '!assets/**/*.min.js', '!assets/bundle/js/**/*.js'],
+          src: ['assets/js/**/*.js', '!assets/js/**/*.min.js'],
           dest: 'dist/docs'
         }]
       }
@@ -278,7 +270,7 @@ module.exports = function (grunt) {
       docsFiles: {
         expand: true,
         cwd: 'src/_docs/',
-        src: ['**/*', '!**/*.md', '!**/*.jst'],
+        src: ['**/*', '!**/*.md', '!content', '!templates', '!content/**/*', '!templates/**/*'],
         dest: 'dist/docs'
       },
       docsBundle: {
@@ -382,7 +374,7 @@ module.exports = function (grunt) {
 
   // Docs task.
   grunt.registerTask('docs-lint', ['stylelint:docs']);
-  grunt.registerTask('docs-compile', ['markdown:docs', 'copy:docsFiles', 'copy:docsBundle', 'postcss:docs', 'bake:docs']);
+  grunt.registerTask('docs-compile', ['site:docs', 'copy:docsFiles', 'copy:docsBundle', 'postcss:docs', 'bake:docs']);
   grunt.registerTask('docs-minify', ['htmlmin:docs', 'cssmin:docs', 'uglify:docs']);
   grunt.registerTask('docs-serve', ['connect:docs']);
   grunt.registerTask('dist-docs', ['docs-lint', 'docs-compile', 'docs-minify']);

@@ -1,0 +1,226 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>CSS &middot; Overview</title><meta name="description" content="Utilize our source Sass files to take advantage of variables, functions, mixins, and more."><link rel="icon" href="favicon.ico"><link rel="stylesheet" href="assets/bundle/css/main.css"><link rel="stylesheet" href="assets/bundle/css/xml-sass.css"><link rel="stylesheet" href="assets/bundle/css/xml-css.css"><link rel="stylesheet" href="assets/css/doc.css"></head><body class="doc-body"><a class="doc-skiplink" id="docSkiplink" href="#content">Skip to main content</a><nav class="doc-nav" id="docNav"><div class="doc-nav-wrap"><a class="doc-nav-link doc-nav-link-title" href="#">Bloggerable</a><div class="doc-nav-divider"></div><a class="doc-nav-link" href="index.html">Home</a> <a class="doc-nav-link" href="getting-started.html">Getting started</a><div class="doc-nav-divider"></div><h6 class="doc-nav-category">CSS</h6><a class="doc-nav-link" href="css.html">Overview</a><h6 class="doc-nav-subcategory">Scaffolding</h6><a class="doc-nav-link" href="css-scaffolding-base-css.html">Base CSS</a> <a class="doc-nav-link" href="css-scaffolding-normalize.html">Normalize</a><h6 class="doc-nav-subcategory">Components</h6><a class="doc-nav-link" href="css-components-blockquotes.html">Blockquotes</a> <a class="doc-nav-link" href="css-components-buttons.html">Buttons</a> <a class="doc-nav-link" href="css-components-forms.html">Forms</a> <a class="doc-nav-link" href="css-components-tables.html">Tables</a><div class="doc-nav-divider"></div><h6 class="doc-nav-category">XML</h6><a class="doc-nav-link" href="xml.html">Overview</a><h6 class="doc-nav-subcategory">Default markups</h6><a class="doc-nav-link" href="xml-defaultmarkups.html">Guide</a> <a class="doc-nav-link" href="xml-defaultmarkups-common.html">Common</a> <a class="doc-nav-link" href="xml-defaultmarkups-gadgets.html">Gadgets</a><h6 class="doc-nav-subcategory">Widgets</h6><a class="doc-nav-link" href="xml-widgets.html">Guide</a> <a class="doc-nav-link" href="xml-widgets-blog-posts.html">Blog posts</a><div class="doc-nav-divider"></div><h6 class="doc-nav-category">Snippets</h6><a class="doc-nav-link" href="snippets.html">Overview</a><h6 class="doc-nav-subcategory">View</h6><a class="doc-nav-link" href="snippets-view-page-types.html">Page types</a><h6 class="doc-nav-subcategory">Posts</h6><a class="doc-nav-link" href="snippets-posts.html">Guide</a> <a class="doc-nav-link" href="snippets-posts-author-name.html">Author name</a> <a class="doc-nav-link" href="snippets-posts-author-photo.html">Author photo</a> <a class="doc-nav-link" href="snippets-posts-body.html">Body</a> <a class="doc-nav-link" href="snippets-posts-comments-link.html">Comments link</a> <a class="doc-nav-link" href="snippets-posts-content-snippet.html">Content snippet</a> <a class="doc-nav-link" href="snippets-posts-date.html">Date</a> <a class="doc-nav-link" href="snippets-posts-featured-image.html">Featured image</a> <a class="doc-nav-link" href="snippets-posts-labels.html">Labels</a> <a class="doc-nav-link" href="snippets-posts-read-more-link.html">Read more link</a> <a class="doc-nav-link" href="snippets-posts-sharing.html">Sharing</a> <a class="doc-nav-link" href="snippets-posts-title.html">Title</a><h6 class="doc-nav-subcategory">Data</h6><a class="doc-nav-link" href="snippets-data-messages.html">Messages</a><div class="doc-nav-divider"></div><h6 class="doc-nav-category">Bloggerable Links</h6><a class="doc-nav-link" href="https://blogger-starter-bloggerable.blogspot.com" target="_blank">Demo</a> <a class="doc-nav-link" href="https://blogger-starter.github.io/bloggerable" target="_blank">Documentation</a> <a class="doc-nav-link" href="https://blogger-starter.blogspot.com" target="_blank">Themes</a> <a class="doc-nav-link" href="https://github.com/blogger-starter/bloggerable" target="_blank">GitHub</a> <a class="doc-nav-link" href="https://facebook.com/bloggerable" target="_blank">Facebook</a> <a class="doc-nav-link" href="https://twitter.com/bloggerable" target="_blank">Twitter</a></div></nav><button class="doc-nav-toggle" id="docNavToggle" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><div class="doc-toc" id="docToc"></div><button class="doc-toc-toggle" id="docTocToggle" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><ul class="doc-topbar doc-margin-x" id="docTopbar"><li><a href="index.html">Home</a></li><li><a href="getting-started.html">Getting started</a></li><li><a href="css-overview.html">CSS</a></li><li><a href="xml-overview.html">XML</a></li><li><a href="snippets-overview.html">Snippets</a></li></ul><div class="doc-header doc-margin-x" id="docHeader"><ol class="doc-header-breadcrumb"><li>CSS</li></ol><h1 class="doc-header-title">Overview</h1></div><main class="doc-content doc-margin-x" id="content"><p>The main CSS.</p><figure><div class="doc-badges"><div class="doc-badge"><span class="doc-badge-item">Source</span> <span class="doc-badge-item doc-badge-item-info">src/_scss</span></div></div></figure><h2 id="file-structure">File structure</h2><pre><code class="lang-plaintext">[root theme directory]
+└── src/
+    └── _scss/
+        ├── _custom.scss
+        └── **/*.scss
+</code></pre><table><thead><tr><th>File / Directory</th><th>Description</th></tr></thead><tbody><tr><td><code style="white-space: nowrap;">_custom.scss</code></td><td>Copy variables from <code>_variables.scss</code> to this file to override default values without modifying source files.</td></tr><tr><td><code style="white-space: nowrap;">**/*.scss</code></td><td>Other Sass files are variables, functions, mixins, and components.</td></tr></tbody></table><h2 id="sass-options">Sass options</h2><p>You can find and customize these variables for key global options in <code>_variables.scss</code>.</p><table><thead><tr><th>Variable</th><th>Values</th><th>Description</th></tr></thead><tbody><tr><td><code>$enable-rounded</code></td><td><code>true</code> (default) or <code>false</code></td><td>Enables predefined <code>border-radius</code> styles on various components.</td></tr><tr><td><code>$enable-shadows</code></td><td><code>true</code> or <code>false</code> (default)</td><td>Enables predefined <code>box-shadow</code> styles on various components.</td></tr><tr><td><code>$enable-transitions</code></td><td><code>true</code> (default) or <code>false</code></td><td>Enables predefined <code>transition</code>s on various components.</td></tr></tbody></table><h2 id="modify-variables-and-maps">Modify variables and maps</h2><p>Every Sass variable includes the <code>!default</code> flag allowing you to override the variable’s default value in <code>_custom.scss</code> without modifying source code.</p><p>Just like Sass variables, all Sass maps include the <code>!default</code> flag and can be overridden and extended.</p><p>Example:</p><pre><code class="lang-scss"># _custom<span class="hljs-selector-class">.scss</span>
+
+<span class="hljs-comment">// Customize options</span>
+<span class="hljs-variable">$enable-rounded</span>: false;
+
+<span class="hljs-comment">// Variable overrides</span>
+<span class="hljs-variable">$body-color</span>:  <span class="hljs-number">#fff</span>;
+<span class="hljs-variable">$body-bg</span>:     <span class="hljs-number">#000</span>;
+
+<span class="hljs-comment">// Modify map</span>
+<span class="hljs-variable">$theme-colors</span>: (
+  <span class="hljs-string">"primary"</span>: <span class="hljs-number">#000</span>
+);
+
+<span class="hljs-comment">// Add to map</span>
+<span class="hljs-variable">$theme-colors</span>: (
+  <span class="hljs-string">"custom-color"</span>: <span class="hljs-number">#900</span>
+);
+</code></pre><h2 id="functions">Functions</h2><p>We utilizes several Sass functions in <code>_functions.scss</code>.</p><h3 id="color-maps">Color maps</h3><p>Functions for getting values from the color maps.</p><pre><code class="lang-scss"><span class="hljs-comment">// Retrieve color Sass maps</span>
+@function theme-color(<span class="hljs-variable">$key</span>: <span class="hljs-string">"primary"</span>) {
+  @return map-get(<span class="hljs-variable">$theme-colors</span>, <span class="hljs-variable">$key</span>);
+}
+</code></pre><p>Example:</p><pre><code class="lang-scss"><span class="hljs-comment">// Example to pick one color from a Sass map</span>
+<span class="hljs-selector-class">.custom-element</span> {
+  <span class="hljs-attribute">background-color</span>: theme-color(<span class="hljs-string">"dark"</span>);
+}
+</code></pre><h3 id="color-contrast">Color contrast</h3><p>The color contrast function, <code>color-yiq</code>. It utilizes the <a href="https://en.wikipedia.org/wiki/YIQ">YIQ color space</a> to automatically return a light (<code>#fff</code>) or dark (<code>#111</code>) contrast color based on the specified base color.</p><pre><code class="lang-scss"><span class="hljs-comment">// Color contrast</span>
+@function color-yiq(<span class="hljs-variable">$color</span>) {
+  <span class="hljs-variable">$r</span>: red(<span class="hljs-variable">$color</span>);
+  <span class="hljs-variable">$g</span>: green(<span class="hljs-variable">$color</span>);
+  <span class="hljs-variable">$b</span>: blue(<span class="hljs-variable">$color</span>);
+
+  <span class="hljs-variable">$yiq</span>: ((<span class="hljs-variable">$r</span> * <span class="hljs-number">299</span>) + (<span class="hljs-variable">$g</span> * <span class="hljs-number">587</span>) + (<span class="hljs-variable">$b</span> * <span class="hljs-number">114</span>)) / <span class="hljs-number">1000</span>;
+
+  @<span class="hljs-keyword">if</span> (<span class="hljs-variable">$yiq</span> &gt;= <span class="hljs-variable">$yiq-contrasted-threshold</span>) {
+    @return <span class="hljs-variable">$yiq-text-dark</span>;
+  } @<span class="hljs-keyword">else</span> {
+    @return <span class="hljs-variable">$yiq-text-light</span>;
+  }
+}
+</code></pre><p>Example:</p><pre><code class="lang-scss"><span class="hljs-variable">$bg</span>: <span class="hljs-number">#000</span>;
+
+<span class="hljs-selector-class">.custom-element</span> {
+  <span class="hljs-attribute">color</span>: color-yiq(<span class="hljs-number">#000</span>); <span class="hljs-comment">// returns `color: #fff`</span>
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#000</span>;
+}
+
+<span class="hljs-selector-class">.custom-element2</span> {
+  <span class="hljs-attribute">color</span>: color-yiq(<span class="hljs-variable">$bg</span>); <span class="hljs-comment">// returns `color: #fff`</span>
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$bg</span>;
+}
+</code></pre><h2 id="responsive-breakpoints">Responsive breakpoints</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a> for creating sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.</p><h3 id="breakpoint-up">Breakpoint up</h3><p>CSS:</p><pre><code class="lang-css"><span class="hljs-comment">/* Extra small devices (portrait phones, less than 576px) */</span>
+<span class="hljs-comment">/* No media query for `xs` since this is the default */</span>
+
+<span class="hljs-comment">/* Small devices (landscape phones, 576px and up) */</span>
+@<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">576px</span>) { ... }
+
+<span class="hljs-comment">/* Medium devices (tablets, 768px and up) */</span>
+@<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">768px</span>) { ... }
+
+<span class="hljs-comment">/* Large devices (desktops, 992px and up) */</span>
+@<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">992px</span>) { ... }
+
+<span class="hljs-comment">/* Extra large devices (large desktops, 1200px and up) */</span>
+@<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">1200px</span>) { ... }
+</code></pre><p>Sass mixins:</p><pre><code class="lang-scss"><span class="hljs-comment">// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`</span>
+@<span class="hljs-keyword">include</span> media-breakpoint-up(sm) { ... }
+@<span class="hljs-keyword">include</span> media-breakpoint-up(md) { ... }
+@<span class="hljs-keyword">include</span> media-breakpoint-up(lg) { ... }
+@<span class="hljs-keyword">include</span> media-breakpoint-up(xl) { ... }
+
+<span class="hljs-comment">// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint</span>
+<span class="hljs-selector-class">.custom-class</span> {
+  <span class="hljs-attribute">display</span>: none;
+}
+@<span class="hljs-keyword">include</span> media-breakpoint-up(sm) {
+  <span class="hljs-selector-class">.custom-class</span> {
+    <span class="hljs-attribute">display</span>: block;
+  }
+}
+</code></pre><h3 id="breakpoint-down">Breakpoint down</h3><p>Media queries that go in the other direction (the given screen size or smaller).</p><p>CSS:</p><pre><code class="lang-css"><span class="hljs-comment">/* Extra small devices (portrait phones, less than 576px) */</span>
+@<span class="hljs-keyword">media</span> (max-width: <span class="hljs-number">575.98px</span>) { ... }
+
+<span class="hljs-comment">/* Small devices (landscape phones, less than 768px) */</span>
+@<span class="hljs-keyword">media</span> (max-width: <span class="hljs-number">767.98px</span>) { ... }
+
+<span class="hljs-comment">/* Medium devices (tablets, less than 992px) */</span>
+@<span class="hljs-keyword">media</span> (max-width: <span class="hljs-number">991.98px</span>) { ... }
+
+<span class="hljs-comment">/* Large devices (desktops, less than 1200px) */</span>
+@<span class="hljs-keyword">media</span> (max-width: <span class="hljs-number">1199.98px</span>) { ... }
+
+<span class="hljs-comment">/* Extra large devices (large desktops) */</span>
+<span class="hljs-comment">/* No media query since the extra-large breakpoint has no upper bound on its width */</span>
+</code></pre><p>Sass mixins:</p><pre><code class="lang-scss">@<span class="hljs-keyword">include</span> media-breakpoint-down(xs) { ... }
+@<span class="hljs-keyword">include</span> media-breakpoint-down(sm) { ... }
+@<span class="hljs-keyword">include</span> media-breakpoint-down(md) { ... }
+@<span class="hljs-keyword">include</span> media-breakpoint-down(lg) { ... }
+<span class="hljs-comment">// No media query necessary for xl breakpoint as it has no upper bound on its width</span>
+
+<span class="hljs-comment">// Example: Style from medium breakpoint and down</span>
+@<span class="hljs-keyword">include</span> media-breakpoint-down(md) {
+  <span class="hljs-selector-class">.custom-class</span> {
+    <span class="hljs-attribute">display</span>: block;
+  }
+}
+</code></pre><h3 id="breakpoint-only">Breakpoint only</h3><p>Media queries for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.</p><p>CSS:</p><pre><code class="lang-css"><span class="hljs-comment">/* Extra small devices (portrait phones, less than 576px) */</span>
+@<span class="hljs-keyword">media</span> (max-width: <span class="hljs-number">575.98px</span>) { ... }
+
+<span class="hljs-comment">/* Small devices (landscape phones, 576px and up) */</span>
+@<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">576px</span>) and (max-width: <span class="hljs-number">767.98px</span>) { ... }
+
+<span class="hljs-comment">/* Medium devices (tablets, 768px and up) */</span>
+@<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">768px</span>) and (max-width: <span class="hljs-number">991.98px</span>) { ... }
+
+<span class="hljs-comment">/* Large devices (desktops, 992px and up) */</span>
+@<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">992px</span>) and (max-width: <span class="hljs-number">1199.98px</span>) { ... }
+
+<span class="hljs-comment">/* Extra large devices (large desktops, 1200px and up) */</span>
+@<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">1200px</span>) { ... }
+</code></pre><p>Sass mixins:</p><pre><code class="lang-scss">@<span class="hljs-keyword">include</span> media-breakpoint-only(xs) { ... }
+@<span class="hljs-keyword">include</span> media-breakpoint-only(sm) { ... }
+@<span class="hljs-keyword">include</span> media-breakpoint-only(md) { ... }
+@<span class="hljs-keyword">include</span> media-breakpoint-only(lg) { ... }
+@<span class="hljs-keyword">include</span> media-breakpoint-only(xl) { ... }
+</code></pre><h3 id="breakpoint-between">Breakpoint between</h3><p>Similarly, media queries may span multiple breakpoint widths.</p><p>CSS:</p><pre><code class="lang-css"><span class="hljs-comment">/* Example */</span>
+<span class="hljs-comment">/* Apply styles starting from medium devices and up to extra large devices */</span>
+@<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">768px</span>) and (max-width: <span class="hljs-number">1199.98px</span>) { ... }
+</code></pre><p>Sass mixins:</p><pre><code class="lang-scss">@<span class="hljs-keyword">include</span> media-breakpoint-between(md, xl) { ... }
+</code></pre><h2 id="code-guide">Code guide</h2><h3 id="comments-and-organization">Comments and organization</h3><p>Sass:</p><pre><code class="lang-scss"><span class="hljs-comment">//</span>
+<span class="hljs-comment">// Heading 1</span>
+<span class="hljs-comment">//</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">//= Sub-heading</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">// Basic comment</span>
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// Heading 2</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// Description...</span>
+<span class="hljs-comment">// ...</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">//= Sub-heading</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// Description...</span>
+<span class="hljs-comment">// ...</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">// Description...</span>
+<span class="hljs-comment">// ...</span>
+<span class="hljs-selector-class">.example</span> {}
+</code></pre><p>CSS:</p><pre><code class="lang-css"><span class="hljs-comment">/* ==========================================================================
+   Heading 1
+   ========================================================================== */</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">/**
+ * Sub-heading x
+ */</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">/** Sub-heading x.x **/</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">/* Basic comment */</span>
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">/* Heading 1.2
+   ========================================================================== */</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">/**
+ * Sub-heading x
+ */</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">/** Sub-heading x.x **/</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">/* Basic comment */</span>
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">/* Heading 1.2.1
+   ========================================= */</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">/**
+ * Sub-heading x
+ */</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">/** Sub-heading x.x **/</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">/* Basic comment */</span>
+<span class="hljs-selector-class">.example</span> {}
+↓
+<span class="hljs-comment">/* ==========================================================================
+   Heading 2
+   ========================================================================== */</span>
+↓
+<span class="hljs-selector-class">.example</span> {}
+</code></pre></main><div class="doc-overlay" id="docOverlay"></div><script src="assets/bundle/js/main.js"></script><script src="assets/js/vendor/anchor.min.js"></script><script src="assets/js/vendor/tocbot.min.js"></script><script src="assets/js/doc.js"></script></body></html>
