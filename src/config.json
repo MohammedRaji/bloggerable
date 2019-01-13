@@ -19,19 +19,6 @@
     }
   },
 
-  "docs": {
-    "links": {
-      "bloggerable": {
-        "demo": "https://blogger-starter-bloggerable.blogspot.com",
-        "documentation": "https://blogger-starter.github.io/bloggerable",
-        "themes": "https://blogger-starter.blogspot.com",
-        "github": "https://github.com/blogger-starter/bloggerable",
-        "facebook": "https://facebook.com/bloggerable",
-        "twitter": "https://twitter.com/bloggerable"
-      }
-    }
-  },
-
   "bloggerable": {
     "name": "Bloggerable",
     "version": "1.0.0",
