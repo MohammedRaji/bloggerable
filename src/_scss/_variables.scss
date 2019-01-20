@@ -198,7 +198,7 @@ $pre-font-size:      $code-font-size !default;
 $pre-color:          $body-color !default;
 
 $kbd-padding:        .2rem .4rem !default;
-$kbd-font-size:      85% !default;
+$kbd-font-size:      $code-font-size !default;
 $kbd-color:          $text-white !default;
 $kbd-bg:             $dark !default;
 $kbd-border-radius:  $border-radius !default;
