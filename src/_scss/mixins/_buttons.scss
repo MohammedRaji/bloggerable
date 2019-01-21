@@ -10,11 +10,13 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 $button-focus-width rgba($border, .5);
+    @if $enable-shadows {
+      box-shadow: 0 0 0 $button-focus-width rgba($border, .5);
+    }
   }
 
-  &.disabled,
-  &:disabled {
+  &:disabled,
+  &.disabled {
     color: color-yiq($background);
     background-color: $background;
     border-color: $border;

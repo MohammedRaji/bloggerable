@@ -7,40 +7,38 @@
 .form-control {
   display: block;
   width: 100%;
-  height: $input-height;
-  padding: $input-padding-y $input-padding-x;
-  font-size: $input-font-size;
-  line-height: $input-line-height;
-  color: $input-color;
-  background-color: $input-bg;
+  height: $form-control-height;
+  padding: $form-control-padding-y $form-control-padding-x;
+  font-size: $form-control-font-size;
+  line-height: $form-control-line-height;
+  color: $form-control-color;
+  background-color: $form-control-bg;
   background-clip: padding-box;
-  border: $input-border-width solid $input-border-color;
-  @include border-radius($input-border-radius);
-  @include transition($input-transition);
-
-  &:focus {
-    color: $input-focus-color;
-    background-color: $input-focus-bg;
-    border-color: $input-focus-border-color;
-    outline: 0;
-    box-shadow: 0 0 0 $input-focus-width rgba($component-active-bg, .25);
-  }
+  border: $form-control-border-width solid $form-control-border-color;
+  @include border-radius($form-control-border-radius);
+  @include transition($form-control-transition);
 
   &::placeholder {
-    color: $input-placeholder-color;
-    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-    opacity: 1;
+    color: $form-control-placeholder-color;
+  }
+
+  &:focus {
+    color: $form-control-focus-color;
+    background-color: $form-control-focus-bg;
+    border-color: $form-control-focus-border-color;
+    @if $enable-shadows {
+      outline: 0;
+      box-shadow: 0 0 0 $form-control-focus-width rgba($form-control-focus-border-color, .5);
+    }
   }
 
   &:disabled,
   &[readonly] {
-    background-color: $input-disabled-bg;
-    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
-    opacity: 1;
+    background-color: $form-control-disabled-bg;
   }
 }
 
-// stylelint-disable no-duplicate-selectors
+// stylelint-disable-next-line no-duplicate-selectors
 select.form-control {
   &[size],
   &[multiple] {
@@ -51,7 +49,6 @@ select.form-control {
 textarea.form-control {
   height: auto;
 }
-// stylelint-enable no-duplicate-selectors
 
 //
 // Checkboxes and radios

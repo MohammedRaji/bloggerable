@@ -20,22 +20,18 @@
   }
 
   &:focus {
-    outline: 0;
+    @if $enable-shadows {
+      outline: 0;
+    }
   }
 
-  &.disabled,
-  &:disabled {
-    box-shadow: none;
+  &:disabled,
+  &.disabled {
     opacity: $button-disabled-opacity;
   }
 
   &:not(:disabled):not(.disabled) {
     cursor: pointer;
-  }
-
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    background-image: none;
   }
 }
 
@@ -45,7 +41,7 @@ fieldset:disabled a.button {
 }
 
 //
-// Alternate buttons
+// Themes
 //
 
 //= Default
@@ -63,11 +59,13 @@ fieldset:disabled a.button {
   }
 
   &:focus {
-    box-shadow: 0 0 0 $button-focus-width rgba($button-border-color, .5);
+    @if $enable-shadows {
+      box-shadow: 0 0 0 $button-focus-width rgba($button-border-color, .5);
+    }
   }
 
-  &.disabled,
-  &:disabled {
+  &:disabled,
+  &.disabled {
     color: $button-color;
     background-color: $button-bg;
     border-color: $button-border-color;
@@ -82,7 +80,7 @@ fieldset:disabled a.button {
 }
 // stylelint-enable no-duplicate-selectors
 
-//= Variants
+//= Alternate buttons
 
 @each $color, $value in $theme-colors {
   .button-#{$color} {
@@ -139,14 +137,14 @@ fieldset:disabled a.button {
 .button-toolbar {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: -.5rem;
+  margin-bottom: -$button-toolbar-gutter;
 
   > .button,
   > .button-group {
-    margin-bottom: .5rem;
+    margin-bottom: $button-toolbar-gutter;
   }
   > .button:not(:last-child),
   > .button-group:not(:last-child) {
-    margin-right: .5rem;
+    margin-right: $button-toolbar-gutter;
   }
 }

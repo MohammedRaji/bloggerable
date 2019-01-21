@@ -13,8 +13,8 @@
 // Blockquotes
 // Addresses
 // Figures
-// Buttons
 // Forms
+// Buttons
 
 //
 // Options
@@ -22,7 +22,7 @@
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-rounded:      true !default;
-$enable-shadows:      false !default;
+$enable-shadows:      true !default;
 $enable-transitions:  true !default;
 
 //
@@ -83,25 +83,29 @@ $font-family-monospace:   SFMono-Regular, Menlo, Monaco, Consolas, "Liberation M
 // stylelint-enable value-keyword-case
 
 $font-size:               1rem !default;
-
 $font-weight-lighter:     lighter !default;
 $font-weight-light:       300 !default;
 $font-weight-normal:      400 !default;
 $font-weight-bold:        700 !default;
 $font-weight-bolder:      bolder !default;
-
 $line-height:             1.5 !default;
-
 $border-width:            1px !default;
-
 $border-radius:           .25rem !default;
-
 $box-shadow:              0 .5rem 1rem rgba($black, .15) !default;
 
 $component-active-color:  $white !default;
 $component-active-bg:     theme-color("primary") !default;
 
 $spacer:                  1rem !default;
+
+// Forms + Buttons
+$input-padding-y:         .375rem !default;
+$input-padding-x:         .75rem !default;
+$input-font-size:         $font-size !default;
+$input-line-height:       $line-height !default;
+$input-border-width:      $border-width !default;
+$input-border-radius:     $border-radius !default;
+$input-focus-width:       .2rem !default;
 
 //
 // Grid breakpoints
@@ -286,19 +290,58 @@ $address-margin-bottom:  1rem !default;
 $figure-margin-bottom:  1rem !default;
 
 //
+// Forms
+//
+
+$label-margin-bottom:                      .5rem !default;
+
+$form-control-padding-y:                   $input-padding-y !default;
+$form-control-padding-x:                   $input-padding-x !default;
+$form-control-font-size:                   $input-font-size !default;
+$form-control-line-height:                 $input-line-height !default;
+$form-control-color:                       $gray-700 !default;
+$form-control-bg:                          $white !default;
+$form-control-border-width:                $input-border-width !default;
+$form-control-border-color:                $gray-400 !default;
+$form-control-border-radius:               $input-border-radius !default;
+$form-control-height:                      calc(#{($form-control-font-size * $form-control-line-height) + ($form-control-padding-y * 2)} + #{($form-control-border-width * 2)}) !default;
+
+$form-control-transition:                  border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$form-control-placeholder-color:           $text-muted !default;
+
+$form-control-focus-color:                 $form-control-color !default;
+$form-control-focus-bg:                    $form-control-bg !default;
+$form-control-focus-border-color:          lighten($component-active-bg, 25%) !default;
+$form-control-focus-width:                 $input-focus-width !default;
+$form-control-disabled-bg:                 $gray-200 !default;
+
+$form-text-margin-top:                     .25rem !default;
+$form-text-font-size:                      $small-font-size !default;
+$form-text-color:                          $text-muted !default;
+
+$form-check-input-gutter:                  1.25rem !default;
+$form-check-input-margin-y:                .4rem !default;
+$form-check-inline-margin-x:               .75rem !default;
+$form-check-inline-input-margin-x:         .3125rem !default;
+
+$form-group-margin-bottom:                 $spacer !default;
+
+//
 // Buttons
 //
 
-$button-padding-y:            .375rem !default;
-$button-padding-x:            .75rem !default;
-$button-font-size:            $font-size !default;
+$button-padding-y:            $input-padding-y !default;
+$button-padding-x:            $input-padding-x !default;
+$button-font-size:            $input-font-size !default;
 $button-font-weight:          $font-weight-normal !default;
-$button-line-height:          $line-height !default;
-$button-border-width:         $border-width !default;
-$button-border-radius:        $border-radius !default;
+$button-line-height:          $input-line-height !default;
+$button-border-width:         $input-border-width !default;
+$button-border-radius:        $input-border-radius !default;
 $button-transition:           color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
-$button-focus-width:          .2rem !default;
+$button-focus-width:          $input-focus-width !default;
 $button-disabled-opacity:     .65 !default;
+
+$button-toolbar-gutter:       .5rem !default;
 
 //= Default button
 
@@ -311,40 +354,3 @@ $button-hover-border-color:   darken($button-hover-bg, 3%) !default;
 $button-active-color:         $text-dark !default;
 $button-active-bg:            darken($button-bg, 12%) !default;
 $button-active-border-color:  darken($button-active-bg, 3%) !default;
-
-//
-// Forms
-//
-
-$label-margin-bottom:               .5rem !default;
-
-$input-padding-y:                   $button-padding-y !default;
-$input-padding-x:                   $button-padding-x !default;
-$input-font-size:                   $button-font-size !default;
-$input-line-height:                 $button-line-height !default;
-$input-color:                       $gray-700 !default;
-$input-bg:                          $white !default;
-$input-disabled-bg:                 $gray-200 !default;
-$input-border-width:                $button-border-width !default;
-$input-border-color:                $gray-400 !default;
-$input-border-radius:               $button-border-radius !default;
-$input-transition:                  border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
-$input-height:                      calc(#{($input-font-size * $input-line-height) + ($input-padding-y * 2)} + #{($input-border-width * 2)}) !default;
-
-$input-focus-color:                 $input-color !default;
-$input-focus-bg:                    $input-bg !default;
-$input-focus-border-color:          lighten($component-active-bg, 25%) !default;
-$input-focus-width:                 $button-focus-width !default;
-
-$input-placeholder-color:           $text-muted !default;
-
-$form-text-margin-top:              .25rem !default;
-$form-text-font-size:               $small-font-size !default;
-$form-text-color:                   $text-muted !default;
-
-$form-check-input-gutter:           1.25rem !default;
-$form-check-input-margin-y:         .4rem !default;
-$form-check-inline-margin-x:        .75rem !default;
-$form-check-inline-input-margin-x:  .3125rem !default;
-
-$form-group-margin-bottom:          $spacer !default;
