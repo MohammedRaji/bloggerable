@@ -19,38 +19,34 @@
   tbody + tbody {
     border-top: (2 * $table-border-width) solid transparent;
   }
+}
 
-  &.table-bordered {
-    border: $table-border-width solid transparent;
+.table-bordered {
+  border: $table-border-width solid transparent;
 
-    th,
-    td {
-      border-width: $table-border-width;
-    }
-    thead th {
-      border-bottom-width: (2 * $table-border-width);
-    }
+  th,
+  td {
+    border-width: $table-border-width;
   }
+}
 
-  &.table-borderless {
-    th,
-    td,
-    thead th,
-    tbody + tbody {
-      border: 0;
-    }
+.table-borderless {
+  th,
+  td,
+  thead th,
+  tbody + tbody {
+    border: 0;
   }
 }
 
 //
-// Theme
+// Themes
 //
+
+//= Default
 
 // stylelint-disable no-duplicate-selectors
 .table {
-
-  //= Default
-
   color: $table-color;
   background-color: $table-bg;
 
@@ -86,86 +82,84 @@
     color: $table-row-hover-color;
     background-color: $table-row-hover-bg;
   }
-
-  //= Light
-
-  &.table-light {
-    color: $table-light-color;
-    background-color: $table-light-bg;
-
-    th,
-    td {
-      border-color: $table-light-border-color;
-    }
-
-    tbody + tbody {
-      border-color: $table-light-border-color;
-    }
-
-    .thead-light th {
-      color: $table-head-light-color;
-      background-color: $table-head-light-bg;
-      border-color: $table-head-light-border-color;
-    }
-
-    &.table-bordered {
-      border-color: $table-light-border-color;
-    }
-
-    &:not(.table-bordered):not(.table-borderless) {
-      border: $table-border-width solid $table-light-border-color;
-    }
-
-    &.table-striped tbody tr:nth-of-type(#{$table-striped-order}) {
-      background-color: $table-light-accent-bg;
-    }
-
-    &.table-hover tbody tr:hover {
-      color: $table-light-row-hover-color;
-      background-color: $table-light-row-hover-bg;
-    }
-  }
-
-  //= Dark
-
-  &.table-dark {
-    color: $table-dark-color;
-    background-color: $table-dark-bg;
-
-    th,
-    td {
-      border-color: $table-dark-border-color;
-    }
-
-    tbody + tbody {
-      border-color: $table-dark-border-color;
-    }
-
-    .thead-dark th {
-      color: $table-head-dark-color;
-      background-color: $table-head-dark-bg;
-      border-color: $table-head-dark-border-color;
-    }
-
-    &.table-bordered {
-      border-color: $table-dark-border-color;
-    }
-
-    &:not(.table-bordered):not(.table-borderless) {
-      border: $table-border-width solid $table-dark-border-color;
-    }
-
-    &.table-striped tbody tr:nth-of-type(#{$table-striped-order}) {
-      background-color: $table-dark-accent-bg;
-    }
-
-    &.table-hover tbody tr:hover {
-      color: $table-dark-row-hover-color;
-      background-color: $table-dark-row-hover-bg;
-    }
-  }
 }
 // stylelint-enable no-duplicate-selectors
+
+//= Light
+
+.table-light {
+  color: $table-light-color;
+  background-color: $table-light-bg;
+
+  th,
+  td {
+    border-color: $table-light-border-color;
+  }
+
+  tbody + tbody {
+    border-color: $table-light-border-color;
+  }
+
+  .thead-light th {
+    color: $table-head-light-color;
+    background-color: $table-head-light-bg;
+    border-color: $table-head-light-border-color;
+  }
+
+  &:not(.table-bordered):not(.table-borderless) {
+    border: $table-border-width solid $table-light-border-color;
+  }
+  &.table-bordered {
+    border-color: $table-light-border-color;
+  }
+
+  &.table-striped tbody tr:nth-of-type(#{$table-striped-order}) {
+    background-color: $table-light-accent-bg;
+  }
+
+  &.table-hover tbody tr:hover {
+    color: $table-light-row-hover-color;
+    background-color: $table-light-row-hover-bg;
+  }
+}
+
+//= Dark
+
+.table-dark {
+  color: $table-dark-color;
+  background-color: $table-dark-bg;
+
+  th,
+  td {
+    border-color: $table-dark-border-color;
+  }
+
+  tbody + tbody {
+    border-color: $table-dark-border-color;
+  }
+
+  .thead-dark th {
+    color: $table-head-dark-color;
+    background-color: $table-head-dark-bg;
+    border-color: $table-head-dark-border-color;
+  }
+
+  &:not(.table-bordered):not(.table-borderless) {
+    border: $table-border-width solid $table-dark-border-color;
+  }
+  &.table-bordered {
+    border-color: $table-dark-border-color;
+  }
+
+  &.table-striped tbody tr:nth-of-type(#{$table-striped-order}) {
+    background-color: $table-dark-accent-bg;
+  }
+
+  &.table-hover tbody tr:hover {
+    color: $table-dark-row-hover-color;
+    background-color: $table-dark-row-hover-bg;
+  }
+}
 
 //
 // Responsive table
