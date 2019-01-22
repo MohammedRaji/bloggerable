@@ -78,7 +78,7 @@ $body-bg:     #000;
 
 // Modify map
 $theme-colors: (
-  "primary": #000
+  "primary": #ff5722
 );
 
 // Add to map

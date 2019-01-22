@@ -58,20 +58,14 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
-$text-primary:    theme-color("primary") !default;
-$text-secondary:  theme-color("secondary") !default;
-$text-light:      theme-color("light") !default;
-$text-dark:       theme-color("dark") !default;
-$text-white:      $white !default;
-$text-black:      $black !default;
-$text-muted:      $gray-600 !default;
-
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light".
 // Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold:  150 !default;
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark:             $text-dark !default;
-$yiq-text-light:            $text-white !default;
+$yiq-text-dark:             $gray-900 !default;
+$yiq-text-light:            $white !default;
+
+$text-muted:                $gray-600 !default;
 
 //
 // Fonts, components, and more
@@ -92,9 +86,6 @@ $line-height:             1.5 !default;
 $border-width:            1px !default;
 $border-radius:           .25rem !default;
 $box-shadow:              0 .5rem 1rem rgba($black, .15) !default;
-
-$component-active-color:  $white !default;
-$component-active-bg:     theme-color("primary") !default;
 
 $spacer:                  1rem !default;
 
@@ -134,7 +125,7 @@ $body-font-family:  $font-family !default;
 $body-font-size:    $font-size !default;
 $body-font-weight:  $font-weight-normal !default;
 $body-line-height:  $line-height !default;
-$body-color:        $text-dark !default;
+$body-color:        $gray-900 !default;
 $body-bg:           $white !default;
 
 //
@@ -174,7 +165,7 @@ $hr-border-color:  rgba($black, .1) !default;
 
 //= Links
 
-$link-color:             $text-primary !default;
+$link-color:             theme-color("primary") !default;
 $link-hover-color:       darken($link-color, 15%) !default;
 $link-decoration:        none !default;
 $link-hover-decoration:  underline !default;
@@ -187,7 +178,7 @@ $small-font-weight:  $font-weight-normal !default;
 //= Mark
 
 $mark-padding:  .2em !default;
-$mark-color:    $text-black !default;
+$mark-color:    $black !default;
 $mark-bg:       #ffecb3 !default;
 
 //
@@ -203,8 +194,8 @@ $pre-color:          $body-color !default;
 
 $kbd-padding:        .2rem .4rem !default;
 $kbd-font-size:      $code-font-size !default;
-$kbd-color:          $text-white !default;
-$kbd-bg:             $dark !default;
+$kbd-color:          $white !default;
+$kbd-bg:             $gray-900 !default;
 $kbd-border-radius:  $border-radius !default;
 
 //
@@ -232,31 +223,31 @@ $table-row-hover-bg:             rgba($black, .075) !default;
 
 //= Light
 
-$table-light-color:              $text-dark !default;
-$table-light-bg:                 $light !default;
+$table-light-color:              $gray-900 !default;
+$table-light-bg:                 $gray-100 !default;
 $table-light-accent-bg:          rgba($black, .05) !default;
 $table-light-border-color:       darken($table-light-bg, 7.5%) !default;
-$table-light-row-hover-color:    $text-dark !default;
+$table-light-row-hover-color:    $gray-900 !default;
 $table-light-row-hover-bg:       rgba($black, .075) !default;
 
 //= Dark
 
-$table-dark-color:               $text-white !default;
-$table-dark-bg:                  $dark !default;
+$table-dark-color:               $white !default;
+$table-dark-bg:                  $gray-900 !default;
 $table-dark-accent-bg:           rgba($white, .05) !default;
 $table-dark-border-color:        lighten($table-dark-bg, 7.5%) !default;
-$table-dark-row-hover-color:     $text-white !default;
+$table-dark-row-hover-color:     $white !default;
 $table-dark-row-hover-bg:        rgba($white, .075) !default;
 
 //= Light head
 
-$table-head-light-color:         $text-dark !default;
+$table-head-light-color:         $gray-900 !default;
 $table-head-light-bg:            darken($table-light-bg, 7.5%) !default;
 $table-head-light-border-color:  darken($table-head-light-bg, 7.5%) !default;
 
 //= Dark head
 
-$table-head-dark-color:          $text-white !default;
+$table-head-dark-color:          $white !default;
 $table-head-dark-bg:             darken($table-dark-bg, 7.5%) !default;
 $table-head-dark-border-color:   lighten($table-head-dark-bg, 15%) !default;
 
@@ -311,7 +302,7 @@ $form-control-placeholder-color:           $text-muted !default;
 
 $form-control-focus-color:                 $form-control-color !default;
 $form-control-focus-bg:                    $form-control-bg !default;
-$form-control-focus-border-color:          lighten($component-active-bg, 25%) !default;
+$form-control-focus-border-color:          lighten(theme-color("primary"), 25%) !default;
 $form-control-focus-width:                 $input-focus-width !default;
 $form-control-disabled-bg:                 $gray-200 !default;
 
@@ -345,12 +336,12 @@ $button-toolbar-gutter:       .5rem !default;
 
 //= Default button
 
-$button-color:                $text-dark !default;
-$button-bg:                   $gray-400 !default;
-$button-border-color:         darken($button-bg, 3%) !default;
-$button-hover-color:          $text-dark !default;
-$button-hover-bg:             darken($button-bg, 7%) !default;
-$button-hover-border-color:   darken($button-hover-bg, 3%) !default;
-$button-active-color:         $text-dark !default;
-$button-active-bg:            darken($button-bg, 12%) !default;
-$button-active-border-color:  darken($button-active-bg, 3%) !default;
+$button-color:                $gray-900 !default;
+$button-bg:                   $white !default;
+$button-border-color:         $gray-300 !default;
+$button-hover-color:          $gray-900 !default;
+$button-hover-bg:             $gray-100 !default;
+$button-hover-border-color:   $gray-400 !default;
+$button-active-color:         $gray-900 !default;
+$button-active-bg:            $gray-200 !default;
+$button-active-border-color:  $gray-500 !default;
