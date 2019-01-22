@@ -58,6 +58,8 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+$text-muted:  $gray-600 !default;
+
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light".
 // Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold:  150 !default;
@@ -65,38 +67,36 @@ $yiq-contrasted-threshold:  150 !default;
 $yiq-text-dark:             $gray-900 !default;
 $yiq-text-light:            $white !default;
 
-$text-muted:                $gray-600 !default;
-
 //
 // Fonts, components, and more
 //
 
 // stylelint-disable value-keyword-case
-$font-family:             -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-family-monospace:   SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family:            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace:  SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
-$font-size:               1rem !default;
-$font-weight-lighter:     lighter !default;
-$font-weight-light:       300 !default;
-$font-weight-normal:      400 !default;
-$font-weight-bold:        700 !default;
-$font-weight-bolder:      bolder !default;
-$line-height:             1.5 !default;
-$border-width:            1px !default;
-$border-radius:           .25rem !default;
-$box-shadow:              0 .5rem 1rem rgba($black, .15) !default;
+$font-size:              1rem !default;
+$font-weight-lighter:    lighter !default;
+$font-weight-light:      300 !default;
+$font-weight-normal:     400 !default;
+$font-weight-bold:       700 !default;
+$font-weight-bolder:     bolder !default;
+$line-height:            1.5 !default;
+$border-width:           1px !default;
+$border-radius:          .25rem !default;
+$box-shadow:             0 .5rem 1rem rgba($black, .15) !default;
 
-$spacer:                  1rem !default;
+$spacer:                 1rem !default;
 
 // Forms + Buttons
-$input-padding-y:         .375rem !default;
-$input-padding-x:         .75rem !default;
-$input-font-size:         $font-size !default;
-$input-line-height:       $line-height !default;
-$input-border-width:      $border-width !default;
-$input-border-radius:     $border-radius !default;
-$input-focus-width:       .2rem !default;
+$input-padding-y:        .375rem !default;
+$input-padding-x:        .75rem !default;
+$input-font-size:        $font-size !default;
+$input-line-height:      $line-height !default;
+$input-border-width:     $border-width !default;
+$input-border-radius:    $border-radius !default;
+$input-focus-width:      .2rem !default;
 
 //
 // Grid breakpoints
@@ -138,12 +138,12 @@ $headings-font-weight:    500 !default;
 $headings-line-height:    1.2 !default;
 $headings-color:          inherit !default;
 
-$h1-font-size:          $font-size * 2.5 !default;
-$h2-font-size:          $font-size * 2 !default;
-$h3-font-size:          $font-size * 1.75 !default;
-$h4-font-size:          $font-size * 1.5 !default;
-$h5-font-size:          $font-size * 1.25 !default;
-$h6-font-size:          $font-size !default;
+$h1-font-size:            $font-size * 2.5 !default;
+$h2-font-size:            $font-size * 2 !default;
+$h3-font-size:            $font-size * 1.75 !default;
+$h4-font-size:            $font-size * 1.5 !default;
+$h5-font-size:            $font-size * 1.25 !default;
+$h6-font-size:            $font-size !default;
 
 //
 // Paragraphs
@@ -172,14 +172,14 @@ $link-hover-decoration:  underline !default;
 
 //= Small
 
-$small-font-size:    80% !default;
-$small-font-weight:  $font-weight-normal !default;
+$small-font-size:        80% !default;
+$small-font-weight:      $font-weight-normal !default;
 
 //= Mark
 
-$mark-padding:  .2em !default;
-$mark-color:    $black !default;
-$mark-bg:       #ffecb3 !default;
+$mark-padding:           .2em !default;
+$mark-color:             $black !default;
+$mark-bg:                #ffecb3 !default;
 
 //
 // Code
@@ -266,7 +266,7 @@ $table-striped-order:            odd !default;
 // Blockquotes
 //
 
-$blockquote-margin-bottom:        1rem !default;
+$blockquote-margin-bottom:  1rem !default;
 
 //
 // Addresses
@@ -284,38 +284,38 @@ $figure-margin-bottom:  1rem !default;
 // Forms
 //
 
-$label-margin-bottom:                      .5rem !default;
+$label-margin-bottom:               .5rem !default;
 
-$form-control-padding-y:                   $input-padding-y !default;
-$form-control-padding-x:                   $input-padding-x !default;
-$form-control-font-size:                   $input-font-size !default;
-$form-control-line-height:                 $input-line-height !default;
-$form-control-color:                       $gray-700 !default;
-$form-control-bg:                          $white !default;
-$form-control-border-width:                $input-border-width !default;
-$form-control-border-color:                $gray-400 !default;
-$form-control-border-radius:               $input-border-radius !default;
-$form-control-height:                      calc(#{($form-control-font-size * $form-control-line-height) + ($form-control-padding-y * 2)} + #{($form-control-border-width * 2)}) !default;
+$form-control-padding-y:            $input-padding-y !default;
+$form-control-padding-x:            $input-padding-x !default;
+$form-control-font-size:            $input-font-size !default;
+$form-control-line-height:          $input-line-height !default;
+$form-control-color:                $gray-700 !default;
+$form-control-bg:                   $white !default;
+$form-control-border-width:         $input-border-width !default;
+$form-control-border-color:         $gray-400 !default;
+$form-control-border-radius:        $input-border-radius !default;
+$form-control-height:               calc(#{($form-control-font-size * $form-control-line-height) + ($form-control-padding-y * 2)} + #{($form-control-border-width * 2)}) !default;
 
-$form-control-transition:                  border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
-$form-control-placeholder-color:           $text-muted !default;
+$form-control-transition:           border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$form-control-placeholder-color:    $text-muted !default;
 
-$form-control-focus-color:                 $form-control-color !default;
-$form-control-focus-bg:                    $form-control-bg !default;
-$form-control-focus-border-color:          lighten(theme-color("primary"), 25%) !default;
-$form-control-focus-width:                 $input-focus-width !default;
-$form-control-disabled-bg:                 $gray-200 !default;
+$form-control-focus-color:          $form-control-color !default;
+$form-control-focus-bg:             $form-control-bg !default;
+$form-control-focus-border-color:   lighten(theme-color("primary"), 25%) !default;
+$form-control-focus-width:          $input-focus-width !default;
+$form-control-disabled-bg:          $gray-200 !default;
 
-$form-text-margin-top:                     .25rem !default;
-$form-text-font-size:                      $small-font-size !default;
-$form-text-color:                          $text-muted !default;
+$form-text-margin-top:              .25rem !default;
+$form-text-font-size:               $small-font-size !default;
+$form-text-color:                   $text-muted !default;
 
-$form-check-input-gutter:                  1.25rem !default;
-$form-check-input-margin-y:                .4rem !default;
-$form-check-inline-margin-x:               .75rem !default;
-$form-check-inline-input-margin-x:         .3125rem !default;
+$form-check-input-gutter:           1.25rem !default;
+$form-check-input-margin-y:         .4rem !default;
+$form-check-inline-margin-x:        .75rem !default;
+$form-check-inline-input-margin-x:  .3125rem !default;
 
-$form-group-margin-bottom:                 $spacer !default;
+$form-group-margin-bottom:          $spacer !default;
 
 //
 // Buttons

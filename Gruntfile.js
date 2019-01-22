@@ -24,7 +24,10 @@ module.exports = function (grunt) {
             ' */\n',
 
     clean: {
-      'dist': ['dist', 'src/tmp'],
+      'dist': [
+        'dist',
+        'src/tmp'
+      ],
       'concatXmlSass': 'src/tmp/css/xml-sass.scss'
     },
 
@@ -84,7 +87,11 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'dist/docs/',
-          src: ['**/*.html', 'assets/css/**/*.css', 'assets/js/**/*.js'],
+          src: [
+            '**/*.html',
+            'assets/css/**/*.css',
+            'assets/js/**/*.js'
+          ],
           dest: 'dist/docs'
         }]
       }
@@ -135,10 +142,19 @@ module.exports = function (grunt) {
         syntax: ''
       },
       coreCss: {
-        src: ['src/skin.css', 'src/template-skin.css', 'src/_scss/**/*.scss', 'src/_xml/**/*.scss', 'src/_xml/**/*.css']
+        src: [
+          'src/skin.css',
+          'src/template-skin.css',
+          'src/_scss/**/*.scss',
+          'src/_xml/**/*.scss',
+          'src/_xml/**/*.css'
+        ]
       },
       docs: {
-        src: ['src/_docs/assets/css/**/*.css', '!src/_docs/assets/css/**/*.min.css']
+        src: [
+          'src/_docs/assets/css/**/*.css',
+          '!src/_docs/assets/css/**/*.min.css'
+        ]
       }
     },
 
@@ -169,7 +185,10 @@ module.exports = function (grunt) {
         src: 'src/tmp/css/**/*.css'
       },
       docs: {
-        src: ['dist/docs/assets/css/**/*.css', '!dist/docs/assets/css/**/*.min.css']
+        src: [
+          'dist/docs/assets/css/**/*.css',
+          '!dist/docs/assets/css/**/*.min.css'
+        ]
       }
     },
 
@@ -187,7 +206,11 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'src/tmp/css/',
-          src: ['**/*.css', '!skin.css', '!template-skin.css'],
+          src: [
+            '**/*.css',
+            '!skin.css',
+            '!template-skin.css'
+          ],
           dest: 'src/tmp/css'
         }]
       },
@@ -198,7 +221,10 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'dist/docs/',
-          src: ['assets/css/**/*.css', '!assets/css/**/*.min.css'],
+          src: [
+            'assets/css/**/*.css',
+            '!assets/css/**/*.min.css'
+          ],
           dest: 'dist/docs'
         }]
       }
@@ -252,7 +278,10 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'dist/docs/',
-          src: ['assets/js/**/*.js', '!assets/js/**/*.min.js'],
+          src: [
+            'assets/js/**/*.js',
+            '!assets/js/**/*.min.js'
+          ],
           dest: 'dist/docs'
         }]
       }
@@ -270,13 +299,25 @@ module.exports = function (grunt) {
       docsFiles: {
         expand: true,
         cwd: 'src/_docs/',
-        src: ['**/*', '!**/*.md', '!content', '!templates', '!content/**/*', '!templates/**/*'],
+        src: [
+          '**/*',
+          '!**/*.md',
+          '!content',
+          '!content/**/*',
+          '!templates',
+          '!templates/**/*'
+        ],
         dest: 'dist/docs'
       },
       docsBundle: {
         expand: true,
         cwd: 'src/tmp/',
-        src: ['css/**/*', '!css/skin.css', '!css/template-skin.css', 'js/**/*'],
+        src: [
+          'css/**/*',
+          'js/**/*',
+          '!css/skin.css',
+          '!css/template-skin.css'
+        ],
         dest: 'dist/docs/assets/bundle'
       }
     },
@@ -297,9 +338,7 @@ module.exports = function (grunt) {
           'src/**/*',
           '!src/tmp/**/*'
         ],
-        tasks: [
-          'default'
-        ]
+        tasks: ['default']
       }
     },
 
@@ -313,7 +352,13 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          src: ['**', '.*', '!.git', '!*.zip', '!node_modules/**']
+          src: [
+            '**',
+            '.*',
+            '!.git',
+            '!*.zip',
+            '!node_modules/**'
+          ]
         }]
       },
       starter: {
@@ -325,7 +370,13 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          src: ['**', '.*', '!.git', '!*.zip', '!node_modules/**']
+          src: [
+            '**',
+            '.*',
+            '!.git',
+            '!*.zip',
+            '!node_modules/**'
+          ]
         }]
       }
     }
