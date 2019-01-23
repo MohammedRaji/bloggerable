@@ -15,6 +15,7 @@ The directory structure looks something like this:
 ```plaintext
 [root theme directory]
 ├── dist
+│   ├── bundle
 │   ├── docs
 │   └── theme.xml
 └── src
@@ -22,7 +23,6 @@ The directory structure looks something like this:
     ├── _js
     ├── _scss
     ├── _xml
-    ├── tmp
     ├── config.json
     ├── skin.css
     ├── template-skin.css
@@ -39,7 +39,7 @@ The directory structure looks something like this:
   <tbody>
     <tr>
       <td><code style="white-space: nowrap;">dist</code></td>
-      <td>The <code>dist</code> folder includes precompiled theme, as well as compiled and minified documentation files.</td>
+      <td>The <code>dist</code> folder includes the precompiled theme, CSS, JS, and documentation.</td>
     </tr>
     <tr>
       <td><code style="white-space: nowrap;">src</code></td>
@@ -51,19 +51,15 @@ The directory structure looks something like this:
     </tr>
     <tr>
       <td><code style="white-space: nowrap;">src/_js</code></td>
-      <td>The source code for main JavaScript (<code>src/tmp/js/main.js</code>).</td>
+      <td>The source code for main JavaScript (<code style="white-space: nowrap;">dist/bundle/js/main[.js|.min.js]</code>).</td>
     </tr>
     <tr>
       <td><code style="white-space: nowrap;">src/_scss</code></td>
-      <td>The source code for main CSS (<code>src/tmp/css/main.css</code>).</td>
+      <td>The source code for main CSS (<code style="white-space: nowrap;">dist/bundle/css/main[.css|.min.css]</code>).</td>
     </tr>
     <tr>
       <td><code style="white-space: nowrap;">src/_xml</code></td>
       <td>The Blogger XML that can be mixed and matched by your theme.</td>
-    </tr>
-    <tr>
-      <td><code style="white-space: nowrap;">src/tmp</code></td>
-      <td>All CSS and JS are compiled into this folder.</td>
     </tr>
     <tr>
       <td>
@@ -305,7 +301,7 @@ For example, the grunt-bake tag that can be used to include the partial in `src/
 
 Our source code have a `src/config.json` file to gives you a lot of flexibility.
 
-Do not edit the existing JSON key in `src/config.json`.
+**Do not edit** the existing JSON key in `src/config.json`.
 
 You can access the config values by using:
 
@@ -320,10 +316,17 @@ You can access the config values in:
 - `src/theme.xml`
 - `src/skin.css`
 - `src/template-skin.css`
-- `src/_xml`
-- `src/_scss`
-- `src/_js`
-- `src/_docs`
+- `src/_xml/`
+  - `**/*.xml`
+  - `**/*.scss`
+  - `**/*.css`
+- `src/_scss/**/*.scss`
+- `src/_js/**/*.js`
+- `src/_docs/`
+  - `**/*.md`
+  - `**/*.html`
+  - `assets/css/**/*.css`
+  - `assets/js/**/*.js`
 
 Example:
 

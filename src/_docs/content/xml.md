@@ -38,7 +38,7 @@ We uses gadget version `2`:
 
 ## Scoped CSS
 
-You can create Sass/CSS files in `src/_xml`, the Sass/CSS files will be automatically concatenated, compiled, and minified into `src/tmp/css/xml-sass.css` (Sass files) and `src/tmp/css/xml-css.css` (CSS files).
+You can create Sass/CSS files in `src/_xml`, the Sass/CSS files will be automatically concatenated, compiled, and minified into `dist/bundle/css`.
 
 When using this feature, its CSS will apply to elements of the current file/component only. This means the component and its CSS must be set specifically.
 
@@ -98,7 +98,7 @@ Bar component:
             └── qux.xml
 ```
 
-The styles in `folder-1/*.scss` and `folder-2/*.scss` will be available in the `src/tmp/css/xml-sass.css`.
+The styles in `folder-1/*.scss` and `folder-2/*.scss` will be available in the `dist/bundle/css/xml-sass.css` and `dist/bundle/css/xml-sass.min.css`.
 
 #### Variables, functions, mixins, and styles
 
@@ -170,7 +170,7 @@ You can also import variables, functions, and mixins from `src/_scss`, or import
             └── qux.xml
 ```
 
-The styles in `folder-1/*.css` and `folder-2/*.css` will be available in the `src/tmp/css/xml-css.css`.
+The styles in `folder-1/*.css` and `folder-2/*.css` will be available in the `dist/bundle/css/xml-css.css` and `dist/bundle/css/xml-css.min.css`.
 
 
 ## Code guide
