@@ -24,11 +24,7 @@ module.exports = function (grunt) {
             ' */\n',
 
     clean: {
-      'dist': [
-        'dist',
-        'src/tmp'
-      ],
-      'concatXmlSass': 'src/tmp/css/xml-sass.scss'
+      'dist': 'dist'
     },
 
     bake: {
@@ -62,11 +58,11 @@ module.exports = function (grunt) {
           basePath: 'src'
         },
         files: [
-          { src: 'src/skin.css', dest: 'src/tmp/css/skin.css' },
-          { src: 'src/template-skin.css', dest: 'src/tmp/css/template-skin.css' },
-          { src: 'src/tmp/css/main.css', dest: 'src/tmp/css/main.css' },
-          { src: 'src/tmp/css/xml-sass.css', dest: 'src/tmp/css/xml-sass.css' },
-          { src: 'src/tmp/css/xml-css.css', dest: 'src/tmp/css/xml-css.css' }
+          { src: 'dist/bundle/css/skin.css', dest: 'dist/bundle/css/skin.css' },
+          { src: 'dist/bundle/css/template-skin.css', dest: 'dist/bundle/css/template-skin.css' },
+          { src: 'dist/bundle/css/main.css', dest: 'dist/bundle/css/main.css' },
+          { src: 'dist/bundle/css/xml-sass.css', dest: 'dist/bundle/css/xml-sass.css' },
+          { src: 'dist/bundle/css/xml-css.css', dest: 'dist/bundle/css/xml-css.css' }
         ]
       },
       coreJs: {
@@ -75,9 +71,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'src/tmp/js/',
+          cwd: 'dist/bundle/js/',
           src: 'main.js',
-          dest: 'src/tmp/js'
+          dest: 'dist/bundle/js'
         }]
       },
       docs: {
@@ -153,7 +149,8 @@ module.exports = function (grunt) {
       docs: {
         src: [
           'src/_docs/assets/css/**/*.css',
-          '!src/_docs/assets/css/**/*.min.css'
+          '!src/_docs/assets/css/**/*.min.css',
+          '!src/_docs/assets/css/vendor/**/*.css'
         ]
       }
     },
@@ -161,33 +158,36 @@ module.exports = function (grunt) {
     sass: {
       options: {
         implementation: sass,
-        sourceMap: true
+        outputStyle: 'expanded',
+        sourceMap: true,
+        sourceMapContents: true
       },
       coreCss: {
-        options: {
-          sourceMap: false
-        },
         files: [
-          { 'src/tmp/css/main.css': 'src/_scss/index.scss' },
-          { 'src/tmp/css/xml-sass.css': 'src/tmp/css/xml-sass.scss' }
+          { 'dist/bundle/css/main.css': 'src/_scss/index.scss' },
+          { 'dist/bundle/css/xml-sass.css': 'dist/bundle/css/xml-sass.scss' }
         ]
       }
     },
 
     postcss: {
       options: {
-        map: false,
+        map: {
+          inline: false,
+          sourcesContent: true
+        },
         processors: [
           require('autoprefixer')({ cascade: false })
         ]
       },
       coreCss: {
-        src: 'src/tmp/css/**/*.css'
+        src: 'dist/bundle/css/**/*.css'
       },
       docs: {
         src: [
           'dist/docs/assets/css/**/*.css',
-          '!dist/docs/assets/css/**/*.min.css'
+          '!dist/docs/assets/css/**/*.min.css',
+          '!dist/docs/assets/css/vendor/**/*.css'
         ]
       }
     },
@@ -200,32 +200,29 @@ module.exports = function (grunt) {
         advanced: false
       },
       coreCss: {
-        options: {
-          sourceMap: false
-        },
         files: [{
           expand: true,
-          cwd: 'src/tmp/css/',
+          cwd: 'dist/bundle/css/',
           src: [
             '**/*.css',
             '!skin.css',
             '!template-skin.css'
           ],
-          dest: 'src/tmp/css'
+          dest: 'dist/bundle/css',
+          ext: '.min.css'
         }]
       },
       docs: {
-        options: {
-          sourceMap: false
-        },
         files: [{
           expand: true,
           cwd: 'dist/docs/',
           src: [
             'assets/css/**/*.css',
-            '!assets/css/**/*.min.css'
+            '!assets/css/**/*.min.css',
+            '!assets/css/vendor/**/*.css'
           ],
-          dest: 'dist/docs'
+          dest: 'dist/docs',
+          ext: '.min.css'
         }]
       }
     },
@@ -244,7 +241,15 @@ module.exports = function (grunt) {
       },
       coreJs: {
         files: {
-          'src/tmp/js/main.js': 'src/_js/index.js'
+          'dist/bundle/js/main.js': 'src/_js/index.js'
+        }
+      }
+    },
+
+    exorcise: {
+      coreJs: {
+        files: {
+          'dist/bundle/js/main.js.map': ['dist/bundle/js/main.js']
         }
       }
     },
@@ -252,7 +257,9 @@ module.exports = function (grunt) {
     uglify: {
       options: {
         mangle: true,
-        sourceMap: true,
+        sourceMap: {
+          includeSources: true
+        },
         compress: {
           warnings: false
         },
@@ -261,28 +268,25 @@ module.exports = function (grunt) {
         }
       },
       coreJs: {
-        options: {
-          sourceMap: false
-        },
         files: [{
           expand: true,
-          cwd: 'src/tmp/js/',
+          cwd: 'dist/bundle/js/',
           src: 'main.js',
-          dest: 'src/tmp/js'
+          dest: 'dist/bundle/js',
+          ext: '.min.js'
         }]
       },
       docs: {
-        options: {
-          sourceMap: false
-        },
         files: [{
           expand: true,
           cwd: 'dist/docs/',
           src: [
             'assets/js/**/*.js',
-            '!assets/js/**/*.min.js'
+            '!assets/js/**/*.min.js',
+            '!assets/js/vendor/**/*.js'
           ],
-          dest: 'dist/docs'
+          dest: 'dist/docs',
+          ext: '.min.js'
         }]
       }
     },
@@ -296,6 +300,15 @@ module.exports = function (grunt) {
     },
 
     copy: {
+      skin: {
+        expand: true,
+        cwd: 'src/',
+        src: [
+          'skin.css',
+          'template-skin.css'
+        ],
+        dest: 'dist/bundle/css'
+      },
       docsFiles: {
         expand: true,
         cwd: 'src/_docs/',
@@ -311,7 +324,7 @@ module.exports = function (grunt) {
       },
       docsBundle: {
         expand: true,
-        cwd: 'src/tmp/',
+        cwd: 'dist/bundle/',
         src: [
           'css/**/*',
           'js/**/*',
@@ -334,10 +347,7 @@ module.exports = function (grunt) {
 
     watch: {
       main: {
-        files: [
-          'src/**/*',
-          '!src/tmp/**/*'
-        ],
+        files: ['src/**/*'],
         tasks: ['default']
       }
     },
@@ -396,7 +406,7 @@ module.exports = function (grunt) {
       var concat = grunt.config.get('concat') || {};
       concat[dir] = {
         src: [dir + '/**/*.scss'],
-        dest: 'src/tmp/css/xml-sass.scss'
+        dest: 'dist/bundle/css/xml-sass.scss'
       };
       grunt.config.set('concat', concat);
     });
@@ -407,19 +417,19 @@ module.exports = function (grunt) {
       var concat = grunt.config.get('concat') || {};
       concat[dir] = {
         src: [dir + '/**/*.css'],
-        dest: 'src/tmp/css/xml-css.css'
+        dest: 'dist/bundle/css/xml-css.css'
       };
       grunt.config.set('concat', concat);
     });
     grunt.task.run('concat');
   });
   grunt.registerTask('css-lint', ['stylelint:coreCss']);
-  grunt.registerTask('css-compile', ['concatXmlSass', 'sass:coreCss', 'clean:concatXmlSass', 'concatXmlCss', 'bake:coreCss', 'postcss:coreCss']);
+  grunt.registerTask('css-compile', ['concatXmlSass', 'sass:coreCss', 'concatXmlCss', 'copy:skin', 'postcss:coreCss', 'bake:coreCss']);
   grunt.registerTask('css-minify', ['cssmin:coreCss']);
   grunt.registerTask('dist-css', ['css-lint', 'css-compile', 'css-minify']);
 
   // JS task.
-  grunt.registerTask('js-compile', ['browserify:coreJs', 'bake:coreJs']);
+  grunt.registerTask('js-compile', ['browserify:coreJs', 'exorcise:coreJs', 'bake:coreJs']);
   grunt.registerTask('js-minify', ['uglify:coreJs']);
   grunt.registerTask('dist-js', ['js-compile', 'js-minify']);
 

@@ -6,10 +6,10 @@
     <title><% if(category != 'none') { %><%= category %> &middot; <% } %><% if(subcategory != 'none') { %><%= subcategory %>: <% } %><%= title %></title>
     <meta name="description" content="<%= description %>">
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="assets/bundle/css/main.css">
-    <link rel="stylesheet" href="assets/bundle/css/xml-sass.css">
-    <link rel="stylesheet" href="assets/bundle/css/xml-css.css">
-    <link rel="stylesheet" href="assets/css/doc.css">
+    <link rel="stylesheet" href="assets/bundle/css/main.min.css">
+    <link rel="stylesheet" href="assets/bundle/css/xml-sass.min.css">
+    <link rel="stylesheet" href="assets/bundle/css/xml-css.min.css">
+    <link rel="stylesheet" href="assets/css/doc.min.css">
   </head>
   <body class="doc-body">
 
@@ -21,9 +21,9 @@
     <%= partial('partials/doc-content.html') %>
     <%= partial('partials/doc-overlay.html') %>
 
-    <script src="assets/bundle/js/main.js"></script>
+    <script src="assets/bundle/js/main.min.js"></script>
     <script src="assets/js/vendor/anchor.min.js"></script>
     <script src="assets/js/vendor/tocbot.min.js"></script>
-    <script src="assets/js/doc.js"></script>
+    <script src="assets/js/doc.min.js"></script>
   </body>
 </html>

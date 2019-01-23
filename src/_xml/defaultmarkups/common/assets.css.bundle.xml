@@ -1,9 +1,9 @@
 <b:includable id='assets.css.bundle'>
 
 <style>
-<!--(bake /tmp/css/main.css)-->
-<!--(bake /tmp/css/xml-sass.css)-->
-<!--(bake /tmp/css/xml-css.css)-->
+<!--(bake /../dist/bundle/css/main.min.css)-->
+<!--(bake /../dist/bundle/css/xml-sass.min.css)-->
+<!--(bake /../dist/bundle/css/xml-css.min.css)-->
 </style>
 
 </b:includable>

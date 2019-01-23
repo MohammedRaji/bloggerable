@@ -2,7 +2,7 @@
 
 <script>
 //<![CDATA[
-<!--(bake /tmp/js/main.js)-->
+<!--(bake /../dist/bundle/js/main.min.js)-->
 //]]>
 </script>
 

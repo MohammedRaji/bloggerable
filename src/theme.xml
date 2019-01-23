@@ -35,7 +35,7 @@ CSS
 <b:if cond='data:view.isLayoutMode'>
 <b:template-skin>
 <![CDATA[
-<!--(bake tmp/css/template-skin.css)-->
+<!--(bake /../dist/bundle/css/template-skin.css)-->
 ]]>
 </b:template-skin>
 </b:if>
@@ -45,7 +45,7 @@ CSS
 <b:if cond='!data:view.isLayoutMode'>
 <b:skin>
 <![CDATA[
-<!--(bake tmp/css/skin.css)-->
+<!--(bake /../dist/bundle/css/skin.css)-->
 ]]>
 </b:skin>
 </b:if>
