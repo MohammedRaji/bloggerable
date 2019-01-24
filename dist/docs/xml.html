@@ -4,7 +4,7 @@
 </code></pre><p>We uses gadget version <code>2</code>:</p><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">b:defaultwidgetversion</span>=<span class="hljs-string">'2'</span>&gt;</span>
   ...
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
-</code></pre><h2 id="scoped-css">Scoped CSS</h2><p>You can create Sass/CSS files in <code>src/_xml</code>, the Sass/CSS files will be automatically concatenated, compiled, and minified into <code>src/tmp/css/xml-sass.css</code> (Sass files) and <code>src/tmp/css/xml-css.css</code> (CSS files).</p><p>When using this feature, its CSS will apply to elements of the current file/component only. This means the component and its CSS must be set specifically.</p><p><strong>Example</strong></p><p>Foo component:</p><pre><code class="lang-html"># foo.xml
+</code></pre><h2 id="scoped-css">Scoped CSS</h2><p>You can create Sass/CSS files in <code>src/_xml</code>, the Sass/CSS files will be automatically concatenated, compiled, and minified into <code>dist/bundle/css</code>.</p><p>When using this feature, its CSS will apply to elements of the current file/component only. This means the component and its CSS must be set specifically.</p><p><strong>Example</strong></p><p>Foo component:</p><pre><code class="lang-html"># foo.xml
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">'foo-element'</span>&gt;</span>
   ...
@@ -37,7 +37,7 @@
             ├── baz.xml
             ├── qux.scss
             └── qux.xml
-</code></pre><p>The styles in <code>folder-1/*.scss</code> and <code>folder-2/*.scss</code> will be available in the <code>src/tmp/css/xml-sass.css</code>.</p><h4 id="variables-functions-mixins-and-styles">Variables, functions, mixins, and styles</h4><p>You can add local and/or global variables, functions, mixins, and styles.</p><h5 id="local-example">Local example</h5><p>Example local variables:</p><pre><code class="lang-scss"># src/_xml/folder-1/foo.scss
+</code></pre><p>The styles in <code>folder-1/*.scss</code> and <code>folder-2/*.scss</code> will be available in the <code>dist/bundle/css/xml-sass.css</code> and <code>dist/bundle/css/xml-sass.min.css</code>.</p><h4 id="variables-functions-mixins-and-styles">Variables, functions, mixins, and styles</h4><p>You can add local and/or global variables, functions, mixins, and styles.</p><h5 id="local-example">Local example</h5><p>Example local variables:</p><pre><code class="lang-scss"># src/_xml/folder-1/foo.scss
 
 $foo-color: #fff !default;
 $foo-bg:    #000 !default;
@@ -72,7 +72,7 @@ $bg:    #000 !default;
             ├── baz.xml
             ├── qux.css
             └── qux.xml
-</code></pre><p>The styles in <code>folder-1/*.css</code> and <code>folder-2/*.css</code> will be available in the <code>src/tmp/css/xml-css.css</code>.</p><h2 id="code-guide">Code guide</h2><h3 id="comments-and-organization">Comments and organization</h3><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>
+</code></pre><p>The styles in <code>folder-1/*.css</code> and <code>folder-2/*.css</code> will be available in the <code>dist/bundle/css/xml-css.css</code> and <code>dist/bundle/css/xml-css.min.css</code>.</p><h2 id="code-guide">Code guide</h2><h3 id="comments-and-organization">Comments and organization</h3><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>
 #############################################################################
 Heading 1
 ############################################################################# <span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>

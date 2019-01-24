@@ -3,23 +3,23 @@
     └── _scss/
         ├── _custom.scss
         └── **/*.scss
-</code></pre><table><thead><tr><th>File / Directory</th><th>Description</th></tr></thead><tbody><tr><td><code style="white-space: nowrap;">_custom.scss</code></td><td>Copy variables from <code>_variables.scss</code> to this file to override default values without modifying source files.</td></tr><tr><td><code style="white-space: nowrap;">**/*.scss</code></td><td>Other Sass files are variables, functions, mixins, and components.</td></tr></tbody></table><h2 id="sass-options">Sass options</h2><p>You can find and customize these variables for key global options in <code>_variables.scss</code>.</p><table><thead><tr><th>Variable</th><th>Values</th><th>Description</th></tr></thead><tbody><tr><td><code>$enable-rounded</code></td><td><code>true</code> (default) or <code>false</code></td><td>Enables predefined <code>border-radius</code> styles on various components.</td></tr><tr><td><code>$enable-shadows</code></td><td><code>true</code> or <code>false</code> (default)</td><td>Enables predefined <code>box-shadow</code> styles on various components.</td></tr><tr><td><code>$enable-transitions</code></td><td><code>true</code> (default) or <code>false</code></td><td>Enables predefined <code>transition</code>s on various components.</td></tr></tbody></table><h2 id="modify-variables-and-maps">Modify variables and maps</h2><p>Every Sass variable includes the <code>!default</code> flag allowing you to override the variable’s default value in <code>_custom.scss</code> without modifying source code.</p><p>Just like Sass variables, all Sass maps include the <code>!default</code> flag and can be overridden and extended.</p><p>Example:</p><pre><code class="lang-scss"># _custom<span class="hljs-selector-class">.scss</span>
+</code></pre><table><thead><tr><th>File / Directory</th><th>Description</th></tr></thead><tbody><tr><td><code style="white-space: nowrap;">_custom.scss</code></td><td>Copy variables from <code>_variables.scss</code> to this file to override default values without modifying source files.</td></tr><tr><td><code style="white-space: nowrap;">**/*.scss</code></td><td>Other Sass files are variables, functions, mixins, and components.</td></tr></tbody></table><h2 id="sass-options">Sass options</h2><p>You can find and customize these variables for key global options in <code>_variables.scss</code>.</p><table><thead><tr><th>Variable</th><th>Values</th><th>Description</th></tr></thead><tbody><tr><td><code>$enable-rounded</code></td><td><code>true</code> (default) or <code>false</code></td><td>Enables predefined <code>border-radius</code> styles on various components.</td></tr><tr><td><code>$enable-shadows</code></td><td><code>true</code> or <code>false</code> (default)</td><td>Enables predefined <code>box-shadow</code> styles on various components.</td></tr><tr><td><code>$enable-transitions</code></td><td><code>true</code> (default) or <code>false</code></td><td>Enables predefined <code>transition</code>s on various components.</td></tr></tbody></table><h2 id="modify-variables-and-maps">Modify variables and maps</h2><p>Every Sass variable includes the <code>!default</code> flag allowing you to override the variable’s default value in <code>_custom.scss</code> without modifying source code.</p><p>Just like Sass variables, all Sass maps include the <code>!default</code> flag and can be overridden and extended.</p><p>Example:</p><pre><code class="lang-scss"># src/_scss/_custom.scss
 
-<span class="hljs-comment">// Customize options</span>
-<span class="hljs-variable">$enable-rounded</span>: false;
+// Customize options
+$enable-rounded: false;
 
-<span class="hljs-comment">// Variable overrides</span>
-<span class="hljs-variable">$body-color</span>:  <span class="hljs-number">#fff</span>;
-<span class="hljs-variable">$body-bg</span>:     <span class="hljs-number">#000</span>;
+// Variable overrides
+$body-color:  #fff;
+$body-bg:     #000;
 
-<span class="hljs-comment">// Modify map</span>
-<span class="hljs-variable">$theme-colors</span>: (
-  <span class="hljs-string">"primary"</span>: <span class="hljs-number">#ff5722</span>
+// Modify map
+$theme-colors: (
+  &quot;primary&quot;: #ff5722
 );
 
-<span class="hljs-comment">// Add to map</span>
-<span class="hljs-variable">$theme-colors</span>: (
-  <span class="hljs-string">"custom-color"</span>: <span class="hljs-number">#900</span>
+// Add to map
+$theme-colors: (
+  &quot;custom-color&quot;: #900
 );
 </code></pre><h2 id="functions">Functions</h2><p>We utilizes several Sass functions in <code>_functions.scss</code>.</p><h3 id="color-maps">Color maps</h3><p>Functions for getting values from the color maps.</p><pre><code class="lang-scss"><span class="hljs-comment">// Retrieve color Sass maps</span>
 @function theme-color(<span class="hljs-variable">$key</span>: <span class="hljs-string">"primary"</span>) {
