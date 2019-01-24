@@ -67,7 +67,7 @@ Just like Sass variables, all Sass maps include the `!default` flag and can be o
 Example:
 
 ```scss
-# _custom.scss
+# src/_scss/_custom.scss
 
 // Customize options
 $enable-rounded: false;
