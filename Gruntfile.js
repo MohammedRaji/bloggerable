@@ -329,7 +329,9 @@ module.exports = function (grunt) {
           'css/**/*',
           'js/**/*',
           '!css/skin.css',
-          '!css/template-skin.css'
+          '!css/skin.css.map',
+          '!css/template-skin.css',
+          '!css/template-skin.css.map'
         ],
         dest: 'dist/docs/assets/bundle'
       }
