@@ -24,7 +24,8 @@ module.exports = function (grunt) {
             ' */\n',
 
     clean: {
-      'dist': 'dist'
+      'dist': 'dist',
+      'xmlSass': 'dist/bundle/css/xml-sass.scss'
     },
 
     bake: {
@@ -426,7 +427,7 @@ module.exports = function (grunt) {
     grunt.task.run('concat');
   });
   grunt.registerTask('css-lint', ['stylelint:coreCss']);
-  grunt.registerTask('css-compile', ['concatXmlSass', 'sass:coreCss', 'concatXmlCss', 'copy:skin', 'postcss:coreCss', 'bake:coreCss']);
+  grunt.registerTask('css-compile', ['concatXmlSass', 'sass:coreCss', 'concatXmlCss', 'copy:skin', 'postcss:coreCss', 'bake:coreCss', 'clean:xmlSass']);
   grunt.registerTask('css-minify', ['cssmin:coreCss']);
   grunt.registerTask('dist-css', ['css-lint', 'css-compile', 'css-minify']);
 
