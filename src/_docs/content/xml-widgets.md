@@ -29,50 +29,37 @@ Learn how to add a widget.
 ```plaintext
 [root theme directory]
 └── src/
-    └── _xml/
-        ├── widgets/
-        │   └── b-section-example/
-        │       ├── Label1.xml
-        │       └── LinkList1.xml
-        └── example.xml
+    ├── _xml/
+    │   ├── widgets/
+    │   │   └── b-section-example/
+    │   │       ├── Image1.xml
+    │   │       └── BlogSearch1.xml
+    │   └── example.xml
+    └── theme.xml
 ```
 
-Create a `<b:section>` in `example.xml`:
+Create a `<b:section>` in `example.xml` and then include `Image1.xml` and `BlogSearch1.xml`:
 
 ```html
-<b:section class='b-section-example' id='b-section-example'>
-  ...
-</b:section>
+# src/_xml/example.xml
+
+<div class='example'>
+  <b:section class='b-section-example' id='b-section-example'>
+    <!--(bake _xml/widgets/b-section-example/Image1.xml)-->
+    <!--(bake _xml/widgets/b-section-example/BlogSearch1.xml)-->
+  </b:section>
+</div>
 ```
 
-`Label1.xml` and `LinkList1.xml`:
+Include the `example.xml` to the main file:
 
 ```html
-# Label1.xml
+# src/theme.xml
 
-<b:widget id='Label1' locked='false' title='Labels' type='Label' visible='true'>
-  ...
-</b:widget>
+<!--(bake _xml/example.xml)-->
 ```
 
-```html
-# LinkList1.xml
-
-<b:widget id='LinkList1' locked='false' title='Link List' type='LinkList' visible='true'>
-  ...
-</b:widget>
-```
-
-Include the widget file to the `<b:section>` in `example.xml`:
-
-```html
-<b:section class='b-section-example' id='b-section-example'>
-  <!--(bake _xml/widgets/b-section-example/Label1.xml)-->
-  <!--(bake _xml/widgets/b-section-example/LinkList1.xml)-->
-</b:section>
-```
-
-### Use defaultmarkups
+#### Use gadget defaultmarkups
 
 Use the default markups and styles in [`src/_xml/defaultmarkups/gadgets`](xml-defaultmarkups-gadgets.html).
 
@@ -86,10 +73,10 @@ Use the default markups and styles in [`src/_xml/defaultmarkups/gadgets`](xml-de
                 └── BlogSearch1.xml
 ```
 
-Gadget with `<b:widget-settings>`. For example, [image gadget](xml-defaultmarkups-gadgets.html#image):
+**[Image gadget](xml-defaultmarkups-gadgets.html#image) (gadget with `<b:widget-settings>`):**
 
 ```html
-# Image1.xml
+# src/_xml/widgets/b-section-example/Image1.xml
 
 <b:widget id='Image1' locked='false' title='Image' type='Image' visible='true'>
   <b:widget-settings>
@@ -104,15 +91,15 @@ Gadget with `<b:widget-settings>`. For example, [image gadget](xml-defaultmarkup
 </b:widget>
 ```
 
-Gadget without `<b:widget-settings>`. For example, [blog search gadget](xml-defaultmarkups-gadgets.html#blog-search):
+**[Blog Search gadget](xml-defaultmarkups-gadgets.html#blog-search) (gadget without `<b:widget-settings>`):**
 
 ```html
-# BlogSearch1.xml
+# src/_xml/widgets/b-section-example/BlogSearch1.xml
 
 <b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' visible='true'/>
 ```
 
-### Override defaultmarkups
+#### Override gadget defaultmarkups
 
 Override the default markups and styles in [`src/_xml/defaultmarkups/gadgets`](xml-defaultmarkups-gadgets.html).
 
@@ -128,14 +115,14 @@ Override the default markups and styles in [`src/_xml/defaultmarkups/gadgets`](x
                 └── BlogSearch1.xml
 ```
 
-Gadget with `<b:widget-settings>`. For example, [image gadget](xml-defaultmarkups-gadgets.html#image):
+**[Image gadget](xml-defaultmarkups-gadgets.html#image) (gadget with `<b:widget-settings>`):**
 
 - Copy-paste the default markup `src/_xml/defaultmarkups/gadgets/Image.xml` into `Image1.xml`.
 - Customize the markup with different classes and IDs.
 - Create styles for the custom markup in `Image1.scss`.
 
 ```html
-# Image1.xml
+# src/_xml/widgets/b-section-example/Image1.xml
 
 <b:widget id='Image1' locked='false' title='Image' type='Image' visible='true'>
   <b:widget-settings>
@@ -159,14 +146,20 @@ Gadget with `<b:widget-settings>`. For example, [image gadget](xml-defaultmarkup
 </b:widget>
 ```
 
-Gadget without `<b:widget-settings>`. For example, [blog search gadget](xml-defaultmarkups-gadgets.html#blog-search):
+```scss
+# src/_xml/widgets/b-section-example/Image1.scss
+
+// Styles for the custom markup
+```
+
+**[Blog Search gadget](xml-defaultmarkups-gadgets.html#blog-search) (gadget without `<b:widget-settings>`):**
 
 - Copy-paste the default markup `src/_xml/defaultmarkups/gadgets/BlogSearch.xml` into `BlogSearch1.xml`.
 - Customize the markup with different classes and IDs.
 - Create styles for the custom markup in `BlogSearch1.scss`.
 
 ```html
-# BlogSearch1.xml
+# src/_xml/widgets/b-section-example/BlogSearch1.xml
 
 <b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' visible='true'>
   <b:includable id='main'>
@@ -185,4 +178,10 @@ Gadget without `<b:widget-settings>`. For example, [blog search gadget](xml-defa
     ... <!-- Custom markup -->
   </b:includable>
 </b:widget>
+```
+
+```scss
+# src/_xml/widgets/b-section-example/BlogSearch1.scss
+
+// Styles for the custom markup
 ```
