@@ -4,7 +4,7 @@
     <b:loop index='i' values='data:posts' var='post'>
       <div class='popular-post'>
 
-       <b:comment>=== Featured image ===</b:comment>
+        <b:comment>=== Featured image ===</b:comment>
         <b:if cond='data:postDisplay.showFeaturedImage'>
           <b:if cond='data:post.featuredImage'>
             <b:if cond='data:post.featuredImage.isYoutube'>
