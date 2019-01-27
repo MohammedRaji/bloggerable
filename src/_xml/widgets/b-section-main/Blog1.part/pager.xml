@@ -1,5 +1,5 @@
 <b:if cond='data:posts.notEmpty and !data:view.isPage'>
-  <nav class='pager'>
+  <nav class='pager' id='pager'>
     <a class='pager-newer pager-link' role='button'>
       <b:class cond='!data:newerPageUrl' name='disabled'/>
       <b:attr expr:value='data:newerPageUrl ? data:newerPageUrl : "javascript:void(0)"' name='href'/>

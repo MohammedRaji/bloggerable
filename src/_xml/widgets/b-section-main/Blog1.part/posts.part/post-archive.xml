@@ -1,6 +1,6 @@
 <b:loop values='data:posts' var='post'>
   <article class='post post-archive' expr:id='"post-" + data:post.id'>
-    <!-- Title -->
+    <b:comment>=== Title ===</b:comment>
     <h2 class='post-archive-title'>
       <b:if cond='data:post.title'>
         <a class='post-archive-title-link' expr:href='data:post.link ?: data:post.url'>
@@ -14,11 +14,11 @@
         </a>
       </b:if>
     </h2>
-    <!-- Snippet -->
+    <b:comment>=== Snippet ===</b:comment>
     <div class='post-archive-snippet'>
       <data:post.snippets.short/>
     </div>
-    <!-- Labels -->
+    <b:comment>=== Labels ===</b:comment>
     <div class='post-label'>
       <ul class='post-label-list'>
         <b:if cond='data:post.labels'>
@@ -37,9 +37,9 @@
         </b:if>
       </ul>
     </div>
-    <!-- Meta -->
+    <b:comment>=== Meta ===</b:comment>
     <ul class='post-meta'>
-      <!-- Author name -->
+      <b:comment>=== Author name ===</b:comment>
       <li class='post-meta-item'>
         <data:messages.by/>
         <b:if cond='data:post.author'>
@@ -55,31 +55,31 @@
           <span>Anonymous</span>
         </b:if>
       </li>
-      <!-- Date (published) -->
+      <b:comment>=== Date (published) ===</b:comment>
       <li class='post-meta-item'>
         <data:messages.on/>
         <time expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'>
           <b:eval expr='format(data:post.date, "MMM dd, YYYY")'/>
         </time>
       </li>
-      <!-- Number of comments -->
+      <b:comment>=== Number of comments ===</b:comment>
       <b:if cond='data:post.allowComments'>
         <li class='post-meta-item'>
           <a class='post-meta-link' expr:href='data:post.commentsUrl' expr:title='data:messages.comments'>
             <b:attr name='b:whitespace' value='remove'/>
             <b:if cond='data:post.commentSource != 1'>
-              <!-- Google+ Comments (No) -->
+              <b:comment>=== Google+ Comments (No) ===</b:comment>
               <b:message name='messages.numberOfComments'>
                 <b:param expr:value='data:post.numberOfComments' name='numComments'/>
               </b:message>
             <b:else/>
-              <!-- Google+ Comments (Yes) -->
+              <b:comment>=== Google+ Comments (Yes) ===</b:comment>
               <data:messages.comments/>
             </b:if>
           </a>
         </li>
       </b:if>
-      <!-- Sharing -->
+      <b:comment>=== Sharing ===</b:comment>
       <li class='post-meta-item'>
         <div class='post-share'>
           <span class='post-share-toggle' tabindex='0'>

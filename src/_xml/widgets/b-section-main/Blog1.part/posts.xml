@@ -1,5 +1,5 @@
 <b:if cond='data:posts.notEmpty'>
-  <div class='posts'>
+  <div class='posts' id='posts'>
     <b:comment>=== Homepage ===</b:comment>
     <b:if cond='data:view.isHomepage'>
       <!--(bake posts.part/post-homepage.xml)-->

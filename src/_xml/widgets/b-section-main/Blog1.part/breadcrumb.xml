@@ -1,5 +1,5 @@
 <b:if cond='!data:view.isHomepage'>
-  <ol class='breadcrumb'>
+  <ol class='breadcrumb' id='breadcrumb'>
     <b:comment>=== Homepage ===</b:comment>
     <b:comment>None</b:comment>
     <b:comment>=== Item page ===</b:comment>

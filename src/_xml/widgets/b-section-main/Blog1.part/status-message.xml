@@ -1,7 +1,7 @@
 <b:comment>=== Homepage ===</b:comment>
 <b:if cond='data:view.isHomepage'>
   <b:if cond='data:posts.empty'>
-    <div class='status-message status-message-danger' role='alert'>
+    <div class='status-message status-message-danger' id='status-message' role='alert'>
       <data:messages.theresNothingHere/>
     </div>
   </b:if>
@@ -17,11 +17,11 @@
 <b:comment>=== Search (label) page ===</b:comment>
 <b:if cond='data:view.search.label'>
   <b:if cond='data:posts.size gte 1'>
-    <div class='status-message status-message-success' role='alert'>
+    <div class='status-message status-message-success' id='status-message' role='alert'>
       <data:view.search.resultsMessageHtml/>
     </div>
   <b:else/>
-    <div class='status-message status-message-danger' role='alert'>
+    <div class='status-message status-message-danger' id='status-message' role='alert'>
       <data:view.search.resultsMessageHtml/> : <data:messages.noResultsFound/>
     </div>
   </b:if>
@@ -29,11 +29,11 @@
 <b:comment>=== Search (query) page ===</b:comment>
 <b:if cond='data:view.search.query'>
   <b:if cond='data:posts.size gte 1'>
-    <div class='status-message status-message-success' role='alert'>
+    <div class='status-message status-message-success' id='status-message' role='alert'>
       <data:view.search.resultsMessageHtml/>
     </div>
   <b:else/>
-    <div class='status-message status-message-danger' role='alert'>
+    <div class='status-message status-message-danger' id='status-message' role='alert'>
       <data:view.search.resultsMessageHtml/> : <data:messages.noResultsFound/>
     </div>
   </b:if>
@@ -45,18 +45,18 @@
 <b:comment>=== Archive page ===</b:comment>
 <b:if cond='data:view.isArchive'>
   <b:if cond='data:posts.size gte 1'>
-    <div class='status-message status-message-success' role='alert'>
+    <div class='status-message status-message-success' id='status-message' role='alert'>
       <data:view.archive.rangeMessage/>
     </div>
   <b:else/>
-    <div class='status-message status-message-danger' role='alert'>
+    <div class='status-message status-message-danger' id='status-message' role='alert'>
       <data:view.archive.rangeMessage/> : <data:messages.noResultsFound/>
     </div>
   </b:if>
 </b:if>
 <b:comment>=== Error page ===</b:comment>
 <b:if cond='data:view.isError'>
-  <div class='status-message status-message-danger' role='alert'>
+  <div class='status-message status-message-danger' id='status-message' role='alert'>
     <data:navMessage/>
   </div>
 </b:if>

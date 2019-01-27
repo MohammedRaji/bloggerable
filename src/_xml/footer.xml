@@ -8,6 +8,6 @@
       </b:if>
       <p class='footer-text'>&#169; <data:blog.title/>. <a expr:href='data:blog.bloggerUrl'><b:message name='messages.poweredByBlogger'/></a>.</p>
       <p class='footer-text'>Bloggerable is open source. It's developed and maintained on <a href='https://github.com/blogger-starter/blogger-starter'>GitHub</a>.</p>
-    </div><!-- /.footer-inner -->
-  </div><!-- /.container -->
-</footer><!-- /.footer -->
+    </div>
+  </div>
+</footer>

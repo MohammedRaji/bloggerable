@@ -12,6 +12,6 @@
           <!--(bake widgets/b-section-header-nav/PageList1.xml)-->
         </b:section>
       </b:if>
-    </div><!-- /.header-inner -->
-  </div><!-- /.container -->
+    </div>
+  </div>
 </header>
