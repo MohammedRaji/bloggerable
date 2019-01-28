@@ -1,15 +1,11 @@
 <div class="doc-header doc-margin-x" id="docHeader">
-  <ol class="doc-header-breadcrumb">
-    <% if(doc.category == 'none') { %>
-      <li>:=:</li>
-    <% } %>
-
-    <% if(doc.category != 'none') { %>
+  <% if(doc.category != 'none') { %>
+    <ol class="doc-header-breadcrumb">
       <li><%= doc.category %></li>
       <% if(doc.subcategory != 'none') { %>
         <li><%= doc.subcategory %></li>
       <% } %>
-    <% } %>
-  </ol>
+    </ol>
+  <% } %>
   <h1 class="doc-header-title"><%= doc.title %></h1>
 </div>
