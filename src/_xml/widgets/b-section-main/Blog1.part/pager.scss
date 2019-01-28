@@ -2,27 +2,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: -.5rem;
-}
-
-.pager-newer {
-  margin-right: .25rem;
-  margin-left: .25rem;
-}
-.pager-home {
-  margin-right: .25rem;
-  margin-left: .25rem;
-}
-.pager-older {
-  margin-right: .25rem;
-  margin-left: .25rem;
+  margin: -.5rem;
 }
 
 .pager-link {
   position: relative;
-  display: inline-block;
+  display: block;
   padding: .5rem .75rem;
-  margin-bottom: .5rem;
+  margin: .5rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.25;

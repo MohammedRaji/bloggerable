@@ -100,24 +100,22 @@
         </li>
       </ul>
       <b:comment>=== Labels ===</b:comment>
-      <div class='post-label'>
-        <ul class='post-label-list'>
-          <b:if cond='data:post.labels'>
-            <b:loop index='i' values='data:post.labels' var='label'>
-              <li class='post-label-item'>
-                <a class='post-label-link' expr:href='params(data:label.url, { max-results: "12" })' expr:title='data:label.name'>
-                  <b:attr name='b:whitespace' value='remove'/>
-                  <data:label.name/>
-                </a>
-              </li>
-            </b:loop>
-          <b:else/><!-- fallback -->
+      <ul class='post-label'>
+        <b:if cond='data:post.labels'>
+          <b:loop index='i' values='data:post.labels' var='label'>
             <li class='post-label-item'>
-              <span class='post-label-link nolabel'>Unlabelled</span>
+              <a class='post-label-link' expr:href='params(data:label.url, { max-results: "12" })' expr:title='data:label.name'>
+                <b:attr name='b:whitespace' value='remove'/>
+                <data:label.name/>
+              </a>
             </li>
-          </b:if>
-        </ul>
-      </div>
+          </b:loop>
+        <b:else/><!-- fallback -->
+          <li class='post-label-item'>
+            <span class='post-label-link nolabel'>Unlabelled</span>
+          </li>
+        </b:if>
+      </ul>
     </header>
     <b:comment>=== Body ===</b:comment>
     <div class='post-item-body post-body-typography'>

@@ -66,10 +66,11 @@
   vertical-align: baseline;
   background-color: #6c757d;
   border-radius: 10rem;
-}
-.active > .label-list-count {
-  color: #fff;
-  background-color: #6c757d;
+
+  .active > & {
+    color: #fff;
+    background-color: #6c757d;
+  }
 }
 
 //
@@ -80,19 +81,20 @@
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
-  margin-top: 0;
   // stylelint-disable-next-line declaration-no-important
-  margin-bottom: -.5rem !important;
+  margin-top: -.5rem !important;
+  margin-bottom: 0;
   list-style: none;
 }
 
 //= Item
 
 .label-cloud-item {
-  margin-bottom: .5rem;
-}
-.label-cloud-item:not(:last-child) {
-  margin-right: .5rem;
+  margin-top: .5rem;
+
+  &:not(:last-child) {
+    margin-right: .5rem;
+  }
 }
 
 //= Link
@@ -141,8 +143,9 @@
   vertical-align: baseline;
   background-color: #f8f9fa;
   border-radius: .25rem;
-}
-.active > .label-cloud-count {
-  color: #212529;
-  background-color: #f8f9fa;
+
+  .active > & {
+    color: #212529;
+    background-color: #f8f9fa;
+  }
 }
