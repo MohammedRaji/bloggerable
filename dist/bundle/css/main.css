@@ -811,16 +811,13 @@ fieldset:disabled a.button {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: -0.5rem;
+  margin-top: -0.5rem;
+  margin-right: -0.5rem;
 }
 
 .button-toolbar > .button,
 .button-toolbar > .button-group {
-  margin-bottom: 0.5rem;
-}
-
-.button-toolbar > .button:not(:last-child),
-.button-toolbar > .button-group:not(:last-child) {
+  margin-top: 0.5rem;
   margin-right: 0.5rem;
 }
 

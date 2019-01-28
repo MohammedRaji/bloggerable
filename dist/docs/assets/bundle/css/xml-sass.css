@@ -582,13 +582,13 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-left: 0;
-  margin-top: 0;
-  margin-bottom: -.5rem !important;
+  margin-top: -.5rem !important;
+  margin-bottom: 0;
   list-style: none;
 }
 
 .label-cloud-item {
-  margin-bottom: .5rem;
+  margin-top: .5rem;
 }
 
 .label-cloud-item:not(:last-child) {
@@ -1050,29 +1050,14 @@
   flex-wrap: wrap;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: -.5rem;
-}
-
-.pager-newer {
-  margin-right: .25rem;
-  margin-left: .25rem;
-}
-
-.pager-home {
-  margin-right: .25rem;
-  margin-left: .25rem;
-}
-
-.pager-older {
-  margin-right: .25rem;
-  margin-left: .25rem;
+  margin: -.5rem;
 }
 
 .pager-link {
   position: relative;
-  display: inline-block;
+  display: block;
   padding: .5rem .75rem;
-  margin-bottom: .5rem;
+  margin: .5rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.25;
@@ -1096,26 +1081,22 @@
 }
 
 .post-label {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-top: -.5rem;
   margin-bottom: .5rem;
+  list-style: none;
 }
 
 .post-label:last-child {
   margin-bottom: 0;
 }
 
-.post-label-list {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: -.5rem;
-  list-style: none;
-}
-
 .post-label-item {
-  margin-bottom: .5rem;
+  margin-top: .5rem;
 }
 
 .post-label-item:not(:last-child) {
@@ -1123,7 +1104,7 @@
 }
 
 .post-label-link {
-  display: inline-block;
+  display: block;
   padding: .25rem .75rem;
   font-size: .875rem;
   font-weight: 500;

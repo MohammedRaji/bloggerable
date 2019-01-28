@@ -29,7 +29,7 @@
   background-color: #212529;
 }
 
-.doc-nav-wrap {
+.doc-nav-inner {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -822,7 +822,7 @@ a.doc-badge-item-danger {
 }
 
 @media (max-width: 767.98px) {
-  .doc-nav-wrap,
+  .doc-nav-inner,
   .doc-toc > .toc-list,
   .doc-content {
     padding-bottom: 5rem;
