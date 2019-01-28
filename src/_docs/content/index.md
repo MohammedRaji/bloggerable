@@ -9,7 +9,7 @@ subcategory: none
   <figcaption style="margin-top: 0; margin-bottom: .5rem; color: #6c757d;">Currently</figcaption>
   <div class="doc-badges">
     <div class="doc-badge">
-      <span class="doc-badge-item">Theme v{{ config.theme.version }}</span>
+      <span class="doc-badge-item">{{ config.theme.name }} v{{ config.theme.version }}</span>
       <span class="doc-badge-item doc-badge-item-info">Based on {{ config.bloggerable.name }} v{{ config.bloggerable.version }}</span>
     </div>
   </div>
@@ -120,31 +120,6 @@ subcategory: none
     <div class="doc-badge" style="width: 100%;">
       <span class="doc-badge-item">License URL</span>
       <span class="doc-badge-item doc-badge-item-info">{{ config.bloggerable.license.url }}</span>
-    </div>
-
-  </div>
-</figure>
-
-<figure>
-  <div class="doc-badges">
-
-    <div class="doc-badge">
-      <a class="doc-badge-item" href="#">Live preview</a>
-    </div>
-    <div class="doc-badge">
-      <a class="doc-badge-item" href="#">Documentation</a>
-    </div>
-    <div class="doc-badge">
-      <a class="doc-badge-item" href="#">Themes</a>
-    </div>
-    <div class="doc-badge">
-      <a class="doc-badge-item" href="#">GitHub</a>
-    </div>
-    <div class="doc-badge">
-      <a class="doc-badge-item" href="https://facebook.com/bloggerable">Facebook</a>
-    </div>
-    <div class="doc-badge">
-      <a class="doc-badge-item" href="https://twitter.com/bloggerable">Twitter</a>
     </div>
 
   </div>
