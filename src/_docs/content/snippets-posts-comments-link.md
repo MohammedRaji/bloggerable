@@ -7,7 +7,6 @@ subcategory: Posts
 
 Link to the comments on the post.
 
-
 ## Default
 
 ```html
@@ -27,7 +26,6 @@ Link to the comments on the post.
   </a>
 </b:if>
 ```
-
 
 ## Fallback
 

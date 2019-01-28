@@ -7,7 +7,6 @@ subcategory: Posts
 
 Link to the full post.
 
-
 ## Default
 
 ```html

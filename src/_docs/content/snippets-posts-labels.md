@@ -11,7 +11,6 @@ Labels of the post.
 
 - `12` - maximum number of posts in label page
 
-
 ## Default
 
 ```html
@@ -25,7 +24,6 @@ Labels of the post.
   </b:loop>
 </b:if>
 ```
-
 
 ## Fallback
 
@@ -42,7 +40,6 @@ Labels of the post.
   <span>Unlabelled</span>
 </b:if>
 ```
-
 
 ## Comma
 

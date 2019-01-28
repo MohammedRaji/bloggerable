@@ -7,28 +7,23 @@ subcategory: Default markups
 
 Common default markups.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/common</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/common</span>
   </div>
-</figure>
-
+</div>
 
 ## custom-all-head-content
 
 Custom `<b:include data='blog' name='all-head-content'/>`.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/common/custom-all-head-content.xml</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/common/custom-all-head-content.xml</span>
   </div>
-</figure>
+</div>
 
 <table>
   <thead>
@@ -79,19 +74,16 @@ Custom `<b:include data='blog' name='all-head-content'/>`.
 }' name='custom-all-head-content'/>
 ```
 
-
 ## assets.css.bundle
 
 All compiled CSS.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/common/assets.css.bundle.xml</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/common/assets.css.bundle.xml</span>
   </div>
-</figure>
+</div>
 
 **Usage**
 
@@ -99,19 +91,16 @@ All compiled CSS.
 <b:include name='assets.css.bundle'/>
 ```
 
-
 ## assets.js.bundle
 
 All compiled JavaScript.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/common/assets.js.bundle.xml</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/common/assets.js.bundle.xml</span>
   </div>
-</figure>
+</div>
 
 **Usage**
 

@@ -7,15 +7,12 @@ subcategory: Components
 
 Simple CSS for HTML tables.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_scss/_tables.scss</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_scss/_tables.scss</span>
   </div>
-</figure>
-
+</div>
 
 ## Examples
 
@@ -191,7 +188,6 @@ Simple CSS for HTML tables.
 </table>
 ```
 
-
 ## Table head options
 
 ### Light head
@@ -352,7 +348,6 @@ Simple CSS for HTML tables.
 </table>
 ```
 
-
 ## Striped rows
 
 <div class="doc-example">
@@ -461,7 +456,6 @@ Simple CSS for HTML tables.
   ...
 </table>
 ```
-
 
 ## Bordered table
 
@@ -572,7 +566,6 @@ Simple CSS for HTML tables.
 </table>
 ```
 
-
 ## Borderless table
 
 <div class="doc-example">
@@ -682,7 +675,6 @@ Simple CSS for HTML tables.
 </table>
 ```
 
-
 ## Hoverable rows
 
 <div class="doc-example">
@@ -791,7 +783,6 @@ Simple CSS for HTML tables.
   ...
 </table>
 ```
-
 
 ## Mix and match
 
@@ -976,7 +967,6 @@ Simple CSS for HTML tables.
   </tbody>
 </table>
 ```
-
 
 ## Responsive table
 

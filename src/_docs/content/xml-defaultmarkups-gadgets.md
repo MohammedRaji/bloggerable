@@ -7,36 +7,31 @@ subcategory: Default markups
 
 Default markups for gadgets.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets</span>
   </div>
-</figure>
-
+</div>
 
 ## Blog Archive
 
 Make it easy for visitors to navigate your blog with links to older posts.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/BlogArchive.xml</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/BlogArchive.scss</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Type</span>
-      <span class="doc-badge-item doc-badge-item-info">BlogArchive</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/BlogArchive.xml</span>
   </div>
-</figure>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">CSS</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/BlogArchive.scss</span>
+  </div>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Type</span>
+    <span class="doc-badge-item doc-badge-item-info">BlogArchive</span>
+  </div>
+</div>
 
 ### Hierarchy
 
@@ -306,27 +301,24 @@ Make it easy for visitors to navigate your blog with links to older posts.
 </b:widget>
 ```
 
-
 ## Blog Search
 
 Let visitors search your blog.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/BlogSearch.xml</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/BlogSearch.scss</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Type</span>
-      <span class="doc-badge-item doc-badge-item-info">BlogSearch</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/BlogSearch.xml</span>
   </div>
-</figure>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">CSS</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/BlogSearch.scss</span>
+  </div>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Type</span>
+    <span class="doc-badge-item doc-badge-item-info">BlogSearch</span>
+  </div>
+</div>
 
 <div class="doc-example">
   <div class="widget BlogSearch">
@@ -352,27 +344,24 @@ Let visitors search your blog.
 <b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' visible='true'/>
 ```
 
-
 ## Contact Form
 
 Add a Contact Form to your Blog.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/ContactForm.xml</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/ContactForm.scss</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Type</span>
-      <span class="doc-badge-item doc-badge-item-info">ContactForm</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/ContactForm.xml</span>
   </div>
-</figure>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">CSS</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/ContactForm.scss</span>
+  </div>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Type</span>
+    <span class="doc-badge-item doc-badge-item-info">ContactForm</span>
+  </div>
+</div>
 
 <div class="doc-example">
   <div class="widget ContactForm">
@@ -409,27 +398,24 @@ Add a Contact Form to your Blog.
 <b:widget id='ContactForm1' locked='false' title='Contact Form' type='ContactForm' visible='true'/>
 ```
 
-
 ## Featured Post
 
 Highlight a special post on your blog.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/FeaturedPost.xml</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/FeaturedPost.scss</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Type</span>
-      <span class="doc-badge-item doc-badge-item-info">FeaturedPost</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/FeaturedPost.xml</span>
   </div>
-</figure>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">CSS</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/FeaturedPost.scss</span>
+  </div>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Type</span>
+    <span class="doc-badge-item doc-badge-item-info">FeaturedPost</span>
+  </div>
+</div>
 
 <div class="doc-example">
   <div class="widget FeaturedPost">
@@ -465,27 +451,24 @@ Highlight a special post on your blog.
 </b:widget>
 ```
 
-
 ## Follow by Email
 
 Make it easy for visitors to subscribe to email delivery when you publish a post.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/FollowByEmail.xml</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/FollowByEmail.scss</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Type</span>
-      <span class="doc-badge-item doc-badge-item-info">FollowByEmail</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/FollowByEmail.xml</span>
   </div>
-</figure>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">CSS</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/FollowByEmail.scss</span>
+  </div>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Type</span>
+    <span class="doc-badge-item doc-badge-item-info">FollowByEmail</span>
+  </div>
+</div>
 
 <div class="doc-example">
   <div class="widget FollowByEmail">
@@ -509,27 +492,24 @@ Make it easy for visitors to subscribe to email delivery when you publish a post
 <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail' visible='true'/>
 ```
 
-
 ## Page Header
 
 Display your blog's title and description.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Header.xml</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Header.scss</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Type</span>
-      <span class="doc-badge-item doc-badge-item-info">Header</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Header.xml</span>
   </div>
-</figure>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">CSS</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Header.scss</span>
+  </div>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Type</span>
+    <span class="doc-badge-item doc-badge-item-info">Header</span>
+  </div>
+</div>
 
 ### Behind
 
@@ -611,27 +591,24 @@ Display your blog's title and description.
 </b:widget>
 ```
 
-
 ## Image
 
 Add an image from your computer, or from somewhere else on the web.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Image.xml</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Image.scss</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Type</span>
-      <span class="doc-badge-item doc-badge-item-info">Image</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Image.xml</span>
   </div>
-</figure>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">CSS</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Image.scss</span>
+  </div>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Type</span>
+    <span class="doc-badge-item doc-badge-item-info">Image</span>
+  </div>
+</div>
 
 <div class="doc-example">
   <div class="widget Image">
@@ -663,27 +640,24 @@ Add an image from your computer, or from somewhere else on the web.
 </b:widget>
 ```
 
-
 ## Labels
 
 Show all the labels of posts in your blog.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Label.xml</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Label.scss</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Type</span>
-      <span class="doc-badge-item doc-badge-item-info">Label</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Label.xml</span>
   </div>
-</figure>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">CSS</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/Label.scss</span>
+  </div>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Type</span>
+    <span class="doc-badge-item doc-badge-item-info">Label</span>
+  </div>
+</div>
 
 ### List
 
@@ -749,27 +723,24 @@ Show all the labels of posts in your blog.
 </b:widget>
 ```
 
-
 ## Popular Posts
 
 Display a list of the most popular posts from your blog.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/PopularPosts.xml</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">CSS</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/PopularPosts.scss</span>
-    </div>
-    <div class="doc-badge" style="width: 100%;">
-      <span class="doc-badge-item">Type</span>
-      <span class="doc-badge-item doc-badge-item-info">PopularPosts</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/PopularPosts.xml</span>
   </div>
-</figure>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">CSS</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/gadgets/PopularPosts.scss</span>
+  </div>
+  <div class="doc-badge" style="width: 100%;">
+    <span class="doc-badge-item">Type</span>
+    <span class="doc-badge-item doc-badge-item-info">PopularPosts</span>
+  </div>
+</div>
 
 <div class="doc-example">
   <div class="widget PopularPosts">

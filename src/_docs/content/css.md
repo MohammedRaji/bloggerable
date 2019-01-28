@@ -7,15 +7,12 @@ subcategory: none
 
 The main CSS.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_scss</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_scss</span>
   </div>
-</figure>
-
+</div>
 
 ## File structure
 
@@ -46,7 +43,6 @@ The main CSS.
   </tbody>
 </table>
 
-
 ## Sass options
 
 You can find and customize these variables for key global options in `_variables.scss`.
@@ -56,7 +52,6 @@ You can find and customize these variables for key global options in `_variables
 | `$enable-rounded` | `true` (default) or `false` | Enables predefined `border-radius` styles on various components. |
 | `$enable-shadows` | `true` or `false` (default) | Enables predefined `box-shadow` styles on various components. |
 | `$enable-transitions` | `true` (default) or `false` | Enables predefined `transition`s on various components. |
-
 
 ## Modify variables and maps
 
@@ -86,7 +81,6 @@ $theme-colors: (
   "custom-color": #900
 );
 ```
-
 
 ## Functions
 
@@ -148,7 +142,6 @@ $bg: #000;
   background-color: $bg;
 }
 ```
-
 
 ## Responsive breakpoints
 

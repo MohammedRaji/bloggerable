@@ -7,7 +7,6 @@ subcategory: Posts
 
 Snippet of the post's content.
 
-
 ## Short
 
 ```html
@@ -26,7 +25,6 @@ Support for *jump break* ![Insert jump break](data:image/png;base64,iVBORw0KGgoA
 </b:if>
 ```
 
-
 ## Long
 
 ```html
@@ -44,7 +42,6 @@ Support for *jump break* ![Insert jump break](data:image/png;base64,iVBORw0KGgoA
   <data:post.snippets.long/>
 </b:if>
 ```
-
 
 ## Custom
 

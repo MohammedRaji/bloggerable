@@ -7,7 +7,6 @@ subcategory: View
 
 Conditional tags for different page types, which allows you to specify a part of your template code on specific types of pages or specific URLs.
 
-
 ## Basic
 
 ```html
@@ -55,7 +54,6 @@ Conditional tags for different page types, which allows you to specify a part of
   <!-- https://www.blogger.com/blogger.g?blogID=<blogID>#pageelements -->
 </b:if>
 ```
-
 
 ## Specific URLs
 

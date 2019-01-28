@@ -7,7 +7,6 @@ subcategory: Posts
 
 Name of the profile of the post author.
 
-
 ## Default
 
 ```html
@@ -16,7 +15,6 @@ Name of the profile of the post author.
   <span><data:post.author.name/></span>
 </b:if>
 ```
-
 
 ## Fallback
 
@@ -28,7 +26,6 @@ Name of the profile of the post author.
   <span>Anonymous</span>
 </b:if>
 ```
-
 
 ## Anchors
 

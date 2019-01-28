@@ -17,7 +17,6 @@ Photo of the profile of the post author.
     - width = `128`
     - height = (`128` * `1`) / `1` = `128`
 
-
 ## Default
 
 ```html
@@ -40,7 +39,6 @@ Photo of the profile of the post author.
   </b:if>
 </b:if>
 ```
-
 
 ## Fallback
 
@@ -71,7 +69,6 @@ Photo of the profile of the post author.
   </img>
 </b:if>
 ```
-
 
 ## Anchors
 

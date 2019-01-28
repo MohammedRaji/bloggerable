@@ -7,15 +7,12 @@ subcategory: Components
 
 Simple CSS for HTML forms.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_scss/_forms.scss</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_scss/_forms.scss</span>
   </div>
-</figure>
-
+</div>
 
 ## Form controls
 
@@ -100,7 +97,6 @@ Simple CSS for HTML forms.
 ```html
 <input class='form-control' placeholder='Readonly input here…' readonly='' type='text'/>
 ```
-
 
 ## Checkboxes and radios
 
@@ -210,7 +206,6 @@ Simple CSS for HTML forms.
 </div>
 ```
 
-
 ## Form groups
 
 <div class="doc-example">
@@ -257,7 +252,6 @@ Simple CSS for HTML forms.
 </form>
 ```
 
-
 ## Help text
 
 <div class="doc-example">
@@ -285,7 +279,6 @@ Simple CSS for HTML forms.
   <button class='button button-primary' type='submit'>Submit</button>
 </form>
 ```
-
 
 ## Disabled forms
 

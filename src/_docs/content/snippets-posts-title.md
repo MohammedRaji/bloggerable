@@ -7,7 +7,6 @@ subcategory: Posts
 
 Title of the post.
 
-
 ## Default
 
 ```html
@@ -16,7 +15,6 @@ Title of the post.
   <data:post.title/>
 </b:if>
 ```
-
 
 ## Fallback
 
@@ -28,7 +26,6 @@ Title of the post.
   <data:messages.noTitle/>
 </b:if>
 ```
-
 
 ## Anchors
 

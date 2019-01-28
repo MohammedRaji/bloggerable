@@ -7,7 +7,6 @@ subcategory: none
 
 Learn how to compile the source code, builds the theme and documentation, and more.
 
-
 ## Directory Structure
 
 The directory structure looks something like this:
@@ -90,7 +89,6 @@ The directory structure looks something like this:
   </tbody>
 </table>
 
-
 ## Tooling setup
 
 We uses [Grunt](https://gruntjs.com/) for its build system. To use our build system, you’ll need the source files and Node. Follow these steps:
@@ -100,7 +98,6 @@ We uses [Grunt](https://gruntjs.com/) for its build system. To use our build sys
 3. Navigate to the root theme directory and run `npm install` to install our local dependencies listed in `package.json`.
 
 When completed, you’ll be able to run the various commands provided from the command line.
-
 
 ## Using Grunt commands
 
@@ -119,7 +116,6 @@ You can run the documentation locally via Grunt commands:
 2. Open `http://localhost:9001` in your browser.
 
 Or open `dist/docs/index.html` in your browser.
-
 
 ## Templating
 

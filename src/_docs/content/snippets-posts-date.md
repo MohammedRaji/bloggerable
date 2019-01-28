@@ -7,7 +7,6 @@ subcategory: Posts
 
 Date of the post.
 
-
 ## Default (published)
 
 ```html
@@ -26,7 +25,6 @@ Date of the post.
 </time>
 ```
 
-
 ## Last updated
 
 ```html
@@ -44,7 +42,6 @@ Date of the post.
   <b:eval expr='format(data:post.lastUpdated, "dd/MM/YYYY")'/>
 </time>
 ```
-
 
 ## Custom format
 

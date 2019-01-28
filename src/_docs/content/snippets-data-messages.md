@@ -27,7 +27,6 @@ Messages which will be translated into the language used by the blog.
 </b:message>
 ```
 
-
 ## .adsGoHere
 
 Gadget type: `Global`
@@ -56,7 +55,6 @@ Gadget type: `Global`
 | Portuguese | `Os anúncios são apresentados aqui` |
 | Spanish | `Aquí van los anuncios` |
 | Vietnamese | `Quảng cáo hiển thị ở đây` |
-
 
 ## .archive
 
@@ -87,7 +85,6 @@ Gadget type: `Global`
 | Spanish | `Archivo` |
 | Vietnamese | `Lưu trữ` |
 
-
 ## .at
 
 Gadget type: `Global`
@@ -117,7 +114,6 @@ Gadget type: `Global`
 | Spanish | `a las` |
 | Vietnamese | `lúc` |
 
-
 ## .authorSaid
 
 Gadget type: `Global`
@@ -140,7 +136,6 @@ Gadget type: `Global`
 | Portuguese | `author_name disse...` |
 | Spanish | `author_name ha dicho...` |
 | Vietnamese | `author_name nói...` |
-
 
 ## .authorSaidWithLink
 
@@ -165,7 +160,6 @@ Gadget type: `Global`
 | Portuguese | `<a href='profile_link'>author_name</a> disse...` |
 | Spanish | `<a href='profile_link'>author_name</a> ha dicho...` |
 | Vietnamese | `<a href='profile_link'>author_name</a> nói...` |
-
 
 ## .blogArchive
 
@@ -196,7 +190,6 @@ Gadget type: `Global`
 | Spanish | `Archivo del blog` |
 | Vietnamese | `Lưu trữ Blog` |
 
-
 ## .blogAuthors
 
 Gadget type: `Global`
@@ -225,7 +218,6 @@ Gadget type: `Global`
 | Portuguese | `Autores do blog` |
 | Spanish | `Autores del blog` |
 | Vietnamese | `Tác giả blog` |
-
 
 ## .by
 
@@ -256,7 +248,6 @@ Gadget type: `Global`
 | Spanish | `De` |
 | Vietnamese | `Bởi` |
 
-
 ## .byAuthor
 
 Gadget type: `Global`
@@ -279,7 +270,6 @@ Gadget type: `Global`
 | Portuguese | `Por author_name` |
 | Spanish | `De author_name` |
 | Vietnamese | `Bởi author_name` |
-
 
 ## .byAuthorLink
 
@@ -304,7 +294,6 @@ Gadget type: `Global`
 | Portuguese | `Por <a href='profile_link'>author_name</a>` |
 | Spanish | `De <a href='profile_link'>author_name</a>` |
 | Vietnamese | `Bởi <a href='profile_link'>author_name</a>` |
-
 
 ## .comments
 
@@ -335,7 +324,6 @@ Gadget type: `Global`
 | Spanish | `Comentarios` |
 | Vietnamese | `Nhận xét` |
 
-
 ## .configurationRequired
 
 Gadget type: `Global`
@@ -364,7 +352,6 @@ Gadget type: `Global`
 | Portuguese | `Configuração necessária` |
 | Spanish | `Necesita configuración` |
 | Vietnamese | `Đã yêu cầu cấu hình` |
-
 
 ## .copy
 

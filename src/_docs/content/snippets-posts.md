@@ -7,7 +7,6 @@ subcategory: Posts
 
 Learn how to use posts snippets.
 
-
 ## Using the Loop
 
 Posts snippets must be used within the loop tag.
@@ -17,7 +16,6 @@ Posts snippets must be used within the loop tag.
   ...
 </b:loop>
 ```
-
 
 ## Wrapper
 

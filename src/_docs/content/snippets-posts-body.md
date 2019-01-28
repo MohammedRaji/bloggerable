@@ -7,7 +7,6 @@ subcategory: Posts
 
 The content of the post.
 
-
 ## Default
 
 ```html

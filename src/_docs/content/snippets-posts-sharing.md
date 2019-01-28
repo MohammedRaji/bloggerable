@@ -7,7 +7,6 @@ subcategory: Posts
 
 The share buttons for the post.
 
-
 ## Default
 
 ```html
@@ -37,7 +36,6 @@ The share buttons for the post.
   BlogThis!
 </a>
 ```
-
 
 ## Dropdown example
 

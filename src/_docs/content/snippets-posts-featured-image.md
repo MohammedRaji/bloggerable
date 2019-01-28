@@ -17,7 +17,6 @@ The featured image for the post.
     - width = `512`
     - height = (`512` * `9`) / `16` = `288`
 
-
 ## Default
 
 ```html
@@ -40,7 +39,6 @@ The featured image for the post.
   </b:if>
 </b:if>
 ```
-
 
 ## Fallback
 
@@ -71,7 +69,6 @@ The featured image for the post.
   </img>
 </b:if>
 ```
-
 
 ## Responsive images
 
@@ -133,7 +130,6 @@ The featured image for the post.
   </img>
 </b:if>
 ```
-
 
 ## Anchors
 
@@ -278,7 +274,6 @@ The featured image for the post.
   </a>
 </b:if>
 ```
-
 
 ## CSS background-image
 

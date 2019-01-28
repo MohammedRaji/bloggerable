@@ -682,12 +682,15 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: -.5rem;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
   overflow-x: auto;
 }
 .doc-badges > .doc-badge {
+  margin-top: .5rem;
+}
+.doc-badges > .doc-badge:not(:last-child) {
   margin-right: .5rem;
-  margin-bottom: .5rem;
 }
 
 .doc-badge {
@@ -698,7 +701,7 @@
 }
 
 .doc-badge-item {
-  display: inline-block;
+  display: block;
   padding: .5em .75em;
   font-size: .85rem;
   font-weight: 400;

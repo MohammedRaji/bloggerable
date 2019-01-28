@@ -10,15 +10,12 @@ Base CSS.
 > Base CSS provide an elegant, consistent, and simple baseline to build upon.<br>
 > Manually forked from [Bootstrap Reboot](https://getbootstrap.com).
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_scss/_base.scss</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_scss/_base.scss</span>
   </div>
-</figure>
-
+</div>
 
 ## Approach
 
@@ -31,7 +28,6 @@ Here are our guidelines and reasons for choosing what to override in base CSS:
 - For easier scaling across device sizes, block elements should use `rem`s for `margin`s.
 - Keep declarations of `font`-related properties to a minimum, using `inherit` whenever possible.
 
-
 ## Document and body
 
 The `<html>` and `<body>` elements are updated to provide better page-wide defaults. More specifically:
@@ -40,7 +36,6 @@ The `<html>` and `<body>` elements are updated to provide better page-wide defau
   - No base `font-size` is declared on the `<html>`, but `16px` is assumed (the browser default). `font-size: 1rem` is applied on the `<body>` for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach.
 - The `<body>` also sets a global `font-family`, `line-height`, and `text-align`. This is inherited later by some form elements to prevent font inconsistencies.
 - For safety, the `<body>` has a declared `background-color`, defaulting to `#fff`.
-
 
 ## Headings and paragraphs
 
@@ -98,7 +93,6 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 ```
 
-
 ## Horizontal rules
 
 Styling for `<hr>` element.
@@ -139,7 +133,6 @@ Styling for `<hr>` element.
 </p>
 ```
 
-
 ## Inline text elements
 
 Styling for inline text elements.
@@ -158,7 +151,6 @@ Styling for inline text elements.
 <p><mark>Mark</mark></p>
 <p><abbr title='HyperText Markup Language'>HTML</abbr> abbreviations.</p>
 ```
-
 
 ## Code
 
@@ -203,7 +195,6 @@ Styling for `<kbd>` element.
 To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
 To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 ```
-
 
 ## Lists
 
@@ -293,7 +284,6 @@ For simpler styling, clear hierarchy, and better spacing, description lists have
 </dl>
 ```
 
-
 ## Tables
 
 Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure consistent `text-align` throughout.
@@ -370,7 +360,6 @@ Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure
 </table>
 ```
 
-
 ## Blockquotes
 
 The `<blockquote>` element is updated to reset the browser default `margin` to `0 0 1rem`.
@@ -386,7 +375,6 @@ The `<blockquote>` element is updated to reset the browser default `margin` to `
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
 </blockquote>
 ```
-
 
 ## Addresses
 
@@ -420,7 +408,6 @@ The `<address>` element is updated to reset the browser default `font-style` fro
 </address>
 ```
 
-
 ## Figures
 
 The `<figure>` element is updated to reset the browser default `margin` to `0 0 1rem`.
@@ -438,7 +425,6 @@ The `<figure>` element is updated to reset the browser default `margin` to `0 0 
   <figcaption>Figure caption</figcaption>
 </figure>
 ```
-
 
 ## Forms
 
@@ -619,7 +605,6 @@ These changes, and more, are demonstrated below.
   </fieldset>
 </form>
 ```
-
 
 ## Misc elements
 

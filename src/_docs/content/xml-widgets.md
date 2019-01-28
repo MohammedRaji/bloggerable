@@ -7,15 +7,12 @@ subcategory: Widgets
 
 Learn how to add a widget.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml/widgets</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/widgets</span>
   </div>
-</figure>
-
+</div>
 
 ## Add a widget
 

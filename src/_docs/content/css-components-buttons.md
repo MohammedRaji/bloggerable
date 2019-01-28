@@ -7,15 +7,12 @@ subcategory: Components
 
 Simple CSS for buttons.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_scss/_buttons.scss</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_scss/_buttons.scss</span>
   </div>
-</figure>
-
+</div>
 
 ## Button tags
 
@@ -38,7 +35,6 @@ Simple CSS for buttons.
 <input class='button button-primary' type='submit' value='Input type submit'/>
 <input class='button button-primary' type='reset' value='Input type reset'/>
 ```
-
 
 ## Style
 
@@ -120,7 +116,6 @@ Simple CSS for buttons.
 <a class='button button-dark disabled' href='#' role='button'>Dark</a>
 ```
 
-
 ## Button group
 
 <div class="doc-example">
@@ -138,7 +133,6 @@ Simple CSS for buttons.
   <button class='button button-secondary' type='button'>Button</button>
 </div>
 ```
-
 
 ## Button toolbar
 

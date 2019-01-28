@@ -7,15 +7,12 @@ subcategory: none
 
 Blogger XML.
 
-<figure>
-  <div class="doc-badges">
-    <div class="doc-badge">
-      <span class="doc-badge-item">Source</span>
-      <span class="doc-badge-item doc-badge-item-info">src/_xml</span>
-    </div>
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml</span>
   </div>
-</figure>
-
+</div>
 
 ## Blogger version
 
@@ -34,7 +31,6 @@ We uses gadget version `2`:
   ...
 </html>
 ```
-
 
 ## Scoped CSS
 
