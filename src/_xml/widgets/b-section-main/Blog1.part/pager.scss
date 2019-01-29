@@ -1,9 +1,15 @@
+//
+// Pager
+//
+
 .pager {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: -.5rem;
 }
+
+//= Link
 
 .pager-link {
   position: relative;
