@@ -1,0 +1,23 @@
+<b:includable id='assets'>
+
+  <b:comment>### CSS bundle ###</b:comment>
+
+  <b:if cond='data:name == "css_bundle"'>
+    <style>
+      <!--(bake /../dist/bundle/css/main.min.css)-->
+      <!--(bake /../dist/bundle/css/xml-sass.min.css)-->
+      <!--(bake /../dist/bundle/css/xml-css.min.css)-->
+    </style>
+  </b:if>
+
+  <b:comment>### JavaScript bundle ###</b:comment>
+
+  <b:if cond='data:name == "js_bundle"'>
+    <script>
+      //<![CDATA[
+        <!--(bake /../dist/bundle/js/main.min.js)-->
+      //]]>
+    </script>
+  </b:if>
+
+</b:includable>

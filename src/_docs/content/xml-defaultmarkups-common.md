@@ -14,7 +14,7 @@ Common default markups.
   </div>
 </div>
 
-## custom-all-head-content
+## Custom all-head-content
 
 Custom `<b:include data='blog' name='all-head-content'/>`.
 
@@ -59,7 +59,7 @@ Custom `<b:include data='blog' name='all-head-content'/>`.
   </tbody>
 </table>
 
-**Usage**
+**Usage** (included in `src/theme.xml`)
 
 ```html
 <b:include data='{
@@ -74,36 +74,31 @@ Custom `<b:include data='blog' name='all-head-content'/>`.
 }' name='custom-all-head-content'/>
 ```
 
-## assets.css.bundle
+## Assets
+
+<div class="doc-badges">
+  <div class="doc-badge">
+    <span class="doc-badge-item">Source</span>
+    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/common/assets.xml</span>
+  </div>
+</div>
+
+### CSS bundle
 
 All compiled CSS.
 
-<div class="doc-badges">
-  <div class="doc-badge">
-    <span class="doc-badge-item">Source</span>
-    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/common/assets.css.bundle.xml</span>
-  </div>
-</div>
-
-**Usage**
+**Usage** (included in `src/theme.xml`)
 
 ```html
-<b:include name='assets.css.bundle'/>
+<b:include cond='!data:view.isLayoutMode' data='{ name: "css_bundle" }' name='assets'/>
 ```
 
-## assets.js.bundle
+### JavaScript bundle
 
 All compiled JavaScript.
 
-<div class="doc-badges">
-  <div class="doc-badge">
-    <span class="doc-badge-item">Source</span>
-    <span class="doc-badge-item doc-badge-item-info">src/_xml/defaultmarkups/common/assets.js.bundle.xml</span>
-  </div>
-</div>
-
-**Usage**
+**Usage** (included in `src/theme.xml`)
 
 ```html
-<b:include name='assets.js.bundle'/>
+<b:include data='{ name: "js_bundle" }' name='assets'/>
 ```

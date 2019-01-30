@@ -1,8 +1,7 @@
 <b:defaultmarkups>
   <b:defaultmarkup type='Common'>
     <!--(bake common/custom-all-head-content.xml)-->
-    <!--(bake common/assets.css.bundle.xml)-->
-    <!--(bake common/assets.js.bundle.xml)-->
+    <!--(bake common/assets.xml)-->
   </b:defaultmarkup>
   <b:defaultmarkup type='BlogArchive'>
     <!--(bake gadgets/BlogArchive.xml)-->
