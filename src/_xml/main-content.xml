@@ -6,7 +6,7 @@
         <b:comment>=== Main ===</b:comment>
         <main class='main-col layout-mode-col-8' id='main-col' role='main'>
           <div class='main' id='main'>
-            <b:section class='b-section-main' id='b-section-main' maxwidgets='1' name='Main' showaddelement='no'>
+            <b:section class='b-section-main' id='b-section-main' maxwidgets='1' name='Main section' showaddelement='no'>
               <!--(bake widgets/b-section-main/Blog1.xml)-->
             </b:section>
           </div>
@@ -14,7 +14,7 @@
         <b:comment>=== Sidebar ===</b:comment>
         <aside class='sidebar-col layout-mode-col-4' id='sidebar-col'>
           <div class='sidebar' id='sidebar'>
-            <b:section class='b-section-sidebar' id='b-section-sidebar' name='Sidebar'>
+            <b:section class='b-section-sidebar' id='b-section-sidebar' name='Sidebar section'>
               <!--(bake widgets/b-section-sidebar/BlogSearch1.xml)-->
               <!--(bake widgets/b-section-sidebar/Label1.xml)-->
               <!--(bake widgets/b-section-sidebar/BlogArchive1.xml)-->
