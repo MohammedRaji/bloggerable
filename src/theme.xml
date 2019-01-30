@@ -30,7 +30,7 @@ CSS
 
 <b:include cond='!data:view.isLayoutMode' data='{ name: "css_bundle" }' name='assets'/>
 
-<b:comment>### Layout mode ###</b:comment>
+<b:comment>### Template skin ###</b:comment>
 
 <b:if cond='data:view.isLayoutMode'>
 <b:template-skin>
