@@ -1,14 +1,16 @@
 <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' visible='true'>
   <b:widget-settings>
-    <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+    <b:widget-setting name='showDateHeader'>true</b:widget-setting>
     <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
     <b:widget-setting name='showShareButtons'>true</b:widget-setting>
     <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-    <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+    <b:widget-setting name='style.urlcolor'>#000000</b:widget-setting>
     <b:widget-setting name='showAuthor'>true</b:widget-setting>
-    <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+    <b:widget-setting name='disableGooglePlusShare'>false</b:widget-setting>
+    <b:widget-setting name='style.linkcolor'>#000000</b:widget-setting>
     <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-    <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+    <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
+    <b:widget-setting name='timestampLabel'/>
     <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
     <b:widget-setting name='style.layout'>1x1</b:widget-setting>
     <b:widget-setting name='showLabels'>true</b:widget-setting>
@@ -16,7 +18,7 @@
     <b:widget-setting name='showTimestamp'>true</b:widget-setting>
     <b:widget-setting name='postsPerAd'>1</b:widget-setting>
     <b:widget-setting name='showBacklinks'>true</b:widget-setting>
-    <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+    <b:widget-setting name='style.bordercolor'>#000000</b:widget-setting>
     <b:widget-setting name='showInlineAds'>true</b:widget-setting>
     <b:widget-setting name='showReactions'>true</b:widget-setting>
   </b:widget-settings>
@@ -25,7 +27,7 @@
     <b:comment>### Metadata JSON ###</b:comment>
 
     <b:if cond='data:posts.notEmpty'>
-      <div class='script-application-ld-json' id='script-application-ld-json'>
+      <div id='postMetadataJSON'>
         <b:loop values='data:posts' var='post'>
           <b:include name='postMetadataJSON'/>
         </b:loop>
