@@ -105,24 +105,28 @@
   font-size: .875rem;
   font-weight: 400;
   line-height: 1.25;
-  color: #fff;
+  color: #495057;
   text-align: center;
   white-space: nowrap;
-  background-color: #6c757d;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .125);
   border-radius: .25rem;
 
   &:hover,
   &:focus {
-    color: #fff;
+    color: #495057;
     text-decoration: none;
-    background-color: darken(#6c757d, 7.5%);
+    background-color: #f8f9fa;
+    border-color: rgba(0, 0, 0, .175);
   }
   &:active {
-    background-color: darken(#6c757d, 12.5%);
+    background-color: darken(#f8f9fa, 2.5%);
+    border-color: rgba(0, 0, 0, .175);
   }
   &.active {
-    color: #fff;
-    background-color: darken(#6c757d, 15%);
+    color: #495057;
+    background-color: #f8f9fa;
+    border-color: rgba(0, 0, 0, .175);
   }
 }
 
@@ -137,15 +141,15 @@
   font-size: 75%;
   font-weight: 700;
   line-height: 1;
-  color: #212529;
+  color: #fff;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  background-color: #f8f9fa;
+  background-color: #6c757d;
   border-radius: .25rem;
 
   .active > & {
-    color: #212529;
-    background-color: #f8f9fa;
+    color: #fff;
+    background-color: #6c757d;
   }
 }
