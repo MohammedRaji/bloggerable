@@ -25,7 +25,8 @@ module.exports = function (grunt) {
 
     clean: {
       'dist': 'dist',
-      'xmlSass': 'dist/bundle/css/xml-sass.scss'
+      'xmlSassSrc': 'dist/bundle/css/xml-sass.src.scss',
+      'xmlJsSrc': 'dist/bundle/js/xml-js.src.js'
     },
 
     bake: {
@@ -39,7 +40,7 @@ module.exports = function (grunt) {
             content[file.alias] = grunt.file.readJSON(file.path);
             return content;
           }, {
-            "rootDirname": __dirname.split(path.sep).pop()
+            'rootDir': __dirname.split(path.sep).pop()
           });
         }
       },
@@ -58,13 +59,18 @@ module.exports = function (grunt) {
         options: {
           basePath: 'src'
         },
-        files: [
-          { src: 'dist/bundle/css/skin.css', dest: 'dist/bundle/css/skin.css' },
-          { src: 'dist/bundle/css/template-skin.css', dest: 'dist/bundle/css/template-skin.css' },
-          { src: 'dist/bundle/css/main.css', dest: 'dist/bundle/css/main.css' },
-          { src: 'dist/bundle/css/xml-sass.css', dest: 'dist/bundle/css/xml-sass.css' },
-          { src: 'dist/bundle/css/xml-css.css', dest: 'dist/bundle/css/xml-css.css' }
-        ]
+        files: [{
+          expand: true,
+          cwd: 'dist/bundle/css/',
+          src: [
+            'skin.css',
+            'template-skin.css',
+            'main.css',
+            'xml-sass.css',
+            'xml-css.css'
+          ],
+          dest: 'dist/bundle/css'
+        }]
       },
       coreJs: {
         options: {
@@ -73,7 +79,10 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'dist/bundle/js/',
-          src: 'main.js',
+          src: [
+            'main.js',
+            'xml-js.js'
+          ],
           dest: 'dist/bundle/js'
         }]
       },
@@ -166,7 +175,7 @@ module.exports = function (grunt) {
       coreCss: {
         files: [
           { 'dist/bundle/css/main.css': 'src/_scss/index.scss' },
-          { 'dist/bundle/css/xml-sass.css': 'dist/bundle/css/xml-sass.scss' }
+          { 'dist/bundle/css/xml-sass.css': 'dist/bundle/css/xml-sass.src.scss' }
         ]
       }
     },
@@ -236,22 +245,25 @@ module.exports = function (grunt) {
         banner: '<%= banner %>',
         transform: [
           ['babelify', {
-            'presets': ['@babel/preset-env']
+            'presets': ['@babel/preset-env'],
+            'plugins': ['babel-plugin-root-import']
           }]
         ]
       },
       coreJs: {
-        files: {
-          'dist/bundle/js/main.js': 'src/_js/index.js'
-        }
+        files: [
+          { 'dist/bundle/js/main.js': 'src/_js/index.js' },
+          { 'dist/bundle/js/xml-js.js': 'dist/bundle/js/xml-js.src.js' }
+        ]
       }
     },
 
     exorcise: {
       coreJs: {
-        files: {
-          'dist/bundle/js/main.js.map': ['dist/bundle/js/main.js']
-        }
+        files: [
+          { 'dist/bundle/js/main.js.map': 'dist/bundle/js/main.js' },
+          { 'dist/bundle/js/xml-js.js.map': 'dist/bundle/js/xml-js.js' }
+        ]
       }
     },
 
@@ -272,7 +284,10 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'dist/bundle/js/',
-          src: 'main.js',
+          src: [
+            'main.js',
+            'xml-js.js'
+          ],
           dest: 'dist/bundle/js',
           ext: '.min.js'
         }]
@@ -289,14 +304,6 @@ module.exports = function (grunt) {
           dest: 'dist/docs',
           ext: '.min.js'
         }]
-      }
-    },
-
-    concat: {
-      options: {
-        banner: '<%= banner %>',
-        stripBanners: true,
-        sourceMap: false
       }
     },
 
@@ -406,10 +413,16 @@ module.exports = function (grunt) {
   // CSS task.
   grunt.registerTask('concatXmlSass', 'Finds Sass in src/_xml folder for concatenation.', function () {
     grunt.file.expand('src/_xml').forEach(function (dir) {
-      var concat = grunt.config.get('concat') || {};
+      var concat = {
+        options: {
+          banner: '<%= banner %>',
+          stripBanners: true,
+          sourceMap: false
+        }
+      };
       concat[dir] = {
         src: [dir + '/**/*.scss'],
-        dest: 'dist/bundle/css/xml-sass.scss'
+        dest: 'dist/bundle/css/xml-sass.src.scss'
       };
       grunt.config.set('concat', concat);
     });
@@ -417,7 +430,13 @@ module.exports = function (grunt) {
   });
   grunt.registerTask('concatXmlCss', 'Finds CSS in src/_xml folder for concatenation.', function () {
     grunt.file.expand('src/_xml').forEach(function (dir) {
-      var concat = grunt.config.get('concat') || {};
+      var concat = {
+        options: {
+          banner: '<%= banner %>',
+          stripBanners: true,
+          sourceMap: false
+        }
+      };
       concat[dir] = {
         src: [dir + '/**/*.css'],
         dest: 'dist/bundle/css/xml-css.css'
@@ -427,12 +446,27 @@ module.exports = function (grunt) {
     grunt.task.run('concat');
   });
   grunt.registerTask('css-lint', ['stylelint:coreCss']);
-  grunt.registerTask('css-compile', ['concatXmlSass', 'sass:coreCss', 'concatXmlCss', 'copy:skin', 'postcss:coreCss', 'bake:coreCss', 'clean:xmlSass']);
+  grunt.registerTask('css-compile', ['concatXmlSass', 'sass:coreCss', 'concatXmlCss', 'copy:skin', 'postcss:coreCss', 'bake:coreCss', 'clean:xmlSassSrc']);
   grunt.registerTask('css-minify', ['cssmin:coreCss']);
   grunt.registerTask('dist-css', ['css-lint', 'css-compile', 'css-minify']);
 
   // JS task.
-  grunt.registerTask('js-compile', ['browserify:coreJs', 'exorcise:coreJs', 'bake:coreJs']);
+  grunt.registerTask('concatXmlJs', 'Finds JavaScript in src/_xml folder for concatenation.', function () {
+    grunt.file.expand('src/_xml').forEach(function (dir) {
+      var concat = {
+        options: {
+          sourceMap: false
+        }
+      };
+      concat[dir] = {
+        src: [dir + '/**/*.js'],
+        dest: 'dist/bundle/js/xml-js.src.js'
+      };
+      grunt.config.set('concat', concat);
+    });
+    grunt.task.run('concat');
+  });
+  grunt.registerTask('js-compile', ['concatXmlJs', 'browserify:coreJs', 'exorcise:coreJs', 'bake:coreJs', 'clean:xmlJsSrc']);
   grunt.registerTask('js-minify', ['uglify:coreJs']);
   grunt.registerTask('dist-js', ['js-compile', 'js-minify']);
 

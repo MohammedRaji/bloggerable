@@ -164,6 +164,7 @@ You can access the config values in:
   - `**/*.xml`
   - `**/*.scss`
   - `**/*.css`
+  - `**/*.js`
 - `src/_scss/**/*.scss`
 - `src/_js/**/*.js`
 - `src/_docs/`

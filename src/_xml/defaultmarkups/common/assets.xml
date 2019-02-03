@@ -16,6 +16,7 @@
     <script>
       //<![CDATA[
         <!--(bake /../dist/bundle/js/main.min.js)-->
+        <!--(bake /../dist/bundle/js/xml-js.min.js)-->
       //]]>
     </script>
   </b:if>

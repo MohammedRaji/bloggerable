@@ -32,49 +32,11 @@ We uses gadget version `2`:
 </html>
 ```
 
-## Scoped CSS
+## CSS
 
 You can create Sass/CSS files in `src/_xml`, the Sass/CSS files will be automatically concatenated, compiled, and minified into `dist/bundle/css`.
 
 When using this feature, its CSS will apply to elements of the current file/component only. This means the component and its CSS must be set specifically.
-
-**Example**
-
-Foo component:
-
-```html
-# foo.xml
-
-<div class='foo-element'>
-  ...
-</div>
-```
-
-```scss
-# foo.scss
-
-.foo-element {
-  ...
-}
-```
-
-Bar component:
-
-```html
-# bar.xml
-
-<div class='bar-element'>
-  ...
-</div>
-```
-
-```scss
-# bar.scss
-
-.bar-element {
-  ...
-}
-```
 
 ### Sass example
 
@@ -104,6 +66,14 @@ You can add local and/or global variables, functions, mixins, and styles.
 
 Example local variables:
 
+```html
+# src/_xml/folder-1/foo.xml
+
+<div class='foo-element' id='fooElement'>
+  ...
+</div>
+```
+
 ```scss
 # src/_xml/folder-1/foo.scss
 
@@ -129,6 +99,14 @@ $color: #fff !default;
 $bg:    #000 !default;
 ```
 
+```html
+# src/_xml/folder-1/bar.xml
+
+<div class='bar-element' id='barElement'>
+  ...
+</div>
+```
+
 ```scss
 # src/_xml/folder-1/bar.scss
 
@@ -140,12 +118,13 @@ $bg:    #000 !default;
 
 #### Import
 
-You can also import variables, functions, and mixins from `src/_scss`, or import Sass files from Node.js module.
+You can also import variables, functions, and mixins from `src/_scss`, and import Sass from Node.js module.
 
 ```scss
 # src/_xml/_global.scss
 
 @import "./src/_scss/file-name";
+@import "./node_modules/path/to/file-name";
 ```
 
 ### CSS example
@@ -167,3 +146,72 @@ You can also import variables, functions, and mixins from `src/_scss`, or import
 ```
 
 The styles in `folder-1/*.css` and `folder-2/*.css` will be available in the `dist/bundle/css/xml-css.css` and `dist/bundle/css/xml-css.min.css`.
+
+```html
+# src/_xml/folder-1/foo.xml
+
+<div class='foo-element' id='fooElement'>
+  ...
+</div>
+```
+
+```css
+# src/_xml/folder-1/foo.css
+
+.foo-element {
+  ...
+}
+```
+
+## JavaScript
+
+You can create JavaScript files in `src/_xml`, the JavaScript files will be automatically concatenated, compiled, and minified into `dist/bundle/js`. You can use ES2015.
+
+Just like CSS above, when using this feature, its JavaScript will apply to elements of the current file/component only. This means the component and its JavaScript must be set specifically.
+
+### Example
+
+```plaintext
+[root theme directory]
+└── src/
+    └── _xml/
+        ├── folder-1/
+        │   ├── foo.js
+        │   ├── foo.xml
+        │   ├── bar.js
+        │   └── bar.xml
+        └── folder-2/
+            ├── baz.js
+            ├── baz.xml
+            ├── qux.js
+            └── qux.xml
+```
+
+The JavaScript in `folder-1/*.js` and `folder-2/*.js` will be available in the `dist/bundle/js/xml-js.js` and `dist/bundle/js/xml-js.min.js`.
+
+```html
+# src/_xml/folder-1/foo.xml
+
+<div class='foo-element' id='fooElement'>
+  ...
+</div>
+```
+
+```js
+# src/_xml/folder-1/foo.js
+
+let foo = document.getElementById('fooElement');
+
+foo.classList.add('foo');
+```
+
+#### Import and export
+
+You can import JavaScript from `src/_js` and Node.js module (do not import or export JavaScript in `src/_xml`).
+
+```js
+# src/_xml/folder-1/foo.js
+
+import {a} from '~/src/_js/file-name';
+import {b} from '~/node_modules/path/to/file-name';
+```
