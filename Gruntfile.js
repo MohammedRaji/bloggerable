@@ -66,8 +66,7 @@ module.exports = function (grunt) {
             'skin.css',
             'template-skin.css',
             'main.css',
-            'xml-sass.css',
-            'xml-css.css'
+            'xml-sass.css'
           ],
           dest: 'dist/bundle/css'
         }]
@@ -428,25 +427,8 @@ module.exports = function (grunt) {
     });
     grunt.task.run('concat');
   });
-  grunt.registerTask('concatXmlCss', 'Finds CSS in src/_xml folder for concatenation.', function () {
-    grunt.file.expand('src/_xml').forEach(function (dir) {
-      var concat = {
-        options: {
-          banner: '<%= banner %>',
-          stripBanners: true,
-          sourceMap: false
-        }
-      };
-      concat[dir] = {
-        src: [dir + '/**/*.css'],
-        dest: 'dist/bundle/css/xml-css.css'
-      };
-      grunt.config.set('concat', concat);
-    });
-    grunt.task.run('concat');
-  });
   grunt.registerTask('css-lint', ['stylelint:coreCss']);
-  grunt.registerTask('css-compile', ['concatXmlSass', 'sass:coreCss', 'concatXmlCss', 'copy:skin', 'postcss:coreCss', 'bake:coreCss', 'clean:xmlSassSrc']);
+  grunt.registerTask('css-compile', ['concatXmlSass', 'sass:coreCss', 'copy:skin', 'postcss:coreCss', 'bake:coreCss', 'clean:xmlSassSrc']);
   grunt.registerTask('css-minify', ['cssmin:coreCss']);
   grunt.registerTask('dist-css', ['css-lint', 'css-compile', 'css-minify']);
 

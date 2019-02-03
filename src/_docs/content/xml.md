@@ -32,9 +32,9 @@ We uses gadget version `2`:
 </html>
 ```
 
-## CSS
+## Sass
 
-You can create Sass/CSS files in `src/_xml`, the Sass/CSS files will be automatically concatenated, compiled, and minified into `dist/bundle/css`.
+You can create Sass files in `src/_xml`, the Sass files will be automatically concatenated, compiled, and minified into `dist/bundle/css`.
 
 When using this feature, its CSS will apply to elements of the current file/component only. This means the component and its CSS must be set specifically.
 
@@ -127,49 +127,13 @@ You can also import variables, functions, and mixins from `src/_scss`, and impor
 @import "./node_modules/path/to/file-name";
 ```
 
-### CSS example
-
-```plaintext
-[root theme directory]
-└── src/
-    └── _xml/
-        ├── folder-1/
-        │   ├── foo.css
-        │   ├── foo.xml
-        │   ├── bar.css
-        │   └── bar.xml
-        └── folder-2/
-            ├── baz.css
-            ├── baz.xml
-            ├── qux.css
-            └── qux.xml
-```
-
-The styles in `folder-1/*.css` and `folder-2/*.css` will be available in the `dist/bundle/css/xml-css.css` and `dist/bundle/css/xml-css.min.css`.
-
-```html
-# src/_xml/folder-1/foo.xml
-
-<div class='foo-element' id='fooElement'>
-  ...
-</div>
-```
-
-```css
-# src/_xml/folder-1/foo.css
-
-.foo-element {
-  ...
-}
-```
-
 ## JavaScript
 
 You can create JavaScript files in `src/_xml`, the JavaScript files will be automatically concatenated, compiled, and minified into `dist/bundle/js`. You can use ES2015.
 
 Just like CSS above, when using this feature, its JavaScript will apply to elements of the current file/component only. This means the component and its JavaScript must be set specifically.
 
-### Example
+### JavaScript example
 
 ```plaintext
 [root theme directory]
