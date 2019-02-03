@@ -4,27 +4,7 @@
 </code></pre><p>We uses gadget version <code>2</code>:</p><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">b:defaultwidgetversion</span>=<span class="hljs-string">'2'</span>&gt;</span>
   ...
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
-</code></pre><h2 id="scoped-css">Scoped CSS</h2><p>You can create Sass/CSS files in <code>src/_xml</code>, the Sass/CSS files will be automatically concatenated, compiled, and minified into <code>dist/bundle/css</code>.</p><p>When using this feature, its CSS will apply to elements of the current file/component only. This means the component and its CSS must be set specifically.</p><p><strong>Example</strong></p><p>Foo component:</p><pre><code class="lang-html"># foo.xml
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">'foo-element'</span>&gt;</span>
-  ...
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</code></pre><pre><code class="lang-scss"># foo<span class="hljs-selector-class">.scss</span>
-
-<span class="hljs-selector-class">.foo-element</span> {
-  ...
-}
-</code></pre><p>Bar component:</p><pre><code class="lang-html"># bar.xml
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">'bar-element'</span>&gt;</span>
-  ...
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</code></pre><pre><code class="lang-scss"># bar<span class="hljs-selector-class">.scss</span>
-
-<span class="hljs-selector-class">.bar-element</span> {
-  ...
-}
-</code></pre><h3 id="sass-example">Sass example</h3><pre><code class="lang-plaintext">[root theme directory]
+</code></pre><h2 id="css">CSS</h2><p>You can create Sass/CSS files in <code>src/_xml</code>, the Sass/CSS files will be automatically concatenated, compiled, and minified into <code>dist/bundle/css</code>.</p><p>When using this feature, its CSS will apply to elements of the current file/component only. This means the component and its CSS must be set specifically.</p><h3 id="sass-example">Sass example</h3><pre><code class="lang-plaintext">[root theme directory]
 └── src/
     └── _xml/
         ├── folder-1/
@@ -37,7 +17,12 @@
             ├── baz.xml
             ├── qux.scss
             └── qux.xml
-</code></pre><p>The styles in <code>folder-1/*.scss</code> and <code>folder-2/*.scss</code> will be available in the <code>dist/bundle/css/xml-sass.css</code> and <code>dist/bundle/css/xml-sass.min.css</code>.</p><h4 id="variables-functions-mixins-and-styles">Variables, functions, mixins, and styles</h4><p>You can add local and/or global variables, functions, mixins, and styles.</p><h5 id="local-example">Local example</h5><p>Example local variables:</p><pre><code class="lang-scss"># src/_xml/folder-1/foo.scss
+</code></pre><p>The styles in <code>folder-1/*.scss</code> and <code>folder-2/*.scss</code> will be available in the <code>dist/bundle/css/xml-sass.css</code> and <code>dist/bundle/css/xml-sass.min.css</code>.</p><h4 id="variables-functions-mixins-and-styles">Variables, functions, mixins, and styles</h4><p>You can add local and/or global variables, functions, mixins, and styles.</p><h5 id="local-example">Local example</h5><p>Example local variables:</p><pre><code class="lang-html"># src/_xml/folder-1/foo.xml
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">'foo-element'</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'fooElement'</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre><pre><code class="lang-scss"># src/_xml/folder-1/foo.scss
 
 $foo-color: #fff !default;
 $foo-bg:    #000 !default;
@@ -50,15 +35,21 @@ $foo-bg:    #000 !default;
 
 $color: #fff !default;
 $bg:    #000 !default;
+</code></pre><pre><code class="lang-html"># src/_xml/folder-1/bar.xml
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">'bar-element'</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'barElement'</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre><pre><code class="lang-scss"># src/_xml/folder-1/bar.scss
 
 .bar-element {
   color: $color;
   background-color: $bg;
 }
-</code></pre><h4 id="import">Import</h4><p>You can also import variables, functions, and mixins from <code>src/_scss</code>, or import Sass files from Node.js module.</p><pre><code class="lang-scss"># src/_xml/_global.scss
+</code></pre><h4 id="import">Import</h4><p>You can also import variables, functions, and mixins from <code>src/_scss</code>, and import Sass from Node.js module.</p><pre><code class="lang-scss"># src/_xml/_global.scss
 
 @import &quot;./src/_scss/file-name&quot;;
+@import &quot;./node_modules/path/to/file-name&quot;;
 </code></pre><h3 id="css-example">CSS example</h3><pre><code class="lang-plaintext">[root theme directory]
 └── src/
     └── _xml/
@@ -72,4 +63,41 @@ $bg:    #000 !default;
             ├── baz.xml
             ├── qux.css
             └── qux.xml
-</code></pre><p>The styles in <code>folder-1/*.css</code> and <code>folder-2/*.css</code> will be available in the <code>dist/bundle/css/xml-css.css</code> and <code>dist/bundle/css/xml-css.min.css</code>.</p></main><div class="doc-overlay" id="docOverlay"></div><script src="assets/bundle/js/main.min.js"></script><script src="assets/js/vendor/anchor.min.js"></script><script src="assets/js/vendor/tocbot.min.js"></script><script src="assets/js/doc.min.js"></script></body></html>
+</code></pre><p>The styles in <code>folder-1/*.css</code> and <code>folder-2/*.css</code> will be available in the <code>dist/bundle/css/xml-css.css</code> and <code>dist/bundle/css/xml-css.min.css</code>.</p><pre><code class="lang-html"># src/_xml/folder-1/foo.xml
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">'foo-element'</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'fooElement'</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre><pre><code class="lang-css"># src/_xml/folder-1/foo.css
+
+.foo-element {
+  ...
+}
+</code></pre><h2 id="javascript">JavaScript</h2><p>You can create JavaScript files in <code>src/_xml</code>, the JavaScript files will be automatically concatenated, compiled, and minified into <code>dist/bundle/js</code>. You can use ES2015.</p><p>Just like CSS above, when using this feature, its JavaScript will apply to elements of the current file/component only. This means the component and its JavaScript must be set specifically.</p><h3 id="example">Example</h3><pre><code class="lang-plaintext">[root theme directory]
+└── src/
+    └── _xml/
+        ├── folder-1/
+        │   ├── foo.js
+        │   ├── foo.xml
+        │   ├── bar.js
+        │   └── bar.xml
+        └── folder-2/
+            ├── baz.js
+            ├── baz.xml
+            ├── qux.js
+            └── qux.xml
+</code></pre><p>The JavaScript in <code>folder-1/*.js</code> and <code>folder-2/*.js</code> will be available in the <code>dist/bundle/js/xml-js.js</code> and <code>dist/bundle/js/xml-js.min.js</code>.</p><pre><code class="lang-html"># src/_xml/folder-1/foo.xml
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">'foo-element'</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'fooElement'</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre><pre><code class="lang-js"># src/_xml/folder-1/foo.js
+
+let foo = document.getElementById(&#39;fooElement&#39;);
+
+foo.classList.add(&#39;foo&#39;);
+</code></pre><h4 id="import-and-export">Import and export</h4><p>You can import JavaScript from <code>src/_js</code> and Node.js module (do not import or export JavaScript in <code>src/_xml</code>).</p><pre><code class="lang-js"># src/_xml/folder-1/foo.js
+
+import {a} from &#39;~/src/_js/file-name&#39;;
+import {b} from &#39;~/node_modules/path/to/file-name&#39;;
+</code></pre></main><div class="doc-overlay" id="docOverlay"></div><script src="assets/bundle/js/main.min.js"></script><script src="assets/bundle/js/xml-js.min.js"></script><script src="assets/js/vendor/anchor.min.js"></script><script src="assets/js/vendor/tocbot.min.js"></script><script src="assets/js/doc.min.js"></script></body></html>

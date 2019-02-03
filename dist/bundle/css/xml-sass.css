@@ -601,26 +601,30 @@
   font-size: .875rem;
   font-weight: 400;
   line-height: 1.25;
-  color: #fff;
+  color: #495057;
   text-align: center;
   white-space: nowrap;
-  background-color: #6c757d;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: .25rem;
 }
 
 .label-cloud-link:hover, .label-cloud-link:focus {
-  color: #fff;
+  color: #495057;
   text-decoration: none;
-  background-color: #5a6268;
+  background-color: #f8f9fa;
+  border-color: rgba(0, 0, 0, 0.175);
 }
 
 .label-cloud-link:active {
-  background-color: #4e555b;
+  background-color: #f1f3f5;
+  border-color: rgba(0, 0, 0, 0.175);
 }
 
 .label-cloud-link.active {
-  color: #fff;
-  background-color: #494f54;
+  color: #495057;
+  background-color: #f8f9fa;
+  border-color: rgba(0, 0, 0, 0.175);
 }
 
 .label-cloud-count {
@@ -632,17 +636,17 @@
   font-size: 75%;
   font-weight: 700;
   line-height: 1;
-  color: #212529;
+  color: #fff;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  background-color: #f8f9fa;
+  background-color: #6c757d;
   border-radius: .25rem;
 }
 
 .active > .label-cloud-count {
-  color: #212529;
-  background-color: #f8f9fa;
+  color: #fff;
+  background-color: #6c757d;
 }
 
 .popular-post {
