@@ -4,6 +4,69 @@
 </code></pre><p>We uses gadget version <code>2</code>:</p><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">b:defaultwidgetversion</span>=<span class="hljs-string">'2'</span>&gt;</span>
   ...
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre><h2 id="page-types">Page types</h2><p>Conditional tags for different page types, which allows you to specify a part of your template code on specific types of pages or specific URLs.</p><h3 id="specific-pages">Specific pages</h3><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Homepage ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.isHomepage'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- https://example.blogspot.com --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Item page ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.isPost'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- https://example.blogspot.com/&lt;year&gt;/&lt;month&gt;/&lt;permalink&gt;.html --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Static page ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.isPage'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- https://example.blogspot.com/p/&lt;permalink&gt;.html --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Search (label) page ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.search.label'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 1. https://example.blogspot.com/search/label/&lt;name&gt; --&gt;</span>
+  <span class="hljs-comment">&lt;!-- 2. https://example.blogspot.com/search?label=&lt;name&gt; --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Search (query) page ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.search.query'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- https://example.blogspot.com/search?q=&lt;query&gt; --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Search (default) page ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.search and !data:view.search.label and !data:view.search.query'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- https://example.blogspot.com/search --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Archive page ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.isArchive'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 1. https://example.blogspot.com/&lt;year&gt; --&gt;</span>
+  <span class="hljs-comment">&lt;!-- 2. https://example.blogspot.com/&lt;year&gt;/&lt;month&gt; --&gt;</span>
+  <span class="hljs-comment">&lt;!-- 3. https://example.blogspot.com/&lt;year&gt;_&lt;month&gt;_&lt;day&gt;_archive.html --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Error page ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.isError'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- https://example.blogspot.com/&lt;404&gt; --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Preview page ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.isPreview'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Preview page --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Layout mode ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.isLayoutMode'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- https://www.blogger.com/blogger.g?blogID=&lt;blogID&gt;#pageelements --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+</code></pre><h3 id="specific-urls">Specific URLs</h3><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Specific item page ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.url == "https://example.blogspot.com/1945/08/wow.html"'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- https://example.blogspot.com/1945/08/wow.html --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Specific static page ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.url == "https://example.blogspot.com/p/wow.html"'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- https://example.blogspot.com/p/wow.html --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Specific search (label) page ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.search.label == "WOW"'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 1. https://example.blogspot.com/search/label/WOW --&gt;</span>
+  <span class="hljs-comment">&lt;!-- 2. https://example.blogspot.com/search?label=WOW --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">b:comment</span>&gt;</span>=== Specific search (query) page ===<span class="hljs-tag">&lt;/<span class="hljs-name">b:comment</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">b:if</span> <span class="hljs-attr">cond</span>=<span class="hljs-string">'data:view.search.query == "wow"'</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- https://example.blogspot.com/search?q=wow --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">b:if</span>&gt;</span>
 </code></pre><h2 id="sass">Sass</h2><p>You can create Sass files in <code>src/_xml</code>, the Sass files will be automatically concatenated, compiled, and minified into <code>dist/bundle/css</code>.</p><p>When using this feature, its CSS will apply to elements of the current file/component only. This means the component and its CSS must be set specifically.</p><h3 id="sass-example">Sass example</h3><pre><code class="lang-plaintext">[root theme directory]
 └── src/
     └── _xml/
