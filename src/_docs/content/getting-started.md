@@ -89,9 +89,11 @@ The directory structure looks something like this:
   </tbody>
 </table>
 
-## Tooling setup
+## Build tools
 
-We uses [Grunt](https://gruntjs.com/) for its build system. To use our build system, you’ll need the source files and Node. Follow these steps:
+We uses [Grunt](https://gruntjs.com/) for its build system. To use our build system, you’ll need the source files and Node.
+
+### Tooling setup
 
 1. [Download and install Node.js](https://nodejs.org/download/), which we use to manage our dependencies.
 2. Install `grunt-cli` globally with `npm install -g grunt-cli`.
@@ -99,7 +101,7 @@ We uses [Grunt](https://gruntjs.com/) for its build system. To use our build sys
 
 When completed, you’ll be able to run the various commands provided from the command line.
 
-## Using Grunt commands
+### Using Grunt commands
 
 Our `Gruntfile.js` includes the following commands and tasks:
 
@@ -107,6 +109,12 @@ Our `Gruntfile.js` includes the following commands and tasks:
 | --- | --- |
 | <code style="white-space: nowrap;">grunt</code> | `grunt` creates the `dist` directory with compiled files. |
 | <code style="white-space: nowrap;">grunt watch</code> | Watches the source files and automatically building them whenever you save. |
+
+### Autoprefixer
+
+We uses Autoprefixer (included in our build process) to automatically add vendor prefixes to some CSS properties at build time.
+
+We maintain the list of browsers supported through Autoprefixer in a separate file. See `/.browserslistrc` for details.
 
 ### Local documentation
 
