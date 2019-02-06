@@ -25,8 +25,7 @@ module.exports = function (grunt) {
 
     clean: {
       'dist': 'dist',
-      'xmlSassSrc': 'dist/bundle/css/xml-sass.src.scss',
-      'xmlJsSrc': 'dist/bundle/js/xml-js.src.js'
+      'bundleTmp': 'dist/bundle/tmp'
     },
 
     bake: {
@@ -65,8 +64,7 @@ module.exports = function (grunt) {
           src: [
             'skin.css',
             'template-skin.css',
-            'main.css',
-            'xml-sass.css'
+            'main.css'
           ],
           dest: 'dist/bundle/css'
         }]
@@ -78,10 +76,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'dist/bundle/js/',
-          src: [
-            'main.js',
-            'xml-js.js'
-          ],
+          src: 'main.js',
           dest: 'dist/bundle/js'
         }]
       },
@@ -151,8 +146,7 @@ module.exports = function (grunt) {
           'src/skin.css',
           'src/template-skin.css',
           'src/_scss/**/*.scss',
-          'src/_xml/**/*.scss',
-          'src/_xml/**/*.css'
+          'src/_xml/**/*.scss'
         ]
       },
       docs: {
@@ -173,8 +167,7 @@ module.exports = function (grunt) {
       },
       coreCss: {
         files: [
-          { 'dist/bundle/css/main.css': 'src/_scss/index.scss' },
-          { 'dist/bundle/css/xml-sass.css': 'dist/bundle/css/xml-sass.src.scss' }
+          { 'dist/bundle/css/main.css': 'src/_scss/index.scss' }
         ]
       }
     },
@@ -251,8 +244,7 @@ module.exports = function (grunt) {
       },
       coreJs: {
         files: [
-          { 'dist/bundle/js/main.js': 'src/_js/index.js' },
-          { 'dist/bundle/js/xml-js.js': 'dist/bundle/js/xml-js.src.js' }
+          { 'dist/bundle/js/main.js': 'src/_js/index.js' }
         ]
       }
     },
@@ -261,7 +253,6 @@ module.exports = function (grunt) {
       coreJs: {
         files: [
           { 'dist/bundle/js/main.js.map': 'dist/bundle/js/main.js' },
-          { 'dist/bundle/js/xml-js.js.map': 'dist/bundle/js/xml-js.js' }
         ]
       }
     },
@@ -283,10 +274,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'dist/bundle/js/',
-          src: [
-            'main.js',
-            'xml-js.js'
-          ],
+          src: 'main.js',
           dest: 'dist/bundle/js',
           ext: '.min.js'
         }]
@@ -414,21 +402,19 @@ module.exports = function (grunt) {
     grunt.file.expand('src/_xml').forEach(function (dir) {
       var concat = {
         options: {
-          banner: '<%= banner %>',
-          stripBanners: true,
           sourceMap: false
         }
       };
       concat[dir] = {
         src: [dir + '/**/*.scss'],
-        dest: 'dist/bundle/css/xml-sass.src.scss'
+        dest: 'dist/bundle/tmp/xml-sass.scss'
       };
       grunt.config.set('concat', concat);
     });
     grunt.task.run('concat');
   });
   grunt.registerTask('css-lint', ['stylelint:coreCss']);
-  grunt.registerTask('css-compile', ['concatXmlSass', 'sass:coreCss', 'copy:skin', 'postcss:coreCss', 'bake:coreCss', 'clean:xmlSassSrc']);
+  grunt.registerTask('css-compile', ['concatXmlSass', 'sass:coreCss', 'copy:skin', 'postcss:coreCss', 'bake:coreCss']);
   grunt.registerTask('css-minify', ['cssmin:coreCss']);
   grunt.registerTask('dist-css', ['css-lint', 'css-compile', 'css-minify']);
 
@@ -442,13 +428,13 @@ module.exports = function (grunt) {
       };
       concat[dir] = {
         src: [dir + '/**/*.js'],
-        dest: 'dist/bundle/js/xml-js.src.js'
+        dest: 'dist/bundle/tmp/xml-js.js'
       };
       grunt.config.set('concat', concat);
     });
     grunt.task.run('concat');
   });
-  grunt.registerTask('js-compile', ['concatXmlJs', 'browserify:coreJs', 'exorcise:coreJs', 'bake:coreJs', 'clean:xmlJsSrc']);
+  grunt.registerTask('js-compile', ['concatXmlJs', 'browserify:coreJs', 'exorcise:coreJs', 'bake:coreJs']);
   grunt.registerTask('js-minify', ['uglify:coreJs']);
   grunt.registerTask('dist-js', ['js-compile', 'js-minify']);
 
@@ -463,7 +449,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', ['dist-css', 'dist-js', 'dist-theme', 'dist-docs']);
 
   // Default task.
-  grunt.registerTask('default', ['clean:dist', 'test']);
+  grunt.registerTask('default', ['clean:dist', 'test', 'clean:bundleTmp']);
 
   // Release task.
   grunt.registerTask('release', ['default', 'compress:theme']);

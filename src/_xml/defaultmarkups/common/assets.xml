@@ -5,7 +5,6 @@
   <b:if cond='data:name == "css_bundle"'>
     <style>
       <!--(bake /../dist/bundle/css/main.min.css)-->
-      <!--(bake /../dist/bundle/css/xml-sass.min.css)-->
     </style>
   </b:if>
 
@@ -15,7 +14,6 @@
     <script>
       //<![CDATA[
         <!--(bake /../dist/bundle/js/main.min.js)-->
-        <!--(bake /../dist/bundle/js/xml-js.min.js)-->
       //]]>
     </script>
   </b:if>

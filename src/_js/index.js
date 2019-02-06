@@ -1,5 +1,9 @@
-import { hello } from './hello';
+import Util from './util';
+import XmlJs from '~/dist/bundle/tmp/xml-js';
+import Example from './example';
 
-let val = hello();
-
-// console.log(val);
+export {
+  Util,
+  XmlJs,
+  Example
+}

@@ -56,11 +56,15 @@ When using this feature, its CSS will apply to elements of the current file/comp
             └── qux.xml
 ```
 
-The styles in `folder-1/*.scss` and `folder-2/*.scss` will be available in the `dist/bundle/css/xml-sass.css` and `dist/bundle/css/xml-sass.min.css`.
+The styles in `folder-1/*.scss` and `folder-2/*.scss` will be available in the `dist/bundle/css/main.css` and `dist/bundle/css/main.min.css`.
 
-#### Variables, functions, mixins, and styles
+#### Variables, functions, and mixins
 
-You can add local and/or global variables, functions, mixins, and styles.
+You can add local and/or global variables, functions, and mixins.
+
+You can also use variables, functions, and mixins from `src/_scss`.
+
+The name of the variables, functions, and mixins must be unique to avoid override by another Sass files.
 
 ##### Local example
 
@@ -88,7 +92,7 @@ $foo-bg:    #000 !default;
 
 ##### Global example
 
-Add global variables, functions, mixins, and styles in `src/_xml/_global.scss`.
+Add global variables, functions, and mixins in `src/_xml/_global.scss`.
 
 Example global variables:
 
@@ -116,14 +120,13 @@ $bg:    #000 !default;
 }
 ```
 
-#### Import
+#### Import Node.js module
 
-You can also import variables, functions, and mixins from `src/_scss`, and import Sass from Node.js module.
+You can also import Sass from Node.js module.
 
 ```scss
 # src/_xml/_global.scss
 
-@import "./src/_scss/file-name";
 @import "./node_modules/path/to/file-name";
 ```
 
@@ -151,7 +154,7 @@ Just like CSS above, when using this feature, its JavaScript will apply to eleme
             └── qux.xml
 ```
 
-The JavaScript in `folder-1/*.js` and `folder-2/*.js` will be available in the `dist/bundle/js/xml-js.js` and `dist/bundle/js/xml-js.min.js`.
+The JavaScript in `folder-1/*.js` and `folder-2/*.js` will be available in the `dist/bundle/js/main.js` and `dist/bundle/js/main.min.js`.
 
 ```html
 # src/_xml/folder-1/foo.xml
@@ -176,6 +179,6 @@ You can import JavaScript from `src/_js` and Node.js module (do not import or ex
 ```js
 # src/_xml/folder-1/foo.js
 
-import {a} from '~/src/_js/file-name';
-import {b} from '~/node_modules/path/to/file-name';
+import Util from '~/src/_js/util';
+import {a, b} from '~/node_modules/path/to/file-name';
 ```
