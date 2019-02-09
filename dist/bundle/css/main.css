@@ -2317,28 +2317,58 @@ textarea.form-control {
 .post-body-typography blockquote,
 .post-body-typography address,
 .post-body-typography figure {
+  margin: 0 0 1rem !important;
+}
+
+.post-body-typography ol ol,
+.post-body-typography ul ul,
+.post-body-typography ol ul,
+.post-body-typography ul ol {
+  margin-bottom: 0 !important;
+}
+
+.post-body-typography br + h1,
+.post-body-typography br + h2,
+.post-body-typography br + h3,
+.post-body-typography br + h4,
+.post-body-typography br + h5,
+.post-body-typography br + h6,
+.post-body-typography br + p,
+.post-body-typography br + pre,
+.post-body-typography br + ol,
+.post-body-typography br + ul,
+.post-body-typography br + dl,
+.post-body-typography br + table,
+.post-body-typography br + blockquote,
+.post-body-typography br + address,
+.post-body-typography br + figure {
   margin: 0 !important;
+}
+
+.post-body-typography .separator img,
+.post-body-typography .tr-caption-container img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.post-body-typography .separator img:not([width^="1"]):not([width^="2"]):not([width^="3"]),
+.post-body-typography .tr-caption-container img:not([width^="1"]):not([width^="2"]):not([width^="3"]) {
+  width: 100%;
 }
 
 .post-body-typography .separator,
-.post-body-typography .tr-caption-container {
-  width: 100% !important;
-  margin: 0 !important;
-}
-
 .post-body-typography .separator a,
 .post-body-typography .separator img,
+.post-body-typography .tr-caption-container,
 .post-body-typography .tr-caption-container a,
 .post-body-typography .tr-caption-container img {
   margin: 0 !important;
 }
 
-.post-body-typography .separator img,
-.post-body-typography .tr-caption-container img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
+.post-body-typography .separator + .separator,
+.post-body-typography .tr-caption-container + .tr-caption-container {
+  margin-top: 1rem !important;
 }
 
 .post-body-typography .separator[style*="float: left"],
@@ -2373,6 +2403,10 @@ textarea.form-control {
   margin-left: 1em !important;
 }
 
+.post-body-typography .tr-caption-container {
+  width: 100% !important;
+}
+
 .post-body-typography .tr-caption-container[style*="float: left"],
 .post-body-typography .tr-caption-container[style*="float:left"],
 .post-body-typography .tr-caption-container[style*="float: right"],
@@ -2382,9 +2416,7 @@ textarea.form-control {
 
 .post-body-typography .tr-caption-container .tr-caption {
   padding-top: .5rem;
-  font-size: .875rem;
-  font-weight: 400;
-  line-height: 1.5rem;
+  font-size: 90%;
   color: #6c757d;
 }
 
@@ -2398,10 +2430,9 @@ textarea.form-control {
 }
 
 .post-body-typography table:not([class]) caption {
-  padding-top: .75rem;
-  padding-bottom: 0;
+  padding: .75rem 0 0;
   color: #6c757d;
-  text-align: left;
+  text-align: inherit;
   caption-side: bottom;
 }
 
@@ -2434,11 +2465,11 @@ textarea.form-control {
 }
 
 .post-body-typography blockquote:not([class]) > :first-child {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 .post-body-typography blockquote:not([class]) > :last-child {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .post-body-typography blockquote:not([class]) footer {
@@ -2452,11 +2483,12 @@ textarea.form-control {
 }
 
 .post-body-typography code {
-  padding: .2rem .4rem;
+  padding: .2em .4em;
   font-size: 87.5%;
-  color: #b1556f;
+  color: #ff3860;
   word-break: break-word;
-  background-color: #f9f2f4;
+  background-color: #f5f5f5;
+  border: 0;
   border-radius: .25rem;
 }
 
@@ -2464,8 +2496,9 @@ textarea.form-control {
   padding: 0;
   font-size: inherit;
   color: inherit;
-  word-break: normal;
+  word-break: inherit;
   background-color: transparent;
+  border: 0;
   border-radius: 0;
 }
 
