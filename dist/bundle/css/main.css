@@ -991,7 +991,7 @@ textarea.form-control {
 .table .thead-dark th {
   color: #fff;
   background-color: #212529;
-  border-color: #32383e;
+  border-color: #434b53;
 }
 
 .table.table-bordered {
@@ -999,12 +999,12 @@ textarea.form-control {
 }
 
 .table.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .table.table-hover tbody tr:hover {
   color: #212529;
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgba(0, 0, 0, 0.045);
 }
 
 .table-light {
@@ -1027,21 +1027,17 @@ textarea.form-control {
   border-color: #cbd3da;
 }
 
-.table-light:not(.table-bordered):not(.table-borderless) {
-  border: 1px solid #e2e6ea;
-}
-
 .table-light.table-bordered {
   border-color: #e2e6ea;
 }
 
 .table-light.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .table-light.table-hover tbody tr:hover {
   color: #212529;
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgba(0, 0, 0, 0.045);
 }
 
 .table-dark {
@@ -1064,21 +1060,17 @@ textarea.form-control {
   border-color: #32383e;
 }
 
-.table-dark:not(.table-bordered):not(.table-borderless) {
-  border: 1px solid #32383e;
-}
-
 .table-dark.table-bordered {
   border-color: #32383e;
 }
 
 .table-dark.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.03);
 }
 
 .table-dark.table-hover tbody tr:hover {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.075);
+  background-color: rgba(255, 255, 255, 0.045);
 }
 
 .table-responsive {
