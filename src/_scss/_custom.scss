@@ -2,22 +2,9 @@
 
 // Your variable overrides
 //
-// Copy variables from `_variables.scss` to this file to override default values
-// without modifying source files.
+// Copy variables from `src/_scss/_variables.scss` and `src/_xml/**/*.scss`
+// to this file to override default values without modifying source files.
 
-// Example: customize options
-// $enable-rounded: false;
-
-// Example: variable overrides
+// Example
 // $body-color:  #fff;
 // $body-bg:     #000;
-
-// Example: modify map
-// $theme-colors: (
-//  "primary": #ff5722
-// );
-
-// Example: add to map
-// $theme-colors: (
-//  "custom-color": #900
-// );

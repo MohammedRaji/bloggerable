@@ -429,7 +429,7 @@
 .doc-content > h5 { font-size: 1.25rem; }
 .doc-content > h6 { font-size: 1rem; }
 
-/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable no-duplicate-selectors, selector-no-qualifying-type */
 .doc-content > h2 {
   padding: 1rem 1.5rem;
   margin-top: 1rem;
@@ -441,6 +441,15 @@
   border-top: 2px solid #dee2e6;
   border-bottom: 2px solid #dee2e6;
 }
+
+.doc-content > h2[tabindex="-1"]:focus,
+.doc-content > h3[tabindex="-1"]:focus,
+.doc-content > h4[tabindex="-1"]:focus,
+.doc-content > h5[tabindex="-1"]:focus,
+.doc-content > h6[tabindex="-1"]:focus {
+  outline: 0;
+}
+/* stylelint-enable no-duplicate-selectors, selector-no-qualifying-type */
 
 /**
  * Code

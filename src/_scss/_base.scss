@@ -1,24 +1,8 @@
-// Document
-// Body
-// Headings
-// Paragraphs
-// Horizontal rules
-// Inline text elements
-// Code
-// Images
-// Lists
-// Tables
-// Blockquotes
-// Addresses
-// Figures
-// Forms
-// Misc elements
-
 //
 // Document
 //
-
 // Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+
 html {
   box-sizing: border-box;
 }
@@ -28,7 +12,11 @@ html {
   box-sizing: inherit;
 }
 
+//
+// HTML5 Shim
+//
 // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers).
+
 // stylelint-disable-next-line selector-list-comma-newline-after
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
@@ -38,67 +26,20 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 // Body
 //
 
-// 1. Set an explicit initial text-align value so that we can later use
-//    the `inherit` value on things like `<th>` elements.
-// 2. As a best practice, apply a default `background-color`.
 body {
+  margin: 0;
   font-family: $body-font-family;
   font-size: $body-font-size;
   font-weight: $body-font-weight;
   line-height: $body-line-height;
   color: $body-color;
-  text-align: left; // 1
-  background-color: $body-bg; // 2
+  text-align: left;
+  background-color: $body-bg;
 }
 
 //
-// Headings
+// Links
 //
-
-// 1. Reset margins on headings.
-// stylelint-disable-next-line selector-list-comma-newline-after
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0; // 1
-  margin-bottom: $headings-margin-bottom; // 1
-  font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
-  color: $headings-color;
-}
-
-h1 { font-size: $h1-font-size; }
-h2 { font-size: $h2-font-size; }
-h3 { font-size: $h3-font-size; }
-h4 { font-size: $h4-font-size; }
-h5 { font-size: $h5-font-size; }
-h6 { font-size: $h6-font-size; }
-
-//
-// Paragraphs
-//
-
-// Reset margins on paragraphs.
-p {
-  margin-top: 0;
-  margin-bottom: $paragraph-margin-bottom;
-}
-
-//
-// Horizontal rules
-//
-
-hr {
-  margin-top: $hr-margin-y;
-  margin-bottom: $hr-margin-y;
-  border: 0;
-  border-top: $hr-border-width solid $hr-border-color;
-}
-
-//
-// Inline text elements
-//
-
-//= Links
 
 a {
   color: $link-color;
@@ -108,233 +49,4 @@ a {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }
-}
-
-//= Small
-
-small {
-  font-size: $small-font-size;
-  font-weight: $small-font-weight;
-}
-
-//= Mark
-
-mark {
-  padding: $mark-padding;
-  color: $mark-color;
-  background-color: $mark-bg;
-}
-
-//= Abbreviations
-//
-// Add explicit cursor to indicate changed behavior.
-
-// stylelint-disable-next-line selector-no-qualifying-type
-abbr[title] {
-  cursor: help;
-}
-
-//
-// Code
-//
-
-pre,
-code,
-kbd,
-samp {
-  font-family: $font-family-monospace;
-}
-
-code {
-  font-size: $code-font-size;
-  color: $code-color;
-  word-break: break-word;
-
-  // Streamline the style when inside anchors to avoid broken underline and more.
-  a > & {
-    color: inherit;
-  }
-}
-
-// 1. Apply a consistent margin strategy.
-// 2. Don't allow content to break outside.
-pre {
-  display: block;
-  margin-top: 0; // 1
-  margin-bottom: $pre-margin-bottom; // 1
-  overflow: auto; // 2
-  font-size: $pre-font-size;
-  color: $pre-color;
-
-  // Account for some code outputs that place code tags in pre tags.
-  code {
-    font-size: inherit;
-    color: inherit;
-    word-break: normal;
-  }
-}
-
-kbd {
-  padding: $kbd-padding;
-  font-size: $kbd-font-size;
-  color: $kbd-color;
-  background-color: $kbd-bg;
-  @include border-radius($kbd-border-radius);
-
-  kbd {
-    padding: 0;
-    font-size: 100%;
-  }
-}
-
-//
-// Images
-//
-
-img {
-  vertical-align: middle;
-}
-
-//
-// Lists
-//
-
-// Apply a consistent margin strategy.
-ol,
-ul,
-dl {
-  margin-top: 0;
-  margin-bottom: $list-margin-bottom;
-}
-
-// Remove bottom margins on nested lists.
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-  margin-bottom: 0;
-}
-
-dt {
-  font-weight: $font-weight-bold;
-}
-dd {
-  margin-bottom: .5rem;
-  margin-left: 0; // Undo browser default.
-}
-
-//
-// Tables
-//
-
-// Prevent double borders.
-table {
-  border-collapse: collapse;
-}
-
-caption {
-  padding-top: $table-caption-padding;
-  padding-bottom: $table-caption-padding;
-  color: $table-caption-color;
-  text-align: $table-caption-text-align;
-  caption-side: $table-caption-side;
-}
-
-// Matches default `<td>` alignment by inheriting from the `<body>`, or the
-// closest parent with a set `text-align`.
-th {
-  text-align: inherit;
-}
-
-//
-// Blockquotes
-//
-
-// Apply a consistent margin strategy.
-blockquote {
-  margin: 0 0 $blockquote-margin-bottom;
-}
-
-//
-// Addresses
-//
-
-// 1. Apply a consistent margin strategy.
-// 2. Reset the browser default `font-style` from `italic` to `normal`.
-address {
-  margin-bottom: $address-margin-bottom; // 1
-  font-style: normal; // 2
-  line-height: inherit;
-}
-
-//
-// Figures
-//
-
-// Apply a consistent margin strategy.
-figure {
-  margin: 0 0 $figure-margin-bottom;
-}
-
-//
-// Forms
-//
-
-// 1. Browsers set a default `min-width: min-content` on fieldsets,
-//    so we reset that to ensure fieldsets behave more like a standard block element.
-// 2. Reset the default outline behavior of fieldsets so they don't affect page layout.
-fieldset {
-  min-width: 0; // 1
-  padding: 0; // 2
-  margin: 0; // 2
-  border: 0; // 2
-}
-
-legend {
-  display: block;
-  width: 100%;
-  margin-bottom: .5rem;
-  font-size: 1.5rem;
-  line-height: inherit;
-}
-
-// 1. Allow labels to use `margin` for spacing.
-label {
-  display: inline-block; // 1
-  margin-bottom: $label-margin-bottom;
-}
-
-input,
-button,
-select,
-optgroup,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-// Textareas should really only resize vertically so they don't break their (horizontal) containers.
-textarea {
-  resize: vertical;
-}
-
-//
-// Misc elements
-//
-
-// Reset the browser default `cursor` from `text` to `pointer` to convey that the element
-// can be interacted with by clicking on it.
-summary {
-  cursor: pointer;
-}
-
-// Suppress the focus outline on elements that cannot be accessed via keyboard.
-// This prevents an unwanted focus outline from appearing around elements that
-// might still respond to pointer events.
-//
-// Credit: https://github.com/suitcss/base
-[tabindex="-1"]:focus {
-  // stylelint-disable-next-line declaration-no-important
-  outline: 0 !important;
 }

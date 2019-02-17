@@ -9,13 +9,9 @@
  * Licensed under {{ config.bloggerable.license.name }} ({{ config.bloggerable.license.url }})
  */
 
-@import "custom";
-@import "functions";
-@import "variables";
-@import "mixins";
-@import "normalize";
+@import "custom"; // 1st
+@import "functions"; // 2nd
+@import "variables"; // 3rd
+@import "mixins"; // 4th
 @import "base";
-@import "buttons";
-@import "forms";
-@import "tables";
-@import "./dist/bundle/tmp/xml-sass";
+@import "./dist/bundle/tmp/xml-sass"; // last
