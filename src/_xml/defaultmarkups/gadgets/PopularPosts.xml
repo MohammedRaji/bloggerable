@@ -49,12 +49,12 @@
         <b:comment>=== Content ===</b:comment>
         <div class='popular-post-content'>
           <b:comment>=== Title ===</b:comment>
-          <h3 class='popular-post-title'>
+          <h2 class='popular-post-title'>
             <a class='popular-post-title-link' expr:href='data:post.link ?: data:post.url'>
               <b:attr name='b:whitespace' value='remove'/>
               <b:eval expr='data:post.title ? data:post.title : data:messages.noTitle'/>
             </a>
-          </h3>
+          </h2>
           <b:comment>=== Meta ===</b:comment>
           <ul class='popular-post-meta'>
             <b:comment>=== Date (published) ===</b:comment>

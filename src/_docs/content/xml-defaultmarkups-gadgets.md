@@ -428,9 +428,9 @@ Highlight a special post on your blog.
         <img alt="Image" class="featured-post-img" src="https://via.placeholder.com/512x288">
         </a>
         <div class="featured-post-spacer"></div>
-        <h3 class="featured-post-title js-toc-ignore">
+        <h2 class="featured-post-title js-toc-ignore">
           <a class="featured-post-title-link" href="#">Post title</a>
-        </h3>
+        </h2>
         <div class="featured-post-spacer"></div>
         <div class="featured-post-snippet">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini...
@@ -751,9 +751,9 @@ Display a list of the most popular posts from your blog.
       <div class="popular-post">
         <a href="#"><img alt="Image" class="popular-post-img popular-post-noimg" height="64" src="https://via.placeholder.com/64x64" width="64"></a>
         <div class="popular-post-content">
-          <h3 class="popular-post-title js-toc-ignore">
+          <h2 class="popular-post-title js-toc-ignore">
             <a class="popular-post-title-link" href="#">Post title 01</a>
-          </h3>
+          </h2>
           <ul class="popular-post-meta">
             <li class="popular-post-meta-item">
               <time datetime="2018-01-01T05:59:00-08:00" title="2018-01-01T05:59:00-08:00">
@@ -769,9 +769,9 @@ Display a list of the most popular posts from your blog.
       <div class="popular-post">
         <a href="#"><img alt="Image" class="popular-post-img" height="64" src="https://via.placeholder.com/64x64" width="64"></a>
         <div class="popular-post-content">
-          <h3 class="popular-post-title js-toc-ignore">
+          <h2 class="popular-post-title js-toc-ignore">
             <a class="popular-post-title-link" href="#">Post title 02</a>
-          </h3>
+          </h2>
           <ul class="popular-post-meta">
             <li class="popular-post-meta-item">
               <time datetime="2018-03-01T07:33:00-08:00" title="2018-03-01T07:33:00-08:00">
@@ -787,9 +787,9 @@ Display a list of the most popular posts from your blog.
       <div class="popular-post">
         <a href="#"><img alt="Image" class="popular-post-img popular-post-noimg" height="64" src="https://via.placeholder.com/64x64" width="64"></a>
         <div class="popular-post-content">
-          <h3 class="popular-post-title js-toc-ignore">
+          <h2 class="popular-post-title js-toc-ignore">
             <a class="popular-post-title-link" href="#">Post title 03</a>
-          </h3>
+          </h2>
           <ul class="popular-post-meta">
             <li class="popular-post-meta-item">
               <time datetime="2018-02-01T07:32:00-08:00" title="2018-02-01T07:32:00-08:00">
