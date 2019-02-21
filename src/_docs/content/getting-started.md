@@ -23,6 +23,7 @@ The directory structure looks something like this:
     ├── _scss
     ├── _xml
     ├── config.json
+    ├── custom.scss
     ├── skin.css
     ├── template-skin.css
     └── theme.xml
@@ -65,6 +66,12 @@ The directory structure looks something like this:
         <div><code style="white-space: nowrap;">src/config.json</code></div>
       </td>
       <td>A config file to gives you a lot of flexibility.</td>
+    </tr>
+    <tr>
+      <td>
+        <div><code style="white-space: nowrap;">src/custom.scss</code></div>
+      </td>
+      <td>Copy variables from <code style="white-space: nowrap;">src/_scss/_variables.scss</code> and <code style="white-space: nowrap;">src/_xml/\*\*/*.scss</code> to this file to override default values without modifying source files.</td>
     </tr>
     <tr>
       <td rowspan="3">

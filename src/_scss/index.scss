@@ -9,7 +9,7 @@
  * Licensed under {{ config.bloggerable.license.name }} ({{ config.bloggerable.license.url }})
  */
 
-@import "custom"; // 1st
+@import "./src/custom"; // 1st
 @import "functions"; // 2nd
 @import "variables"; // 3rd
 @import "mixins"; // 4th
