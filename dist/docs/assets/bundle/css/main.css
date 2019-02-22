@@ -971,7 +971,6 @@ h6 {
 }
 
 .header-nav-item {
-  display: block;
   margin-right: .25rem;
   margin-bottom: .25rem;
 }
@@ -979,9 +978,7 @@ h6 {
 .header-nav-link {
   display: block;
   padding: .5rem 1rem;
-  font-size: 1rem;
   font-weight: 500;
-  line-height: 1.5;
   color: #6c757d;
   text-align: center;
   background-color: transparent;
