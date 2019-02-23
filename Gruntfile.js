@@ -23,6 +23,16 @@ module.exports = function (grunt) {
             ' * Licensed under {{ config.bloggerable.license.name }} ({{ config.bloggerable.license.url }})\n' +
             ' */\n',
 
+    bannerDocs: '/*!\n' +
+                ' * {{ config.theme.name }} Docs\n' +
+                ' * Based on {{ config.bloggerable.name }}\n' +
+                ' */\n' +
+                '/*!\n' +
+                ' * {{ config.bloggerable.name }} Docs ({{ config.bloggerable.homepage }})\n' +
+                ' * Copyright {{ config.bloggerable.date }} {{ config.bloggerable.author.name }} ({{ config.bloggerable.author.url }})\n' +
+                ' * Licensed under the Creative Commons Attribution 3.0 Unported License (https://creativecommons.org/licenses/by/3.0)\n' +
+                ' */\n',
+
     clean: {
       'dist': 'dist',
       'bundleTmp': 'dist/bundle/tmp'
@@ -234,7 +244,6 @@ module.exports = function (grunt) {
         browserifyOptions: {
           debug: true
         },
-        banner: '<%= banner %>',
         transform: [
           ['babelify', {
             'presets': ['@babel/preset-env'],
@@ -252,7 +261,7 @@ module.exports = function (grunt) {
     exorcise: {
       coreJs: {
         files: [
-          { 'dist/bundle/js/main.js.map': 'dist/bundle/js/main.js' },
+          { 'dist/bundle/js/main.js.map': 'dist/bundle/js/main.js' }
         ]
       }
     },
@@ -291,6 +300,41 @@ module.exports = function (grunt) {
           dest: 'dist/docs',
           ext: '.min.js'
         }]
+      }
+    },
+
+    header: {
+      coreCss: {
+        options: {
+          text: '<%= banner %>'
+        },
+        files: {
+          'dist/bundle/css/main.css': 'dist/bundle/css/main.css'
+        }
+      },
+      coreJs: {
+        options: {
+          text: '<%= banner %>'
+        },
+        files: {
+          'dist/bundle/js/main.js': 'dist/bundle/js/main.js'
+        }
+      },
+      docsCss: {
+        options: {
+          text: '<%= bannerDocs %>'
+        },
+        files: {
+          'dist/docs/assets/css/doc.css': 'dist/docs/assets/css/doc.css'
+        }
+      },
+      docsJs: {
+        options: {
+          text: '<%= bannerDocs %>'
+        },
+        files: {
+          'dist/docs/assets/js/doc.js': 'dist/docs/assets/js/doc.js'
+        }
       }
     },
 
@@ -414,7 +458,7 @@ module.exports = function (grunt) {
     grunt.task.run('concat');
   });
   grunt.registerTask('css-lint', ['stylelint:coreCss']);
-  grunt.registerTask('css-compile', ['concatXmlSass', 'sass:coreCss', 'copy:skin', 'postcss:coreCss', 'bake:coreCss']);
+  grunt.registerTask('css-compile', ['concatXmlSass', 'sass:coreCss', 'copy:skin', 'postcss:coreCss', 'header:coreCss', 'bake:coreCss']);
   grunt.registerTask('css-minify', ['cssmin:coreCss']);
   grunt.registerTask('dist-css', ['css-lint', 'css-compile', 'css-minify']);
 
@@ -434,13 +478,13 @@ module.exports = function (grunt) {
     });
     grunt.task.run('concat');
   });
-  grunt.registerTask('js-compile', ['concatXmlJs', 'browserify:coreJs', 'exorcise:coreJs', 'bake:coreJs']);
+  grunt.registerTask('js-compile', ['concatXmlJs', 'browserify:coreJs', 'exorcise:coreJs', 'header:coreJs', 'bake:coreJs']);
   grunt.registerTask('js-minify', ['uglify:coreJs']);
   grunt.registerTask('dist-js', ['js-compile', 'js-minify']);
 
   // Docs task.
   grunt.registerTask('docs-lint', ['stylelint:docs']);
-  grunt.registerTask('docs-compile', ['site:docs', 'copy:docsFiles', 'copy:docsBundle', 'postcss:docs', 'bake:docs']);
+  grunt.registerTask('docs-compile', ['site:docs', 'copy:docsFiles', 'copy:docsBundle', 'postcss:docs', 'header:docsCss', 'header:docsJs', 'bake:docs']);
   grunt.registerTask('docs-minify', ['htmlmin:docs', 'cssmin:docs', 'uglify:docs']);
   grunt.registerTask('docs-serve', ['connect:docs']);
   grunt.registerTask('dist-docs', ['docs-lint', 'docs-compile', 'docs-minify']);

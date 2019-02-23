@@ -21,6 +21,7 @@
     "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-exorcise": "^2.1.1",
+    "grunt-header": "^1.1.0",
     "grunt-markdown-site": "^4.1.0",
     "grunt-postcss": "^0.9.0",
     "grunt-sass": "^3.0.1",

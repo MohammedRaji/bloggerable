@@ -1,14 +1,3 @@
-/*!
- * {{ config.theme.name }} v{{ config.theme.version }}
- * Based on {{ config.bloggerable.name }}
- */
-
-/*!
- * {{ config.bloggerable.name }} v{{ config.bloggerable.version }} ({{ config.bloggerable.homepage }})
- * Copyright {{ config.bloggerable.date }} {{ config.bloggerable.author.name }} ({{ config.bloggerable.author.url }})
- * Licensed under {{ config.bloggerable.license.name }} ({{ config.bloggerable.license.url }})
- */
-
 @import "./src/custom"; // 1st
 @import "functions"; // 2nd
 @import "variables"; // 3rd
