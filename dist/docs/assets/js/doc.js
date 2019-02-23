@@ -2,7 +2,6 @@
  * Theme name Docs
  * Based on Bloggerable
  */
-
 /*!
  * Bloggerable Docs (https://blogger-starter.github.io/bloggerable)
  * Copyright 2017-2018 Igoy Nawamreh (https://twitter.com/igoynawamreh)
