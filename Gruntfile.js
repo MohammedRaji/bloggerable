@@ -172,8 +172,8 @@ module.exports = function (grunt) {
       options: {
         implementation: sass,
         outputStyle: 'expanded',
-        sourceMap: true,
-        sourceMapContents: true
+        sourceMap: false,
+        sourceMapContents: false
       },
       coreCss: {
         files: [
@@ -184,10 +184,7 @@ module.exports = function (grunt) {
 
     postcss: {
       options: {
-        map: {
-          inline: false,
-          sourcesContent: true
-        },
+        map: false,
         processors: [
           require('autoprefixer')({ cascade: false })
         ]
@@ -207,8 +204,8 @@ module.exports = function (grunt) {
     cssmin: {
       options: {
         level: 1,
-        sourceMap: true,
-        sourceMapInlineSources: true,
+        sourceMap: false,
+        sourceMapInlineSources: false,
         advanced: false
       },
       coreCss: {
@@ -258,20 +255,10 @@ module.exports = function (grunt) {
       }
     },
 
-    exorcise: {
-      coreJs: {
-        files: [
-          { 'dist/bundle/js/main.js.map': 'dist/bundle/js/main.js' }
-        ]
-      }
-    },
-
     uglify: {
       options: {
         mangle: true,
-        sourceMap: {
-          includeSources: true
-        },
+        sourceMap: false,
         compress: {
           warnings: false
         },
@@ -478,7 +465,7 @@ module.exports = function (grunt) {
     });
     grunt.task.run('concat');
   });
-  grunt.registerTask('js-compile', ['concatXmlJs', 'browserify:coreJs', 'exorcise:coreJs', 'header:coreJs', 'bake:coreJs']);
+  grunt.registerTask('js-compile', ['concatXmlJs', 'browserify:coreJs', 'header:coreJs', 'bake:coreJs']);
   grunt.registerTask('js-minify', ['uglify:coreJs']);
   grunt.registerTask('dist-js', ['js-compile', 'js-minify']);
 
