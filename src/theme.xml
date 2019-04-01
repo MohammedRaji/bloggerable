@@ -113,7 +113,39 @@ JavaScript
 Default markups
 ############################################################################# </b:comment>
 
-<!--(bake _xml/defaultmarkups/defaultmarkups.xml)-->
+<b:defaultmarkups>
+  <b:defaultmarkup type='Common'>
+    <!--(bake _xml/defaultmarkups/common/custom-all-head-content.xml)-->
+    <!--(bake _xml/defaultmarkups/common/assets.xml)-->
+  </b:defaultmarkup>
+  <b:defaultmarkup type='BlogArchive'>
+    <!--(bake _xml/defaultmarkups/gadgets/BlogArchive.xml)-->
+  </b:defaultmarkup>
+  <b:defaultmarkup type='BlogSearch'>
+    <!--(bake _xml/defaultmarkups/gadgets/BlogSearch.xml)-->
+  </b:defaultmarkup>
+  <b:defaultmarkup type='ContactForm'>
+    <!--(bake _xml/defaultmarkups/gadgets/ContactForm.xml)-->
+  </b:defaultmarkup>
+  <b:defaultmarkup type='FeaturedPost'>
+    <!--(bake _xml/defaultmarkups/gadgets/FeaturedPost.xml)-->
+  </b:defaultmarkup>
+  <b:defaultmarkup type='FollowByEmail'>
+    <!--(bake _xml/defaultmarkups/gadgets/FollowByEmail.xml)-->
+  </b:defaultmarkup>
+  <b:defaultmarkup type='Header'>
+    <!--(bake _xml/defaultmarkups/gadgets/Header.xml)-->
+  </b:defaultmarkup>
+  <b:defaultmarkup type='Image'>
+    <!--(bake _xml/defaultmarkups/gadgets/Image.xml)-->
+  </b:defaultmarkup>
+  <b:defaultmarkup type='Label'>
+    <!--(bake _xml/defaultmarkups/gadgets/Label.xml)-->
+  </b:defaultmarkup>
+  <b:defaultmarkup type='PopularPosts'>
+    <!--(bake _xml/defaultmarkups/gadgets/PopularPosts.xml)-->
+  </b:defaultmarkup>
+</b:defaultmarkups>
 
 
 </body>

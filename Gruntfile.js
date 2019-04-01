@@ -1,6 +1,5 @@
 const path = require('path');
 const sass = require('node-sass');
-const hljs = require('highlight.js');
 
 module.exports = function (grunt) {
   'use strict';
@@ -22,16 +21,6 @@ module.exports = function (grunt) {
             ' * Copyright {{ config.bloggerable.date }} {{ config.bloggerable.author.name }} ({{ config.bloggerable.author.url }})\n' +
             ' * Licensed under {{ config.bloggerable.license.name }} ({{ config.bloggerable.license.url }})\n' +
             ' */\n',
-
-    bannerDocs: '/*!\n' +
-                ' * {{ config.theme.name }} Docs\n' +
-                ' * Based on {{ config.bloggerable.name }}\n' +
-                ' */\n' +
-                '/*!\n' +
-                ' * {{ config.bloggerable.name }} Docs ({{ config.bloggerable.homepage }})\n' +
-                ' * Copyright {{ config.bloggerable.date }} {{ config.bloggerable.author.name }} ({{ config.bloggerable.author.url }})\n' +
-                ' * Licensed under the Creative Commons Attribution 3.0 Unported License (https://creativecommons.org/licenses/by/3.0)\n' +
-                ' */\n',
 
     clean: {
       'dist': 'dist',
@@ -89,55 +78,6 @@ module.exports = function (grunt) {
           src: 'main.js',
           dest: 'dist/bundle/js'
         }]
-      },
-      docs: {
-        options: {
-          basePath: 'src'
-        },
-        files: [{
-          expand: true,
-          cwd: 'dist/docs/',
-          src: [
-            '**/*.html',
-            'assets/css/**/*.css',
-            'assets/js/**/*.js'
-          ],
-          dest: 'dist/docs'
-        }]
-      }
-    },
-
-    site: {
-      docs: {
-        options: {
-          site: {},
-          extend: {},
-          marked: {
-            gfm: true,
-            highlight: function(code, lang) {
-              return hljs.highlight(lang, code).value;
-            }
-          },
-          templates: 'src/_docs/templates',
-          defaultTemplate: 'doc.html'
-        },
-        src: 'src/_docs/content',
-        dest: 'dist/docs'
-      }
-    },
-
-    htmlmin: {
-      docs: {
-        options: {
-          removeComments: true,
-          collapseWhitespace: true
-        },
-        files: [{
-          expand: true,
-          cwd: 'dist/docs/',
-          src: '**/*.html',
-          dest: 'dist/docs'
-        }]
       }
     },
 
@@ -157,13 +97,6 @@ module.exports = function (grunt) {
           'src/template-skin.css',
           'src/_scss/**/*.scss',
           'src/_xml/**/*.scss'
-        ]
-      },
-      docs: {
-        src: [
-          'src/_docs/assets/css/**/*.css',
-          '!src/_docs/assets/css/**/*.min.css',
-          '!src/_docs/assets/css/vendor/**/*.css'
         ]
       }
     },
@@ -191,13 +124,6 @@ module.exports = function (grunt) {
       },
       coreCss: {
         src: 'dist/bundle/css/**/*.css'
-      },
-      docs: {
-        src: [
-          'dist/docs/assets/css/**/*.css',
-          '!dist/docs/assets/css/**/*.min.css',
-          '!dist/docs/assets/css/vendor/**/*.css'
-        ]
       }
     },
 
@@ -218,19 +144,6 @@ module.exports = function (grunt) {
             '!template-skin.css'
           ],
           dest: 'dist/bundle/css',
-          ext: '.min.css'
-        }]
-      },
-      docs: {
-        files: [{
-          expand: true,
-          cwd: 'dist/docs/',
-          src: [
-            'assets/css/**/*.css',
-            '!assets/css/**/*.min.css',
-            '!assets/css/vendor/**/*.css'
-          ],
-          dest: 'dist/docs',
           ext: '.min.css'
         }]
       }
@@ -274,19 +187,6 @@ module.exports = function (grunt) {
           dest: 'dist/bundle/js',
           ext: '.min.js'
         }]
-      },
-      docs: {
-        files: [{
-          expand: true,
-          cwd: 'dist/docs/',
-          src: [
-            'assets/js/**/*.js',
-            '!assets/js/**/*.min.js',
-            '!assets/js/vendor/**/*.js'
-          ],
-          dest: 'dist/docs',
-          ext: '.min.js'
-        }]
       }
     },
 
@@ -306,22 +206,6 @@ module.exports = function (grunt) {
         files: {
           'dist/bundle/js/main.js': 'dist/bundle/js/main.js'
         }
-      },
-      docsCss: {
-        options: {
-          text: '<%= bannerDocs %>'
-        },
-        files: {
-          'dist/docs/assets/css/doc.css': 'dist/docs/assets/css/doc.css'
-        }
-      },
-      docsJs: {
-        options: {
-          text: '<%= bannerDocs %>'
-        },
-        files: {
-          'dist/docs/assets/js/doc.js': 'dist/docs/assets/js/doc.js'
-        }
       }
     },
 
@@ -334,42 +218,6 @@ module.exports = function (grunt) {
           'template-skin.css'
         ],
         dest: 'dist/bundle/css'
-      },
-      docsFiles: {
-        expand: true,
-        cwd: 'src/_docs/',
-        src: [
-          '**/*',
-          '!**/*.md',
-          '!content',
-          '!content/**/*',
-          '!templates',
-          '!templates/**/*'
-        ],
-        dest: 'dist/docs'
-      },
-      docsBundle: {
-        expand: true,
-        cwd: 'dist/bundle/',
-        src: [
-          'css/**/*',
-          'js/**/*',
-          '!css/skin.css',
-          '!css/skin.css.map',
-          '!css/template-skin.css',
-          '!css/template-skin.css.map'
-        ],
-        dest: 'dist/docs/assets/bundle'
-      }
-    },
-
-    connect: {
-      docs: {
-        options: {
-          port: 9001,
-          keepalive: true,
-          base: 'dist/docs'
-        }
       }
     },
 
@@ -469,15 +317,8 @@ module.exports = function (grunt) {
   grunt.registerTask('js-minify', ['uglify:coreJs']);
   grunt.registerTask('dist-js', ['js-compile', 'js-minify']);
 
-  // Docs task.
-  grunt.registerTask('docs-lint', ['stylelint:docs']);
-  grunt.registerTask('docs-compile', ['site:docs', 'copy:docsFiles', 'copy:docsBundle', 'postcss:docs', 'header:docsCss', 'header:docsJs', 'bake:docs']);
-  grunt.registerTask('docs-minify', ['htmlmin:docs', 'cssmin:docs', 'uglify:docs']);
-  grunt.registerTask('docs-serve', ['connect:docs']);
-  grunt.registerTask('dist-docs', ['docs-lint', 'docs-compile', 'docs-minify']);
-
   // Test task.
-  grunt.registerTask('test', ['dist-css', 'dist-js', 'dist-theme', 'dist-docs']);
+  grunt.registerTask('test', ['dist-css', 'dist-js', 'dist-theme']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test', 'clean:bundleTmp']);

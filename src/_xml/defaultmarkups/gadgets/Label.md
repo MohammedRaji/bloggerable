@@ -1,0 +1,31 @@
+# Labels
+
+Show all the labels of posts in your blog.
+
+## List
+
+```html
+<b:widget id='Label1' locked='false' title='Labels' type='Label' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+    <b:widget-setting name='display'>LIST</b:widget-setting>
+    <b:widget-setting name='selectedLabelsList'/>
+    <b:widget-setting name='showType'>ALL</b:widget-setting>
+    <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+  </b:widget-settings>
+</b:widget>
+```
+
+## Cloud
+
+```html
+<b:widget id='Label1' locked='false' title='Labels' type='Label' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+    <b:widget-setting name='display'>CLOUD</b:widget-setting>
+    <b:widget-setting name='selectedLabelsList'/>
+    <b:widget-setting name='showType'>ALL</b:widget-setting>
+    <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+  </b:widget-settings>
+</b:widget>
+```

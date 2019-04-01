@@ -4,7 +4,7 @@
     <div class='page-header image-placement-replace'>
       <b:class cond='data:image' name='is-image'/>
       <b:class cond='!data:image' name='is-noimage'/>
-      <div class='container'>
+      <div class='page-header-container'>
         <b:if cond='data:image'>
           <a expr:href='data:blog.homepageUrl'>
             <b:attr name='b:whitespace' value='remove'/>
@@ -19,7 +19,7 @@
     <div class='page-header image-placement-before-description'>
       <b:class cond='data:image' name='is-image'/>
       <b:class cond='!data:image' name='is-noimage'/>
-      <div class='container'>
+      <div class='page-header-container'>
         <b:if cond='data:image'>
           <a expr:href='data:blog.homepageUrl'>
             <b:attr name='b:whitespace' value='remove'/>
@@ -38,7 +38,7 @@
       <b:attr cond='data:image' expr:value='"background-image: url(" + data:image + ");"' name='style'/>
       <b:class cond='data:image' name='is-image'/>
       <b:class cond='!data:image' name='is-noimage'/>
-      <div class='container'>
+      <div class='page-header-container'>
         <b:if cond='data:title'>
           <h1 class='page-header-title'>
             <a class='page-header-title-link' expr:href='data:blog.homepageUrl'>

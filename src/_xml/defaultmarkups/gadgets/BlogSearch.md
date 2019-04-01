@@ -1,0 +1,7 @@
+# Blog Search
+
+Let visitors search your blog.
+
+```html
+<b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' visible='true'/>
+```
